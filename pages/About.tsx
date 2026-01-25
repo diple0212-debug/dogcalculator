@@ -4,49 +4,60 @@ import React from 'react';
 const PageMeta = ({ title, description }: { title: string, description: string }) => {
   document.title = title;
   const descriptionMeta = document.querySelector('meta[name="description"]');
-  if (descriptionMeta) {
-    descriptionMeta.setAttribute('content', description);
-  }
+  if (descriptionMeta) descriptionMeta.setAttribute('content', description);
   return null;
 };
 
 const About: React.FC = () => {
   return (
     <>
-      <PageMeta 
-        title="사이트 소개 | 똑똑한 집사"
-        description="똑똑한 집사는 반려견의 건강한 삶을 응원하는 모든 보호자를 위한 공간입니다. 과학적 데이터를 기반으로 한 강아지 계산기를 통해 반려 생활에 도움을 드립니다."
-      />
-      <div className="w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
-        <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">사이트 소개</h1>
-        <div className="prose max-w-none text-lg text-gray-700">
-          <p>
-            '똑똑한 집사'는 소중한 반려견과 함께하는 모든 보호자님들을 위해 만들어진 공간입니다.
-            말로 표현하지 못하는 반려견의 건강 상태를 객관적인 데이터를 통해 조금이나마 더 쉽게 이해하고,
-            더 건강한 반려 생활을 이어 나가는 데 도움을 드리고자 합니다.
-          </p>
-          <p>
-            저 역시 한 마리의 강아지를 키우는 보호자로서, '우리 아이 나이는 사람으로 치면 몇 살일까?', '지금 체중이 괜찮은 걸까?', '사료는 얼마나 줘야 하지?'와 같은 궁금증을 항상 가지고 있었습니다.
-            인터넷에는 수많은 정보가 있었지만, 신뢰할 수 있는 정보를 찾고 복잡한 공식을 직접 계산하기는 번거로웠습니다.
-          </p>
-          <p>
-            '똑똑한 집사'는 이러한 경험을 바탕으로, 꼭 필요하지만 찾기 번거로웠던 정보들을 한곳에 모아
-            누구나 쉽고 빠르게 사용할 수 있는 계산기 형태로 제공합니다.
-          </p>
-          <h2 className="text-2xl font-bold text-gray-800 mt-10">제공하는 기능</h2>
-          <ul>
-            <li><strong>강아지 나이 계산기:</strong> 반려견의 크기와 실제 나이를 기반으로 사람 나이로 환산하여 생애 주기를 이해하는 데 도움을 줍니다.</li>
-            <li><strong>강아지 비만도 계산기:</strong> 현재 체중과 이상적인 체중을 비교하여 비만도를 체크하고 건강한 체중 관리 계획을 세울 수 있도록 돕습니다.</li>
-            <li><strong>강아지 사료량 계산기:</strong> 체중과 활동량에 맞는 하루 권장 급여량을 계산하여 과식과 영양 부족을 예방합니다.</li>
-          </ul>
-          <p>
-            앞으로도 보호자님들에게 실질적인 도움이 될 수 있는 유용한 정보와 기능들을 꾸준히 업데이트해 나갈 예정입니다.
-            '똑똑한 집사'와 함께 반려견의 건강을 지키고, 더 행복한 추억을 만들어 가시길 바랍니다.
-          </p>
-          <p className="mt-8 text-center font-semibold">
-            모든 반려견과 보호자님의 행복한 삶을 응원합니다.
-          </p>
-        </div>
+      <PageMeta title="사이트 소개 | 똑똑한 집사의 철학과 전문성" description="반려견 건강 관리 전문 플랫폼 똑똑한 집사를 소개합니다. 수의학적 기초 지식과 IT 기술을 결합하여 올바른 반려 문화에 기여합니다." />
+      <div className="w-full max-w-3xl mx-auto space-y-10 animate-in fade-in duration-700">
+        <section className="bg-white rounded-3xl shadow-xl overflow-hidden border border-orange-100">
+          <div className="h-48 bg-orange-500 flex items-center justify-center">
+            <h1 className="text-4xl font-black text-white">About Us</h1>
+          </div>
+          <div className="p-8 md:p-12 space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-2xl font-black text-gray-800">"반려견의 시간을 더 건강하게"</h2>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                똑똑한 집사는 보호자가 강아지의 건강 상태를 객관적으로 파악하고,<br className="hidden md:block"/>
+                과학적인 근거를 바탕으로 케어할 수 있도록 돕는 디지털 헬스케어 도우미입니다.
+              </p>
+            </div>
+
+            <hr className="border-gray-100" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="space-y-4">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto text-3xl">🩺</div>
+                <h3 className="font-bold text-gray-800">의학적 기초</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">미국동물병원협회(AAHA) 및 국내외 수의학 가이드를 기반으로 계산기를 설계합니다.</p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto text-3xl">🤖</div>
+                <h3 className="font-bold text-gray-800">AI 기술 결합</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">최신 AI 기술을 활용하여 증상별 초기 대처법과 맞춤형 건강 조언을 제공합니다.</p>
+              </div>
+              <div className="space-y-4">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto text-3xl">🤝</div>
+                <h3 className="font-bold text-gray-800">신뢰와 책임</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">정확한 정보 전달을 최우선으로 하며, 전문가 상담을 위한 가이드 역할을 수행합니다.</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100">
+              <h3 className="font-black text-gray-800 mb-4 text-xl">우리의 미션</h3>
+              <p className="text-gray-600 leading-loose">
+                단순히 숫자를 계산하는 도구를 넘어, 보호자가 반려견의 '노화'와 '질병'을 미리 준비하고 대응할 수 있는 지식 창고가 되는 것입니다. 똑똑한 집사는 모든 반려견이 보호자의 따뜻한 배려 속에서 더 오래, 더 건강하게 우리 곁에 머물기를 진심으로 바랍니다.
+              </p>
+            </div>
+            
+            <p className="text-center text-sm text-gray-400">
+              Contact: support@dogcalculator.co.kr
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );
