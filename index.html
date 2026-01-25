@@ -3,40 +3,36 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>똑똑한 집사 - 강아지 건강 관리 & AI 상담</title>
+    <title>똑똑한 집사 - AI 강아지 건강 관리 & 계산기</title>
+    
+    <!-- SEO 및 소셜 공유 설정 -->
+    <meta name="description" content="강아지 나이 계산기, 비만도(BCS) 체크, 사료량 계산기 및 AI 건강 상담 서비스로 반려견의 건강을 스마트하게 관리하세요." />
+    <meta name="keywords" content="강아지 나이 계산기, 강아지 비만도 계산기, 강아지 사료량 계산기, 강아지 건강 상담, AI 수의사, 반려견 건강관리" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="똑똑한 집사 - AI 강아지 건강 관리" />
+    <meta property="og:description" content="우리 강아지 나이부터 사료량까지, AI가 알려주는 스마트한 반려생활" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-    <script type="application/ld+json">
+    
+    <script type="importmap">
     {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "똑똑한 집사",
-      "description": "강아지 나이 계산기, 비만도(BCS) 체크, 사료량 계산기 및 AI 건강 상담 서비스.",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0"
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@6.23.1?external=react,react-dom",
+        "@google/genai": "https://esm.sh/@google/genai",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/"
       }
     }
     </script>
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.23.1?external=react,react-dom",
-    "@google/genai": "https://esm.sh/@google/genai",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/"
-  }
-}
-</script>
   </head>
-  <body class="bg-orange-50">
+  <body class="bg-orange-50 font-sans antialiased text-gray-900">
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>
