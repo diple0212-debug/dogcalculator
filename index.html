@@ -10,30 +10,51 @@
     <!-- SEO 및 소셜 공유 설정 -->
     <meta name="description" content="강아지 나이 계산기, 비만도(BCS) 체크, 사료량 계산기 및 AI 건강 상담 서비스로 반려견의 건강을 스마트하게 관리하세요." />
     <meta name="keywords" content="강아지 나이 계산기, 강아지 비만도 계산기, 강아지 사료량 계산기, 강아지 건강 상담, AI 수의사, 반려견 건강관리" />
+    <link rel="canonical" href="https://dogcalculator.co.kr" />
+    
     <meta property="og:type" content="website" />
     <meta property="og:title" content="똑똑한 집사 - AI 강아지 건강 관리" />
     <meta property="og:description" content="우리 강아지 나이부터 사료량까지, AI가 알려주는 스마트한 반려생활" />
+    <meta property="og:url" content="https://dogcalculator.co.kr" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000" />
     
+    <!-- JSON-LD 구조화 데이터 (SEO 핵심) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "똑똑한 집사",
+      "url": "https://dogcalculator.co.kr",
+      "description": "반려견 건강을 위한 AI 상담 및 필수 계산기 도구 모음",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "featureList": [
+        "강아지 나이 계산기",
+        "강아지 비만도(BCS) 체크",
+        "강아지 사료 급여량 계산기",
+        "AI 기반 건강 상담"
+      ]
+    }
+    </script>
+
     <!-- Tailwind CSS 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+        "vite": "https://esm.sh/vite@^7.3.1",
+        "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-orange-50 font-sans antialiased text-gray-900">
     <div id="root"></div>
-    <!-- Vite가 이 경로를 통해 React 앱을 빌드합니다 -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
