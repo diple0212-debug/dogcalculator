@@ -5,7 +5,6 @@ import Layout from './components/Layout.tsx';
 import AgeCalculator from './pages/AgeCalculator.tsx';
 import ObesityCalculator from './pages/ObesityCalculator.tsx';
 import FoodCalculator from './pages/FoodCalculator.tsx';
-import HealthAdvisor from './pages/HealthAdvisor.tsx';
 import AnxietyTest from './pages/AnxietyTest.tsx';
 import DogMBTI from './pages/DogMBTI.tsx';
 import FAQ from './pages/FAQ.tsx';
@@ -21,7 +20,6 @@ function App() {
           <Route path="/" element={<AgeCalculator />} />
           <Route path="/obesity" element={<ObesityCalculator />} />
           <Route path="/food" element={<FoodCalculator />} />
-          <Route path="/health-advisor" element={<HealthAdvisor />} />
           <Route path="/anxiety-test" element={<AnxietyTest />} />
           <Route path="/dog-mbti" element={<DogMBTI />} />
           <Route path="/faq" element={<FAQ />} />

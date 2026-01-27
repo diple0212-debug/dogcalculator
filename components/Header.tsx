@@ -9,46 +9,50 @@ const PawIcon = () => (
   </svg>
 );
 
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinkClass = "text-lg font-medium text-gray-600 hover:text-orange-500 transition-colors px-3 py-2 rounded-lg";
-  const activeNavLinkClass = "text-lg font-medium text-orange-500";
+  const navLinkClass = "text-md font-bold text-gray-600 hover:text-orange-500 transition-colors px-3 py-2 rounded-lg";
+  const activeNavLinkClass = "text-md font-bold text-orange-500";
   
   const mobileNavLinkClass = "block px-4 py-3 rounded-lg text-lg font-semibold text-gray-700 hover:bg-orange-100";
   const activeMobileNavLinkClass = "block px-4 py-3 rounded-lg text-lg font-semibold bg-orange-500 text-white";
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-10">
+    <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <NavLink to="/" className="flex items-center gap-2">
             <PawIcon />
-            <span className="text-xl font-bold text-gray-800">똑똑한 집사</span>
+            <span className="text-xl font-black text-gray-800 tracking-tight">똑똑한 집사</span>
           </NavLink>
 
-          <nav className="hidden md:flex items-center space-x-2">
-            <NavLink to="/" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>나이 계산기</NavLink>
-            <NavLink to="/obesity" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>비만도 계산기</NavLink>
-            <NavLink to="/food" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>사료량 계산기</NavLink>
+          <nav className="hidden lg:flex items-center space-x-1">
+            <NavLink to="/" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>나이</NavLink>
+            <NavLink to="/obesity" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>비만도</NavLink>
+            <NavLink to="/food" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>사료량</NavLink>
+            <NavLink to="/anxiety-test" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>분리불안</NavLink>
+            <NavLink to="/dog-mbti" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>MBTI</NavLink>
+            <NavLink to="/faq" className={({ isActive }) => isActive ? activeNavLinkClass : navLinkClass}>FAQ</NavLink>
           </nav>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 hover:text-orange-500 focus:outline-none">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} pb-4`}>
-          <nav className="flex flex-col space-y-2">
+        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'} pb-4`}>
+          <nav className="flex flex-col space-y-1">
             <NavLink to="/" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>나이 계산기</NavLink>
             <NavLink to="/obesity" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>비만도 계산기</NavLink>
             <NavLink to="/food" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>사료량 계산기</NavLink>
+            <NavLink to="/anxiety-test" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>분리불안 테스트</NavLink>
+            <NavLink to="/dog-mbti" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>강아지 MBTI</NavLink>
+            <NavLink to="/faq" className={({ isActive }) => isActive ? activeMobileNavLinkClass : mobileNavLinkClass} onClick={() => setIsOpen(false)}>자주 묻는 질문</NavLink>
           </nav>
         </div>
       </div>
