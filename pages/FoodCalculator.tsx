@@ -22,14 +22,11 @@ const FoodCalculator: React.FC = () => {
 
     if (isNaN(dogWeight) || isNaN(calPer100g) || dogWeight <= 0 || calPer100g <= 0) return;
 
-    // 수의학 표준 RER 공식: 70 * (체중^0.75)
     const rer = 70 * Math.pow(dogWeight, 0.75);
-    
-    // 활동량별 DER 가중치
     const multipliers: Record<string, number> = {
-      low: 1.2,    // 비활동적, 노령견
-      normal: 1.6, // 중성화 완료 성견
-      high: 2.0    // 매우 활동적인 성견, 성장기
+      low: 1.2,
+      normal: 1.6,
+      high: 2.0
     };
     
     const der = rer * multipliers[activityLevel];
@@ -86,100 +83,35 @@ const FoodCalculator: React.FC = () => {
 
         <AdPlaceholder placement="중단" />
 
-        {/* --- 정보성 텍스트 강화 섹션 (1,500자 이상 타겟) --- */}
         <div className="space-y-12">
           <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">강아지 사료, '적당히' 주면 안 되는 이유</h2>
+            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">정확한 급여량 계산이 반려견의 수명을 결정합니다</h2>
             <div className="prose prose-orange text-gray-600 leading-loose space-y-6">
-              <p>많은 보호자분들이 사료 포장지의 뒷면에 적힌 권장 가이드를 그대로 따르거나 종이컵으로 대충 짐작해서 급여하곤 합니다. 하지만 강아지마다 대사 효율과 활동량이 다르기 때문에 잘못된 급여량은 비만이나 영양 부족의 직접적인 원인이 됩니다.</p>
+              <p>사료 뒷면의 권장 급여량은 단순한 '평균치'일 뿐입니다. 우리 아이의 실제 활동량과 중성화 여부, 그리고 현재 체중 상태에 따라 필요한 에너지는 크게 달라질 수 있습니다.</p>
               
-              <h3 className="text-xl font-bold text-gray-800 mt-8">급여량 결정의 두 가지 핵심 지표</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
-                <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100">
-                  <h4 className="font-bold text-orange-700 mb-2">RER (Resting Energy Requirement)</h4>
-                  <p className="text-sm">휴식기 대사량으로, 강아지가 아무것도 하지 않고 숨만 쉬고 있을 때 소비되는 최소한의 에너지입니다. 기초 대사량과 유사한 개념입니다.</p>
+              <div className="space-y-4">
+                <div className="bg-orange-50 p-5 rounded-2xl border-l-4 border-orange-400">
+                  <h4 className="font-bold text-gray-800 mb-1">RER(기초대사량)이란?</h4>
+                  <p className="text-sm">강아지가 휴식 상태에서 생존을 위해 소모하는 최소한의 에너지입니다. 본 계산기는 이 RER에 정확한 활동 계수를 곱하여 가장 과학적인 <strong>DER(일일 필요 에너지)</strong>을 산출합니다.</p>
                 </div>
-                <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                  <h4 className="font-bold text-blue-700 mb-2">DER (Daily Energy Requirement)</h4>
-                  <p className="text-sm">일일 필요 에너지량으로, RER에 활동 지수(나이, 중성화 여부, 활동량)를 곱해 실제로 하루 동안 필요한 총 칼로리를 의미합니다.</p>
+                
+                <div className="bg-blue-50 p-5 rounded-2xl border-l-4 border-blue-400">
+                  <h4 className="font-bold text-gray-800 mb-1">중성화 유무의 중요성</h4>
+                  <p className="text-sm">중성화를 한 강아지는 호르몬 변화로 대사율이 약 20% 낮아집니다. 일반 강아지와 같은 양을 먹으면 쉽게 살이 찔 수 있으므로 정밀한 계산이 필수적입니다.</p>
                 </div>
               </div>
-              <p>똑똑한 집사의 계산기는 최신 수의학적 권장 공식을 사용하여, 아이의 현재 상태에 가장 최적화된 DER을 산출하고 이를 사료 무게로 변환해 드립니다.</p>
-            </div>
-          </section>
 
-          <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">좋은 사료를 고르는 '똑똑한' 방법</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">비싼 사료가 무조건 좋은 사료는 아닙니다. 사료 뒷면의 영양 성분표와 원료 리스트를 읽는 법을 알아야 합니다.</p>
-            
-            <div className="space-y-6">
-              <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
-                <div>
-                  <h4 className="font-bold text-gray-800">제1원료 확인 (주단백질원)</h4>
-                  <p className="text-sm text-gray-500 mt-1">'육분(Meat meal)'이나 '부산물' 보다는 '생닭고기', '연어', '양고기' 처럼 특정 단일 단백질원이 명확히 기재된 것이 좋습니다.</p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
-                <div>
-                  <h4 className="font-bold text-gray-800">조단백질과 조지방 함량</h4>
-                  <p className="text-sm text-gray-500 mt-1">성견 기준 조단백질 18% 이상, 조지방 5% 이상이 법적 기준이지만, 활동적인 개라면 단백질 25% 내외를 권장합니다. 어린 강아지는 훨씬 높은 함량이 필요합니다.</p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-start">
-                <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
-                <div>
-                  <h4 className="font-bold text-gray-800">합성 보존제 유무</h4>
-                  <p className="text-sm text-gray-500 mt-1">BHA, BHT 같은 합성 보존제 보다는 비타민 E(토코페롤)나 로즈마리 추출물 같은 천연 보존제를 사용한 제품이 안전합니다.</p>
-                </div>
+              <div className="mt-8 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+                <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">⚠️ 똑똑한 집사의 최종 조언</h4>
+                <p className="text-sm leading-relaxed">
+                  본 결과값은 가이드라인입니다. 아이의 <strong>변 상태</strong>를 꼭 확인해 주세요! <br/>
+                  - 변이 너무 무르다면? 급여량을 조금 줄여보세요. <br/>
+                  - 변이 너무 딱딱하다면? 급여량이 조금 부족할 수 있습니다. <br/>
+                  변의 상태를 보며 우리 아이에게 최적화된 양을 찾아가는 것이 최고의 건강 관리법입니다.
+                </p>
               </div>
             </div>
           </section>
-
-          <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">생애 주기별 급여 가이드라인</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-left border-collapse">
-                <thead>
-                  <tr className="bg-orange-50">
-                    <th className="p-4 border-b-2 border-orange-200">구분</th>
-                    <th className="p-4 border-b-2 border-orange-200">권장 횟수</th>
-                    <th className="p-4 border-b-2 border-orange-200">주요 포인트</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-600">
-                  <tr className="border-b border-gray-50">
-                    <td className="p-4 font-bold">자견 (퍼피)</td>
-                    <td className="p-4">3~4회 분할</td>
-                    <td className="p-4">성장기 에너지 소모가 큼. 소화력이 낮아 조금씩 자주 줘야 함.</td>
-                  </tr>
-                  <tr className="border-b border-gray-50">
-                    <td className="p-4 font-bold">성견 (어덜트)</td>
-                    <td className="p-4">2회 분할</td>
-                    <td className="p-4">체중 유지에 집중. 일정한 시간 간격으로 급여하는 습관 필요.</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-bold">노령견 (시니어)</td>
-                    <td className="p-4">2~3회 분할</td>
-                    <td className="p-4">활동량이 줄어들어 칼로리를 줄여야 함. 소화를 돕기 위해 사료를 불려주는 것도 좋음.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <article className="bg-orange-500 text-white rounded-3xl p-8 md:p-10 shadow-lg relative overflow-hidden">
-            <div className="relative z-10">
-              <h2 className="text-2xl font-black mb-4">⚠️ 집사의 주의사항</h2>
-              <p className="leading-relaxed opacity-90">
-                사료 교체 시에는 갑자기 바꾸지 마세요. 7~10일 동안 기존 사료와 새 사료의 비율을 조금씩 섞어가며(1:9, 3:7, 5:5...) 위장이 적응할 시간을 주어야 설사를 예방할 수 있습니다. 또한, 계산된 급여량은 절대적인 수치가 아니므로 변 상태(너무 무르면 과식, 너무 딱딱하면 부족)를 보며 미세하게 조절해 주세요.
-              </p>
-            </div>
-            <div className="absolute -bottom-10 -right-10 opacity-10 rotate-12 transform scale-150">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-48 h-48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C10.9 2 10 2.9 10 4s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3.5 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4.5 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm15 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM12 11c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5z"/></svg>
-            </div>
-          </article>
         </div>
         
         <AdPlaceholder placement="하단" />

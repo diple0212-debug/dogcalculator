@@ -80,33 +80,33 @@ const Home: React.FC = () => {
         ))}
       </div>
 
-      <Link to="/faq" className="mx-4 block p-6 bg-gray-800 rounded-3xl text-white hover:bg-gray-700 transition-colors">
+      <Link to="/faq" className="mx-4 block p-6 bg-gray-800 rounded-3xl text-white hover:bg-gray-700 transition-colors shadow-lg">
         <div className="flex justify-between items-center">
           <div>
             <h3 className="text-xl font-bold mb-1">초보 집사를 위한 필수 가이드 📘</h3>
             <p className="text-gray-400 text-sm">보호자들이 가장 많이 묻는 건강 상식 15가지</p>
           </div>
-          <span className="text-2xl">➔</span>
+          <span className="text-2xl animate-pulse">➔</span>
         </div>
       </Link>
 
       <section className="px-4 py-8 space-y-6">
         <h2 className="text-2xl font-black text-gray-800 border-l-4 border-orange-500 pl-4">최근 인기 칼럼</h2>
         <div className="space-y-4">
-          <div className="bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center">
-            <div className="w-20 h-20 bg-gray-100 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl">🦴</div>
+          <Link to="/faq" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
+            <div className="w-20 h-20 bg-orange-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🦴</div>
             <div>
-              <h4 className="font-bold text-gray-800 mb-1">우리 아이 관절 건강, 5세부터 시작해야 하는 이유</h4>
-              <p className="text-gray-400 text-xs">전문의가 알려주는 슬개골 탈구 예방 수칙</p>
+              <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">우리 아이 관절 건강, 5세부터 시작해야 하는 이유</h4>
+              <p className="text-gray-400 text-xs leading-relaxed">전문의가 알려주는 슬개골 탈구 예방 수칙 및 체중 관리법</p>
             </div>
-          </div>
-          <div className="bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center">
-            <div className="w-20 h-20 bg-gray-100 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl">🌿</div>
+          </Link>
+          <Link to="/faq" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
+            <div className="w-20 h-20 bg-green-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🌿</div>
             <div>
-              <h4 className="font-bold text-gray-800 mb-1">강아지에게 먹여도 되는 안전한 과일 리스트</h4>
-              <p className="text-gray-400 text-xs">당뇨가 걱정된다면 블루베리를 급여하세요</p>
+              <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">강아지에게 먹여도 되는 안전한 과일 리스트</h4>
+              <p className="text-gray-400 text-xs leading-relaxed">당뇨가 걱정된다면 블루베리! 절대 금지 식품인 포도와 양파 구분법</p>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
     </div>

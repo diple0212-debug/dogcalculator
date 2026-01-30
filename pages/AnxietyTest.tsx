@@ -83,32 +83,29 @@ const AnxietyTest: React.FC = () => {
 
       <AdPlaceholder placement="중단" />
 
-      {/* --- 분리불안 상세 정보 (1,500자 이상 타겟) --- */}
-      <section className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 space-y-10">
-        <article className="prose prose-orange max-w-none text-gray-600 leading-loose">
-          <h2 className="text-3xl font-black text-gray-800 border-l-8 border-orange-500 pl-4 mb-8">분리불안, 왜 생기고 어떻게 고치나요?</h2>
+      <section className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+        <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">분리불안은 '기다려' 교육만으로 해결되지 않습니다</h2>
+        <div className="prose prose-orange text-gray-600 leading-loose space-y-8">
+          <p>테스트 결과가 높게 나왔다고 해서 자책하실 필요는 없습니다. 분리불안은 보호자에 대한 사랑이 깊어서 생기는 단순한 증상이 아니라, 혼자 있는 시간에 대한 <strong>'불안감'에서 오는 일종의 질병</strong>에 가깝습니다.</p>
           
-          <h3 className="text-xl font-bold text-gray-800">1. 분리불안의 근본적인 원인</h3>
-          <p>강아지 분리불안은 보호자와 떨어졌을 때 극심한 공포와 스트레스를 느끼는 심리적 상태를 말합니다. 이는 단순히 보호자를 좋아하는 마음을 넘어, 생존의 위협으로 인식될 때 발생합니다. 주요 원인으로는 <strong>과도한 의존성, 갑작스러운 환경 변화(이사, 입양), 과거의 유기 경험, 혹은 보호자의 불안한 심리</strong>가 강아지에게 전이되는 경우가 많습니다.</p>
-          
-          <h3 className="text-xl font-bold text-gray-800">2. 우리가 흔히 하는 실수: 작별 인사</h3>
-          <p>보호자들이 가장 많이 하는 실수 중 하나는 외출 직전 강아지에게 "다녀올게, 미안해"라며 과하게 인사를 하는 것입니다. 이는 강아지에게 "이제 곧 큰일(이별)이 벌어질 거야"라는 신호를 주는 것과 같습니다. 외출 15분 전부터는 강아지에게 무관심한 태도를 유지하는 것이 도움이 됩니다.</p>
-
-          <div className="bg-orange-50 p-6 rounded-2xl border border-orange-100 my-8">
-            <h4 className="font-black text-orange-700 mb-4">💡 행동 교정 훈련 가이드 (5-10-5 법칙)</h4>
-            <ul className="space-y-3 list-none p-0">
-              <li className="flex gap-2"><strong>1단계:</strong> 현관문 밖으로 나갔다가 5초 만에 들어오기 (무한 반복)</li>
-              <li className="flex gap-2"><strong>2단계:</strong> 시간을 10초, 30초, 1분으로 점진적으로 늘리기</li>
-              <li className="flex gap-2"><strong>3단계:</strong> 나갔다 들어왔을 때 과하게 반기지 않고 5분간 기다린 후 차분히 인사하기</li>
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <h4 className="font-black text-gray-800 mb-2">1. 작은 습관부터 바꾸기</h4>
+              <p className="text-sm">외출 직전 가방을 챙기거나 옷을 입는 '외출 신호'에 아이들이 예민하게 반응하나요? 옷을 입고도 나가지 않고 다시 TV를 보는 등의 행동을 반복하여 외출 신호를 무뎌지게 만드는 훈련이 큰 도움이 됩니다.</p>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-2xl">
+              <h4 className="font-black text-gray-800 mb-2">2. 노즈워크의 마법</h4>
+              <p className="text-sm">보호자가 나갈 때 가장 맛있는 간식을 노즈워크 장난감에 넣어주세요. '보호자의 외출 = 맛있는 것이 생기는 즐거운 시간'으로 뇌의 기억을 조금씩 바꿔주는 과정이 필요합니다.</p>
+            </div>
           </div>
 
-          <h3 className="text-xl font-bold text-gray-800">3. 환경적 솔루션: 노즈워크와 백색소음</h3>
-          <p>강아지의 뇌를 자극하는 노즈워크 장난감은 혼자 있는 시간을 '지루한 시간'이 아닌 '사냥하고 보상받는 시간'으로 인지하게 합니다. 또한, 보호자의 목소리가 담긴 라디오나 강아지 전용 음악(백색소음)을 틀어주어 외부 소음에 민감하게 반응하지 않도록 안정감을 주는 것도 필수적인 환경 조성 전략입니다.</p>
-
-          <h3 className="text-xl font-bold text-gray-800">4. 전문가가 권장하는 수의학적 접근</h3>
-          <p>심각한 수준의 분리불안은 강아지의 신체 건강까지 해칠 수 있습니다. 과도한 침 흘림은 탈수를 유발하고, 지속적인 스트레스 호르몬 방출은 면역력을 저하시킵니다. 만약 행동 교정만으로 차도가 없다면, 수의사와 상담하여 일시적인 항불안제 처방이나 페로몬 디퓨저(DAP) 사용을 고려해보는 것도 현명한 방법입니다.</p>
-        </article>
+          <div className="bg-orange-500 text-white p-8 rounded-3xl shadow-lg">
+            <h4 className="text-xl font-bold mb-3">🆘 전문가의 도움이 필요한 순간</h4>
+            <p className="opacity-90 text-sm leading-relaxed">
+              아이의 증상이 심해 자해를 하거나, 멈추지 않는 하울링으로 이웃에게 민원이 들어오는 수준이라면 행동 교정 전문가나 수의학적 상담을 병행하는 것이 가장 빠르고 안전한 길입니다. 분리불안은 아이와 보호자 모두의 삶의 질을 위해 꼭 해결해야 하는 과제입니다.
+            </p>
+          </div>
+        </div>
       </section>
       
       <AdPlaceholder placement="하단" />

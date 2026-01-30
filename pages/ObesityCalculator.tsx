@@ -105,86 +105,29 @@ const ObesityCalculator: React.FC = () => {
 
         <AdPlaceholder placement="중단" />
 
-        {/* --- 정보성 텍스트 강화 섹션 (1,500자 이상 타겟) --- */}
         <div className="space-y-12">
           <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">강아지 비만, 단순한 '귀여움'이 아닌 '질병'입니다</h2>
+            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">우리 강아지, 몸무게보다 '체형(BCS)'이 더 중요한 이유</h2>
             <div className="prose prose-orange text-gray-600 leading-loose space-y-6">
-              <p>반려견의 통통한 모습이 귀여워 보일 수 있지만, 수의학적으로 비만은 전신적인 염증 상태를 유발하는 심각한 질병입니다. 전 세계 반려견의 약 50% 이상이 과체중 혹은 비만 상태로 추정되며, 이는 반려견의 삶의 질을 떨어뜨리는 가장 큰 원인 중 하나입니다.</p>
+              <p>반려견의 건강 상태를 확인하는 데 있어 단순 몸무게보다 중요한 것은 <strong>BCS(Body Condition Score)</strong>입니다. 사람과 달리 강아지는 견종마다 골격과 근육량이 다르기 때문에 절대적인 수치보다는 육안과 촉진을 통한 체형 평가가 훨씬 정확합니다.</p>
               
-              <h3 className="text-xl font-bold text-gray-800 mt-8">비만이 유발하는 주요 합병증</h3>
-              <ul className="list-none space-y-4 p-0">
-                <li className="flex gap-4 items-start">
-                  <span className="bg-red-100 text-red-600 p-2 rounded-lg font-bold text-sm">01</span>
-                  <div>
-                    <strong className="text-gray-800">관절 및 골격계 질환:</strong>
-                    <p className="text-sm mt-1">과도한 체중은 슬개골 탈구, 고관절 이형성증, 십자인대 파열의 위험을 극도로 높입니다. 특히 노령견의 경우 관절염 통증으로 인해 활동량이 줄어들고, 이것이 다시 비만으로 이어지는 악순환이 발생합니다.</p>
-                  </div>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="bg-red-100 text-red-600 p-2 rounded-lg font-bold text-sm">02</span>
-                  <div>
-                    <strong className="text-gray-800">심혈관계 및 호흡기 부담:</strong>
-                    <p className="text-sm mt-1">지방 조직은 심장에 더 많은 혈액 공급을 요구하며, 가슴 주위의 지방층은 폐의 확장을 방해합니다. 이는 기관지 협착증이 있는 소형견들에게 치명적인 호흡 곤란을 유발할 수 있습니다.</p>
-                  </div>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="bg-red-100 text-red-600 p-2 rounded-lg font-bold text-sm">03</span>
-                  <div>
-                    <strong className="text-gray-800">대사 질환 및 당뇨병:</strong>
-                    <p className="text-sm mt-1">비만은 인슐린 저항성을 높여 당뇨병을 유발합니다. 또한 췌장염의 주요 발병 원인이 되며, 한 번 발병하면 평생 엄격한 식단 관리가 필요하게 됩니다.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+                <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                  <h4 className="font-bold text-blue-800 mb-2">BCS 1~3: 저체중</h4>
+                  <p className="text-xs">갈비뼈가 너무 뚜렷하게 보이고 지방이 거의 없는 상태입니다. 단백질 섭취를 늘리고 영양 보충에 각별히 신경 써야 하는 시기입니다.</p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-2xl border border-green-100">
+                  <h4 className="font-bold text-green-800 mb-2">BCS 4~5: 이상적</h4>
+                  <p className="text-xs">위에서 보았을 때 허리 라인이 매끄럽고, 만졌을 때 얇은 지방층 아래로 갈비뼈가 느껴지는 가장 건강한 골든 타임입니다.</p>
+                </div>
+                <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
+                  <h4 className="font-bold text-red-800 mb-2">BCS 6~9: 비만</h4>
+                  <p className="text-xs">비만은 강아지의 관절염, 당뇨, 심혈관 질환의 직접적인 원인이 됩니다. 특히 슬개골 탈구가 잦은 소형견에게 비만은 치명적입니다.</p>
+                </div>
+              </div>
 
-          <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">수의사가 사용하는 BCS(Body Condition Score) 9단계 완벽 가이드</h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">단순히 체중계의 숫자만 보는 것이 아니라, 강아지의 체형을 눈으로 보고 손으로 만져서 평가하는 지표입니다. 보통 1~9점 척도를 사용하며, 4~5점이 가장 이상적입니다.</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">🔹 BCS 1~3: 저체중 단계</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">갈비뼈와 골반뼈가 멀리서도 뚜렷하게 보입니다. 근육량이 적고 지방층이 거의 없어 앙상한 상태입니다. 영양 부족이나 기저 질환이 의심될 수 있습니다.</p>
-              </div>
-              <div className="bg-green-50 p-6 rounded-2xl border border-green-100">
-                <h4 className="font-bold text-green-800 mb-3 flex items-center gap-2">🔹 BCS 4~5: 이상적 단계</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">갈비뼈가 눈에 보이진 않지만 손으로 만지면 쉽게 느껴집니다. 위에서 보았을 때 허리 라인(모래시계 형태)이 뚜렷하며 옆에서 보면 복부가 적절히 올라가 있습니다.</p>
-              </div>
-              <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100">
-                <h4 className="font-bold text-yellow-800 mb-3 flex items-center gap-2">🔹 BCS 6~7: 과체중 단계</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">갈비뼈 위로 지방층이 느껴져 만지기가 조금 힘들어집니다. 허리 곡선이 사라지고 일자형 몸매가 됩니다. 산책 시 쉽게 지치기 시작하는 단계입니다.</p>
-              </div>
-              <div className="bg-red-50 p-6 rounded-2xl border border-red-100">
-                <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">🔹 BCS 8~9: 비만 단계</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">심한 지방층 때문에 갈비뼈를 만지는 것이 불가능합니다. 복부가 팽창되어 보이거나 아래로 처져 있으며, 꼬리 시작 부위에도 두꺼운 지방이 잡힙니다. 즉각적인 수의사 상담이 필요합니다.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">성공적인 다이어트를 위한 3단계 전략</h2>
-            <div className="space-y-8 text-gray-600 leading-relaxed">
-              <div>
-                <h4 className="text-lg font-bold text-gray-800 mb-2">1. 칼로리 제한과 '눈물 겨운 간식 금지'</h4>
-                <p>가장 흔한 실패 원인은 '간식'입니다. 주식 사료량을 줄여도 보호자가 주는 과일 한 조각, 고기 한 점이 다이어트를 방해합니다. 간식을 꼭 줘야 한다면, 하루 권장 칼로리의 10% 내외로 제한하고 양배추나 오이 같은 저칼로리 채소로 대체하세요.</p>
-              </div>
-              <hr className="border-gray-100" />
-              <div>
-                <h4 className="text-lg font-bold text-gray-800 mb-2">2. 활동량의 점진적 증대</h4>
-                <p>비만견은 관절이 약해진 상태이므로 갑자기 뛰는 운동은 위험합니다. 평소보다 5분씩 산책 시간을 늘리거나, 경사가 없는 평지 위주로 걷는 것부터 시작하세요. 수영은 관절에 무리를 주지 않으면서 칼로리 소모가 가장 높은 최고의 다이어트 운동입니다.</p>
-              </div>
-              <hr className="border-gray-100" />
-              <div>
-                <h4 className="text-lg font-bold text-gray-800 mb-2">3. 정기적인 체중 측정과 기록</h4>
-                <p>사람과 마찬가지로 정기적으로 몸무게를 기록하는 것이 중요합니다. 일주일에 한 번 같은 시간에 몸무게를 측정하세요. 한 달에 현재 체중의 1~2% 정도만 감량하는 것을 목표로 삼는 것이 요요 현상을 방지하는 비결입니다.</p>
-              </div>
-            </div>
-            
-            <div className="mt-10 p-6 bg-gray-50 rounded-2xl border border-gray-200 text-center">
-              <p className="text-sm font-medium text-gray-500 italic">
-                "강아지의 비만 탈출은 보호자의 의지에 달려 있습니다. 오늘부터 '사랑'을 '간식' 대신 '산책'으로 표현해 보세요."
+              <p className="bg-gray-50 p-5 rounded-2xl border border-gray-200 italic text-sm">
+                💡 <strong>집사의 팁:</strong> 현재 점수가 6점 이상이라면 간식을 과감히 줄이고 활동량을 서서히 늘려주는 건강한 다이어트가 필요합니다. 사랑하는 마음을 '간식'이 아닌 '산책'으로 표현해 주세요!
               </p>
             </div>
           </section>
