@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { POSTS_DATA } from './Posts.tsx';
 
 const tools = [
   {
@@ -54,6 +55,9 @@ const tools = [
 ];
 
 const Home: React.FC = () => {
+  // 최근 등록된 순서대로 3개만 가져옴
+  const recentPosts = [...POSTS_DATA].slice(0, 3);
+
   return (
     <div className="space-y-10 py-4 max-w-4xl mx-auto">
       <section className="text-center space-y-3 px-4">
@@ -95,21 +99,22 @@ const Home: React.FC = () => {
           <h2 className="text-2xl font-black text-gray-800">최근 인기 칼럼</h2>
           <Link to="/posts" className="text-sm font-bold text-orange-500 hover:underline">전체 보기 ➔</Link>
         </div>
-        <div className="space-y-4">
-          <Link to="/posts/1" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
-            <div className="w-20 h-20 bg-orange-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🦴</div>
-            <div>
-              <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">우리 아이 관절 건강, 5세부터 시작해야 하는 이유</h4>
-              <p className="text-gray-400 text-xs leading-relaxed">전문의가 알려주는 슬개골 탈구 예방 수칙 및 체중 관리법</p>
-            </div>
-          </Link>
-          <Link to="/posts/2" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
-            <div className="w-20 h-20 bg-green-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🌿</div>
-            <div>
-              <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">강아지에게 먹여도 되는 안전한 과일 리스트</h4>
-              <p className="text-gray-400 text-xs leading-relaxed">당뇨가 걱정된다면 블루베리! 절대 금지 식품인 포도와 양파 구분법</p>
-            </div>
-          </Link>
+        <div className="grid grid-cols-1 gap-4">
+          {recentPosts.map((post) => (
+            <Link 
+              key={post.id}
+              to={`/posts/${post.id}`} 
+              className="block bg-white p-5 rounded-3xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group"
+            >
+              <div className={`w-20 h-20 ${post.color} rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}>
+                {post.icon}
+              </div>
+              <div className="flex-grow">
+                <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors line-clamp-1">{post.title}</h4>
+                <p className="text-gray-400 text-xs leading-relaxed line-clamp-2">{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

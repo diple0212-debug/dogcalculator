@@ -15,10 +15,12 @@ import Privacy from './pages/Privacy.tsx';
 import HealthAdvisor from './pages/HealthAdvisor.tsx';
 import Posts from './pages/Posts.tsx';
 import PostDetail from './pages/PostDetail.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
