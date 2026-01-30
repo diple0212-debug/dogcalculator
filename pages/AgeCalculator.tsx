@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AdPlaceholder from '../components/AdPlaceholder';
 
 const PageMeta = ({ title, description }: { title: string, description: string }) => {
@@ -31,7 +32,7 @@ const AgeCalculator: React.FC = () => {
   const [dogSize, setDogSize] = useState<string>('small');
   const [selectedBreed, setSelectedBreed] = useState<string>(breeds[0].name);
   const [humanAge, setHumanAge] = useState<number | null>(null);
-  const [copySuccess, setCopySuccess] = useState(false);
+  const [lifeStage, setLifeStage] = useState<string>('');
   
   const handleBreedChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const breedName = e.target.value;
@@ -53,17 +54,11 @@ const AgeCalculator: React.FC = () => {
       calculatedAge = 24 + (age - 2) * multiplier;
     }
     setHumanAge(calculatedAge);
-  };
-
-  const shareResult = () => {
-    const text = `우리 강아지(${selectedBreed})는 사람 나이로 ${humanAge}살이래요! 🐾 똑똑한 집사에서 확인해보세요: ${window.location.origin}`;
-    if (navigator.share) {
-      navigator.share({ title: '똑똑한 집사 - 결과 공유', text: text, url: window.location.href }).catch(console.error);
-    } else {
-      navigator.clipboard.writeText(text);
-      setCopySuccess(true);
-      setTimeout(() => setCopySuccess(false), 2000);
-    }
+    
+    if (calculatedAge < 20) setLifeStage('퍼피(성장기)');
+    else if (calculatedAge < 45) setLifeStage('어덜트(청년기)');
+    else if (calculatedAge < 65) setLifeStage('어덜트(장년기)');
+    else setLifeStage('시니어(노령기)');
   };
 
   return (
@@ -75,9 +70,9 @@ const AgeCalculator: React.FC = () => {
       <div className="w-full max-w-2xl mx-auto space-y-12">
         <div className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-orange-100">
           <div className="text-center mb-8">
-            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Scientific Algorithm</span>
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Life Cycle AI</span>
             <h1 className="text-3xl md:text-4xl font-black text-gray-800 mt-4 mb-2">강아지 나이 계산기</h1>
-            <p className="text-gray-500 font-medium italic">"정확한 생애 주기 파악이 건강의 시작입니다."</p>
+            <p className="text-gray-500 font-medium">우리 아이의 생애 주기를 정확히 진단해 보세요.</p>
           </div>
 
           <form onSubmit={calculateAge} className="space-y-6">
@@ -99,81 +94,72 @@ const AgeCalculator: React.FC = () => {
           </form>
 
           {humanAge !== null && (
-            <div className="mt-10 p-8 bg-orange-50 rounded-3xl border-2 border-orange-200 text-center animate-in zoom-in duration-300">
-              <p className="text-gray-600 font-bold mb-2">우리 강아지는 사람 나이로</p>
-              <h2 className="text-5xl md:text-6xl font-black text-orange-600 mb-6">약 {humanAge}살</h2>
-              <button onClick={shareResult} className="bg-white text-gray-800 font-bold px-6 py-3 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors shadow-sm active:scale-95">
-                {copySuccess ? '✅ 결과 복사됨' : '친구에게 결과 공유하기'}
-              </button>
+            <div className="mt-10 animate-in zoom-in duration-300">
+              <div className="p-8 bg-orange-50 rounded-[2.5rem] border-2 border-orange-200 text-center relative overflow-hidden">
+                <p className="text-gray-600 font-bold mb-2">우리 강아지는 사람 나이로</p>
+                <h2 className="text-5xl md:text-6xl font-black text-orange-600 mb-2">약 {humanAge}살</h2>
+                <span className="inline-block px-4 py-1 bg-white border border-orange-200 rounded-full text-orange-500 font-bold text-sm mb-6">
+                  {lifeStage} 단계
+                </span>
+                
+                <div className="bg-white/80 p-5 rounded-2xl text-left border border-orange-100">
+                   <h4 className="font-black text-gray-800 mb-2">🏡 집사의 건강 가이드</h4>
+                   <p className="text-sm text-gray-600 leading-relaxed">
+                     {lifeStage.includes('퍼피') ? "성장이 매우 빠른 시기입니다. 뼈와 근육 형성을 위해 고단백 퍼피용 사료를 급여하고 기초 예방접종을 완료해 주세요." :
+                      lifeStage.includes('청년기') ? "가장 에너지가 넘치는 황금기입니다. 충분한 산책과 놀이로 스트레스를 풀어주고, 치아 관리를 시작해야 하는 시기입니다." :
+                      lifeStage.includes('장년기') ? "신진대사가 조금씩 느려지기 시작합니다. 과도한 체중 증가를 경계하고 1년에 한 번 건강검진을 추천합니다." :
+                      "노령기에 접어들었습니다. 소화력이 떨어질 수 있으니 사료를 불려주거나 고품질 단백질 위주로 급여하고 관절 보호에 힘써주세요."}
+                   </p>
+                </div>
+              </div>
             </div>
           )}
         </div>
 
+        {/* 관련 서비스 링크 유도 섹션 */}
+        <section className="bg-gray-50 p-6 rounded-3xl border border-gray-100">
+          <h3 className="font-black text-gray-800 mb-4 text-center">다른 보호자들이 많이 이용한 기능</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <Link to="/obesity" className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 hover:bg-orange-50 transition-colors">
+              <span className="text-2xl">⚖️</span>
+              <span className="font-bold text-sm">비만도 체크</span>
+            </Link>
+            <Link to="/food" className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 hover:bg-orange-50 transition-colors">
+              <span className="text-2xl">🥣</span>
+              <span className="font-bold text-sm">사료량 계산</span>
+            </Link>
+          </div>
+        </section>
+
         <AdPlaceholder placement="중단" />
 
-        {/* --- 애드센스 승인을 위한 정보성 텍스트 강화 섹션 --- */}
         <section className="space-y-12">
           <article className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">강아지 나이 계산, 왜 '7의 법칙'이 틀렸을까요?</h2>
-            <div className="prose prose-orange text-gray-600 leading-relaxed space-y-5">
-              <p>흔히 강아지의 1년이 사람의 7년과 같다고 말하지만, 이는 수의학적으로 매우 단순화된 수치입니다. 실제로 강아지는 생애 첫 2년 동안 사람으로 치면 24세가 될 정도로 매우 빠르게 성장하며, 그 이후의 노화 속도는 견종의 크기에 따라 크게 달라집니다.</p>
+            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">강아지 나이 계산, 견종 크기가 핵심인 이유</h2>
+            <div className="prose prose-orange text-gray-600 leading-loose space-y-5">
+              <p>강아지의 1년을 사람의 7년으로 단순히 곱하는 '7의 법칙'은 현대 수의학에서 더 이상 사용되지 않습니다. 최신 연구에 따르면 강아지는 종의 크기에 따라 노화 메커니즘이 완전히 다르게 작동하기 때문입니다.</p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                  <h3 className="font-black text-orange-600 mb-2">소형견 (10kg 미만)</h3>
-                  <p className="text-sm">성장이 빠르지만 이후 노화 속도가 가장 느립니다. 평균 수명이 15~18세로 긴 편입니다.</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                  <h3 className="font-black text-blue-600 mb-2">중형견 (10~25kg)</h3>
-                  <p className="text-sm">소형견보다 약간 빠른 노화 속도를 보이며, 평균적으로 12~15세까지 생존합니다.</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                  <h3 className="font-black text-red-600 mb-2">대형견 (25kg 이상)</h3>
-                  <p className="text-sm">가장 늦게 성숙하지만 5세 이후부터 노화가 급격히 진행됩니다. 세심한 관리가 필요합니다.</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">크기별 노화 곡선의 차이</h3>
+              <ul className="list-disc pl-5 space-y-3">
+                <li><strong>소형견:</strong> 초기 성장이 빠르지만, 성견이 된 이후 세포 노화 속도가 중/대형견에 비해 현저히 낮습니다. 평균 15세 이상의 수명을 가집니다.</li>
+                <li><strong>중형견:</strong> 소형견보다 완만한 노화 곡선을 그리며, 10세 이후부터 노화 관련 질병이 나타나기 시작합니다.</li>
+                <li><strong>대형견:</strong> 성견이 되는 시점은 가장 늦지만, 5~6세부터 세포 노화가 가속화됩니다. 신체 크기가 클수록 심혈관계와 관절에 가해지는 부담이 크기 때문입니다.</li>
+              </ul>
 
-              <p>똑똑한 집사의 계산기는 최신 수의학 연구 데이터를 기반으로 견종 크기별 가중치를 적용하여, 보다 현실적인 '사람 환산 나이'를 산출합니다.</p>
-            </div>
-          </article>
-
-          <article className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">연령대별 필수 건강 체크리스트</h2>
-            <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center font-black flex-shrink-0">1-2</div>
-                <div>
-                  <h3 className="font-bold text-gray-800 text-lg mb-2">성장기 및 청년기 (에너지 폭발기)</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">이 시기에는 사회화 교육과 기초 예방접종이 가장 중요합니다. 고단백 영양 섭취를 통해 골격을 형성해야 하며, 중성화 수술 여부를 결정하는 시기이기도 합니다.</p>
+              <h2 className="text-2xl font-black text-gray-800 mt-10 mb-6">노령견 보호자가 주의해야 할 3가지 증상</h2>
+              <div className="space-y-6">
+                <div className="p-5 bg-gray-50 rounded-2xl">
+                  <h4 className="font-bold text-gray-800 mb-1">1. 갑작스러운 활동량 감소와 수면 증가</h4>
+                  <p className="text-sm">단순히 '나이가 들어서'라고 생각하기 쉽지만, 관절 통증이나 심장 기능 저하의 신호일 수 있습니다. 아이가 산책을 거부하거나 평소보다 잠이 너무 많아졌다면 정밀 검진이 필요합니다.</p>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center font-black flex-shrink-0">3-6</div>
-                <div>
-                  <h3 className="font-bold text-gray-800 text-lg mb-2">성숙기 (안정적인 황금기)</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">체중 관리가 시작되어야 하는 시점입니다. 활동량에 맞는 사료 조절이 필요하며, 1년에 한 번 정기 검진을 통해 신장과 간 수치를 체크하는 습관을 들여야 합니다.</p>
+                <div className="p-5 bg-gray-50 rounded-2xl">
+                  <h4 className="font-bold text-gray-800 mb-1">2. 인지 기능 장애 (강아지 치매)</h4>
+                  <p className="text-sm">밤에 이유 없이 짖거나, 구석진 곳에서 나오지 못하고, 배변 실수가 잦아지는 증상이 나타납니다. 노즈워크와 가벼운 산책으로 뇌 자극을 지속해주는 것이 예방의 핵심입니다.</p>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="bg-gray-100 text-gray-600 w-12 h-12 rounded-full flex items-center justify-center font-black flex-shrink-0">7+</div>
-                <div>
-                  <h3 className="font-bold text-gray-800 text-lg mb-2">노령기 (세심한 케어기)</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">활동량이 줄어들고 잠이 많아집니다. 관절 영양제 급여를 권장하며, 안구 혼탁이나 갑작스러운 행동 변화(치매 증상)를 면밀히 관찰해야 합니다.</p>
+                <div className="p-5 bg-gray-50 rounded-2xl">
+                  <h4 className="font-bold text-gray-800 mb-1">3. 식이 및 음수량 변화</h4>
+                  <p className="text-sm">물을 너무 많이 마시거나 소변량이 급증하는 것은 당뇨나 신장 질환의 전조 증상입니다. 체중 변화를 정기적으로 기록하는 습관이 중요합니다.</p>
                 </div>
-              </div>
-            </div>
-          </article>
-
-          <article className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 font-sans">반려견 수명을 늘리는 3가지 습관</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-600">
-              <div className="flex flex-col gap-3">
-                <h4 className="font-black text-gray-800 flex items-center gap-2">🦷 매일매일 양치질</h4>
-                <p className="text-sm leading-relaxed">치주 질환은 세균이 혈관을 타고 심장이나 신장에 문제를 일으키는 원인이 됩니다. 양치질만으로도 수명을 2년 연장할 수 있습니다.</p>
-              </div>
-              <div className="flex flex-col gap-3">
-                <h4 className="font-black text-gray-800 flex items-center gap-2">⚖️ 적정 체중 유지</h4>
-                <p className="text-sm leading-relaxed">비만은 강아지에게 만병의 근원입니다. 사료량 계산기를 활용해 정확한 양을 급여하고, 매일 30분 이상의 산책을 유지하세요.</p>
               </div>
             </div>
           </article>
