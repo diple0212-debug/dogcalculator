@@ -91,16 +91,19 @@ const Home: React.FC = () => {
       </Link>
 
       <section className="px-4 py-8 space-y-6">
-        <h2 className="text-2xl font-black text-gray-800 border-l-4 border-orange-500 pl-4">최근 인기 칼럼</h2>
+        <div className="flex justify-between items-end border-l-4 border-orange-500 pl-4">
+          <h2 className="text-2xl font-black text-gray-800">최근 인기 칼럼</h2>
+          <Link to="/posts" className="text-sm font-bold text-orange-500 hover:underline">전체 보기 ➔</Link>
+        </div>
         <div className="space-y-4">
-          <Link to="/faq" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
+          <Link to="/posts/1" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
             <div className="w-20 h-20 bg-orange-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🦴</div>
             <div>
               <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">우리 아이 관절 건강, 5세부터 시작해야 하는 이유</h4>
               <p className="text-gray-400 text-xs leading-relaxed">전문의가 알려주는 슬개골 탈구 예방 수칙 및 체중 관리법</p>
             </div>
           </Link>
-          <Link to="/faq" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
+          <Link to="/posts/2" className="block bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 items-center hover:shadow-md hover:border-orange-200 transition-all group">
             <div className="w-20 h-20 bg-green-50 rounded-xl flex-shrink-0 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🌿</div>
             <div>
               <h4 className="font-bold text-gray-800 mb-1 group-hover:text-orange-600 transition-colors">강아지에게 먹여도 되는 안전한 과일 리스트</h4>

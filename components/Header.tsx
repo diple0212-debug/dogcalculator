@@ -14,6 +14,7 @@ const Header: React.FC = () => {
 
   const navItems = [
     { to: "/", label: "홈" },
+    { to: "/posts", label: "컬럼" },
     { to: "/age", label: "나이" },
     { to: "/obesity", label: "비만도" },
     { to: "/food", label: "사료량" },
@@ -55,7 +56,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 모바일 가로 스크롤 메뉴바 (헤더 아래 고정) */}
         <div className="lg:hidden border-t border-gray-100 overflow-x-auto no-scrollbar scroll-smooth flex py-2 -mx-4 px-4 bg-white shadow-inner">
           <div className="flex space-x-2 whitespace-nowrap">
             {navItems.map((item) => (
@@ -72,7 +72,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 모바일 전체 메뉴 오버레이 */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'} py-4 border-t border-gray-100`}>
           <nav className="flex flex-col space-y-2">
             {navItems.map((item) => (
