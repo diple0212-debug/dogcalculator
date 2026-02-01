@@ -53,15 +53,15 @@ const ObesityCalculator: React.FC = () => {
   return (
     <>
       <PageMeta 
-        title="강아지 비만도 계산기 | 몸무게 비만 확인 및 BCS 다이어트 가이드" 
-        description="우리 강아지 몸무게가 정상일까요? 품종별 이상 체중과 비교한 비만도 계산 및 수의학적 체형 평가(BCS) 단계별 건강 관리 팁 제공." 
+        title="강아지 비만도 계산기 | BCS 체형 평가 및 비만 관리 가이드" 
+        description="강아지 몸무게 수치보다 중요한 BCS(Body Condition Score) 체크! 우리 아이 비만도를 정확히 계산하고 수의학적 다이어트 플랜을 세워보세요." 
       />
       <div className="w-full max-w-2xl mx-auto space-y-12">
         <div className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-orange-100">
           <div className="text-center mb-8">
-            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Weight Management</span>
+            <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Body Condition AI</span>
             <h1 className="text-3xl md:text-4xl font-black text-gray-800 mt-4 mb-2">강아지 비만도 계산기</h1>
-            <p className="text-gray-500 font-medium">체중 관리는 가장 저렴하고 효과적인 질병 예방법입니다.</p>
+            <p className="text-gray-500 font-medium">단순 몸무게가 아닌 '체형'이 건강의 척도입니다.</p>
           </div>
 
           <form onSubmit={calculateObesity} className="space-y-6">
@@ -108,36 +108,37 @@ const ObesityCalculator: React.FC = () => {
 
         <AdPlaceholder placement="중단" />
 
-        {/* 1,500자 이상의 SEO 전문 콘텐츠 */}
         <section className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 space-y-10">
           <div className="prose prose-blue max-w-none text-gray-600 leading-loose">
-            <h2 className="text-3xl font-black text-gray-800 border-l-8 border-blue-500 pl-4 mb-8">비만은 강아지의 수명을 2.5년 단축시킵니다</h2>
+            <h2 className="text-3xl font-black text-gray-800 border-l-8 border-blue-500 pl-4 mb-8">왜 강아지 몸무게보다 BCS(Body Condition Score)가 중요한가요?</h2>
             
-            <p>미국 오하이오 주립 대학의 연구에 따르면, 정상 체중을 유지하는 강아지는 비만인 강아지보다 평균적으로 **2.5년 더 오래 산다는 사실**이 밝혀졌습니다. 단순히 외형적인 문제가 아닙니다. 비만은 강아지에게 만성 염증 상태를 유발하며, 이는 암, 당뇨병, 고혈압 및 심각한 관절염의 직접적인 원인이 됩니다. '강아지 비만도 계산기'를 통해 아이의 상태를 파악하는 것은 집사가 할 수 있는 최고의 사랑 고백입니다.</p>
+            <p>보통 보호자들은 "우리 강아지가 5kg인데 비만인가요?"라고 묻습니다. 하지만 같은 5kg이라도 치와와에게는 고도 비만일 수 있고, 코커 스파니엘에게는 심각한 저체중일 수 있습니다. 사람에게 BMI가 있다면 강아지에게는 **BCS(Body Condition Score)**라는 수의학적 표준 지표가 있습니다. BCS는 강아지의 갈비뼈, 허리 라인, 복부 팽창 정도를 시각적·촉각적으로 평가하여 지방 함량을 판단하는 시스템입니다.</p>
 
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">1. 몸무게보다 중요한 BCS(Body Condition Score) 시스템</h3>
-            <p>사람에게 BMI(체질량지수)가 있다면, 강아지에게는 수의학 표준인 **BCS**가 있습니다. 단순히 몸무게 수치만으로는 아이의 근육량과 골격을 다 설명할 수 없기 때문입니다. BCS는 보통 1단계(기아 상태)부터 9단계(고도 비만)로 나뉩니다.</p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">1. 수의사가 사용하는 BCS 1~9단계 시스템</h3>
+            <p>세계소동물수의사회(WSAVA)에서 권장하는 BCS 시스템은 보통 1단계부터 9단계로 나뉩니다. 이 중 4~5단계가 가장 이상적인 상태입니다.</p>
             <ul className="list-disc pl-5 space-y-3">
-              <li><strong>BCS 4-5단계(이상적):</strong> 갈비뼈가 눈에 보이지는 않지만 살짝 만졌을 때 형태가 느껴지며, 위에서 보았을 때 모래시계처럼 잘록한 허리 라인이 있는 상태입니다.</li>
-              <li><strong>BCS 6-7단계(과체중):</strong> 갈비뼈 위에 지방층이 두꺼워져 만지기 어렵고, 배가 아래로 처지기 시작합니다. 이때부터 관절에 가해지는 압력이 급증합니다.</li>
-              <li><strong>BCS 8-9단계(고도 비만):</strong> 목, 등, 꼬리 기저부에 상당한 지방이 축적되어 있으며 활동량이 현저히 줄어듭니다.</li>
+              <li><strong>BCS 1-3단계 (저체중):</strong> 갈비뼈와 골반뼈가 멀리서도 뚜렷하게 보이며, 지방이 거의 없어 근육 소실이 진행 중인 위험한 상태입니다.</li>
+              <li><strong>BCS 4-5단계 (이상적):</strong> 위에서 보았을 때 허리 라인이 잘록하고, 갈비뼈를 만졌을 때 얇은 지방층 아래로 뼈가 부드럽게 느껴지는 가장 건강한 상태입니다.</li>
+              <li><strong>BCS 6-7단계 (과체중):</strong> 허리 라인이 사라지고 일자가 되며, 갈비뼈를 만지기 위해 꽤 깊게 눌러야 하는 상태입니다. 다이어트가 시급한 단계입니다.</li>
+              <li><strong>BCS 8-9단계 (고도 비만):</strong> 배가 아래로 처지고 목과 꼬리 기저부에 상당한 지방이 축적되어 있습니다. 갈비뼈를 만지는 것이 거의 불가능하며 각종 합병증 위험이 매우 높습니다.</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">2. 왜 우리 아이는 적게 먹어도 살이 찔까?</h3>
-            <p>보호자들이 가장 많이 하소연하는 부분입니다. 하지만 여기에는 과학적인 이유가 있습니다. 첫째, **중성화 수술** 이후 호르몬 변화로 기초대사량이 약 20% 감소합니다. 둘째, 노령기에 접어들면서 근육량이 줄어 에너지를 소비하는 공장이 작아졌기 때문입니다. 셋째, 우리가 무심코 주는 '한 입'의 간식이 아이에게는 치명적일 수 있습니다. 예를 들어, 5kg 소형견에게 주는 치즈 한 조각은 사람으로 치면 햄버거 반 개를 먹는 것과 맞먹는 칼로리 비중을 가집니다.</p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">2. 집에서 직접 하는 '갈비뼈 촉진법'</h3>
+            <p>가장 쉽고 정확한 자가 진단법은 손바닥을 사용하여 강아지의 옆구리를 만져보는 것입니다. 강아지가 서 있는 상태에서 양손으로 갈비뼈를 훑어보세요. 이때 손등의 뼈 느낌과 비슷하다면 정상, 손바닥의 두툼한 살 느낌이라면 비만, 손가락 마디의 뼈 느낌이라면 저체중으로 판단할 수 있습니다. 위에서 내려다봤을 때 어깨보다 허리 폭이 좁아야 건강한 몸매입니다.</p>
 
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">3. 성공적인 강아지 다이어트 3단계 전략</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">3. 비만이 반려견의 생명을 단축시키는 과학적 이유</h3>
             <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 my-8">
-              <h4 className="font-black text-gray-800 mb-4">✅ 똑똑한 집사의 다이어트 로드맵</h4>
+              <h4 className="font-black text-gray-800 mb-4">🚨 비만이 유발하는 4대 질환</h4>
               <ol className="space-y-4">
-                <li><strong>식사량 10%씩 줄이기:</strong> 갑작스러운 감량은 아이의 스트레스를 유발합니다. 일주일 단위로 조금씩 양을 조절하세요.</li>
-                <li><strong>간식을 야채로 대체:</strong> 오이, 양배추, 브로콜리 같이 칼로리는 낮고 수분과 식이섬유가 풍부한 간식으로 대체해 포만감을 주어야 합니다.</li>
-                <li><strong>저충격 운동 병행:</strong> 비만견은 이미 관절이 약해져 있습니다. 무리한 달리기보다는 평지에서의 천천히 걷기 산책이나 수영 같은 저충격 운동이 적합합니다.</li>
+                <li><strong>관절염 및 디스크:</strong> 과도한 하중은 슬개골 탈구와 척추 디스크를 악화시킵니다. 살만 빼도 통증의 50%가 감소합니다.</li>
+                <li><strong>심혈관계 질환:</strong> 심장이 펌프질해야 할 혈액량이 늘어나 심비대증과 고혈압을 유발합니다.</li>
+                <li><strong>당뇨병 및 내분비 장애:</strong> 체지방은 인슐린 저항성을 높여 췌장에 무리를 주고 당뇨병을 일으키는 주범입니다.</li>
+                <li><strong>호흡기 압박:</strong> 목 주변의 지방은 기도를 압박하여 '거위 소리' 같은 기침이나 호흡 곤란을 유발합니다.</li>
               </ol>
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">4. 비만 관리가 가져오는 놀라운 변화</h3>
-            <p>체중이 10%만 줄어도 강아지의 활동 지수는 비약적으로 상승합니다. 이전보다 더 자주 꼬리를 흔들고, 산책을 즐기며, 숨소리가 편안해집니다. 무엇보다 비만으로 인한 인슐린 저항성이 개선되어 각종 성인병 예방 효과를 거둘 수 있습니다. 지금 바로 '비만도 계산기'로 체크하고, 아이의 20세 건강을 위한 계획을 세워보세요.</p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">4. 요요 없는 다이어트를 위한 집사의 습관</h3>
+            <p>갑작스러운 사료 절식은 간 손상을 일으킬 수 있습니다. 현재 급여량에서 10%씩 서서히 줄여나가며, 칼로리는 낮고 포만감은 높은 양배추나 오이 같은 야채 간식을 활용하세요. 무엇보다 '비만도 계산기'로 매주 변화를 기록하며 우리 아이의 건강한 20살을 위해 노력하는 자세가 중요합니다.</p>
           </div>
         </section>
 

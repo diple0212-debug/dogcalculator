@@ -68,12 +68,14 @@ const Home: React.FC = () => {
         <p className="text-gray-500 text-lg font-medium">데이터와 AI로 시작하는 스마트한 반려생활</p>
       </section>
 
+      {/* 메인 대시보드 카드 섹션 - 모든 카드를 Link(<a> 태그)로 구현 */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 px-4">
         {tools.map((tool) => (
           <Link 
             key={tool.to}
             to={tool.to}
             className={`group p-5 md:p-8 rounded-[2rem] border-2 ${tool.border} bg-white hover:shadow-xl transition-all active:scale-95 flex flex-col items-center text-center`}
+            aria-label={`${tool.title} 바로가기`}
           >
             <div className={`w-14 h-14 md:w-20 md:h-20 ${tool.color} rounded-2xl flex items-center justify-center text-3xl md:text-5xl mb-4 group-hover:rotate-6 transition-transform`}>
               {tool.icon}
