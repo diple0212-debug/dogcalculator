@@ -5,6 +5,110 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '4': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"집사라면 반드시 알아야 할 응급 지식 1순위, 초콜릿 섭취 대응 가이드입니다."</p>
+      <p>강아지에게 초콜릿이 위험하다는 사실은 잘 알려져 있지만, 왜 위험한지, 얼마나 먹었을 때 문제가 되는지 정확히 아는 보호자는 많지 않습니다. 초콜릿 섭취는 강아지에게 급성 독성 반응을 일으킬 수 있는 긴급 상황입니다. 오늘 '똑똑한 집사'에서는 초콜릿 속 독성 성분의 정체와 치사량, 그리고 응급 대처법까지 수의학적 관점에서 심도 있게 분석해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 테오브로민(Theobromine): 강아지에게 독약이 되는 이유</h2>
+      <p>초콜릿의 주성분인 카카오에는 **'테오브로민'**이라는 메틸잔틴계 성분이 들어있습니다. 사람은 이 성분을 빠르게 대사하여 배출할 수 있지만, 강아지는 대사 속도가 매우 느립니다. 강아지 몸속에 남아 있는 테오브로민은 중추신경계를 자극하고, 심박수를 위험 수준까지 높이며, 근육 수축을 유발합니다. 이는 단순한 배탈을 넘어 발작, 혼수상태, 심지어 심장마비로 이어질 수 있는 무서운 독성 물질입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 초콜릿 종류별 위험도와 치사량</h2>
+      <p>모든 초콜릿이 같은 위험도를 가진 것은 아닙니다. 카카오 함량이 높을수록 위험합니다.</p>
+      <ul className="list-disc pl-5 space-y-3">
+        <li><strong>화이트 초콜릿:</strong> 테오브로민 함량이 낮아 상대적으로 덜 위험하지만, 높은 유지방으로 인한 췌장염 위험이 있습니다.</li>
+        <li><strong>밀크 초콜릿:</strong> 소형견(5kg 미만)이 초콜릿 바 하나를 다 먹었다면 즉시 병원에 가야 하는 수준입니다.</li>
+        <li><strong>다크 초콜릿 / 베이킹용 카카오:</strong> 가장 위험합니다. 단 몇 조각만으로도 강아지의 생명을 위협할 수 있습니다.</li>
+      </ul>
+      <div className="bg-red-50 p-6 rounded-3xl border-l-4 border-red-400 shadow-sm">
+        <h4 className="font-bold text-red-800 mb-2">⚠️ 긴급 수치 가이드</h4>
+        <p className="text-sm m-0 leading-relaxed text-red-900">강아지 몸무게 1kg당 테오브로민 20mg 이상 섭취 시 독성 증상이 나타나기 시작하며, 100mg 이상은 치명적입니다. 하지만 개체마다 민감도가 다르므로 '조금 먹었으니 괜찮겠지'라는 생각은 금물입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 반드시 체크해야 할 주요 중독 증상</h2>
+      <p>초콜릿을 먹은 직후에는 아무렇지 않아 보일 수 있습니다. 증상은 보통 섭취 후 2~12시간 이내에 나타납니다.</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>과도한 흥분과 안절부절못함</li>
+        <li>잦은 배뇨와 극심한 갈증</li>
+        <li>구토 및 설사</li>
+        <li>빠른 심박수와 헐떡임</li>
+        <li>몸 떨림이나 경련, 발작</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 응급 대처 골든타임 가이드</h2>
+      <p>가장 중요한 것은 **집에서 억지로 구토를 유발하지 않는 것**입니다. 잘못된 구토 유발(과산화수소 사용 등)은 식도 화상이나 흡인성 폐렴을 일으켜 상황을 더 악화시킬 수 있습니다.</p>
+      <ol className="list-decimal pl-5 space-y-4">
+        <li><strong>즉시 증거 수집:</strong> 아이가 먹은 초콜릿의 포장지를 챙기세요. 카카오 함량과 섭취량을 파악하는 것이 치료의 핵심입니다.</li>
+        <li><strong>섭취 시간 확인:</strong> 언제 먹었는지 정확한 시간을 기록하세요.</li>
+        <li><strong>동물병원 연락:</strong> 이동 중에도 병원에 전화를 걸어 상황을 알리세요. 미리 준비된 병원은 아이가 도착하자마자 신속하게 위 세척이나 활성탄 투여를 진행할 수 있습니다.</li>
+      </ol>
+      <p className="mt-6">사랑하는 아이의 생명은 보호자의 침착한 대응에 달려 있습니다. 평소에 24시 응급 동물병원의 위치를 파악해두고, 초콜릿은 반드시 강아지 발이 닿지 않는 높은 곳이나 서랍 안에 보관하는 습관을 들여주세요.</p>
+    </div>
+  ),
+  '5': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리 강아지가 뒷다리를 들고 걸어요. 슬개골 탈구일까요?"</p>
+      <p>포메라니안, 말티즈, 푸들 등 소형견 보호자들의 가장 큰 고민 중 하나가 바로 슬개골 탈구입니다. 국내 반려견 주거 환경의 90% 이상이 미끄러운 마룻바닥인 탓에 소형견의 슬개골 탈구 발생률은 매우 높습니다. 방치하면 퇴행성 관절염으로 이어져 걷지 못하게 될 수도 있는 슬개골 탈구, 어떻게 관리해야 할까요?</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 슬개골 탈구란 무엇인가?</h2>
+      <p>슬개골은 무릎 관절을 보호하는 작은 조개 모양의 뼈입니다. 정상적인 상태라면 대퇴골 앞쪽의 깊은 홈(활차구)에 위치하여 무릎을 굽히고 펼 때 부드럽게 움직여야 합니다. 하지만 유전적 원인이나 외상으로 인해 이 뼈가 옆으로 빠져나가는 현상을 '탈구'라고 합니다. 안쪽으로 빠지면 내측 탈구(소형견 다수), 바깥쪽으로 빠지면 외측 탈구(대형견 다수)로 구분합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 탈구의 4단계 진단 기준</h2>
+      <ul className="list-disc pl-5 space-y-4">
+        <li><strong>1단계:</strong> 평소엔 제자리에 있으나 손으로 밀면 빠지는 상태. 통증은 거의 없으나 예방 관리가 필요합니다.</li>
+        <li><strong>2단계:</strong> 활동 중에 가끔 빠졌다가 스스로 돌아오는 상태. '깽깽이 발' 증상이 나타나기 시작합니다.</li>
+        <li><strong>3단계:</strong> 항상 빠져 있으며 인위적으로 밀어 넣어야 들어가는 상태. 뼈가 이미 변형되어 통증과 염증이 동반됩니다.</li>
+        <li><strong>4단계:</strong> 항상 빠져 있고 인위적으로도 들어가지 않는 상태. 다리를 굽히고 다니며 근육 위축이 심각합니다.</li>
+      </ul>
+
+      <div className="bg-green-50 p-6 rounded-3xl border-l-4 border-green-400 shadow-sm text-gray-700">
+        <h4 className="font-bold text-green-800 mb-2">🏠 집사라면 반드시 지켜야 할 '슬개골 홈 케어'</h4>
+        <ul className="text-sm m-0 space-y-2">
+          <li>- <strong>매트 설치:</strong> 미끄러운 바닥은 관절의 적입니다. 미끄럼 방지 매트는 선택이 아닌 필수입니다.</li>
+          <li>- <strong>발바닥 털 관리:</strong> 발바닥 패드 사이의 털이 길면 제동력이 떨어져 관절에 무리가 갑니다. 수시로 이발해 주세요.</li>
+          <li>- <strong>점프 금지:</strong> 소파나 침대에 강아지 전용 계단(스텝)을 설치하여 충격을 줄여주세요.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 수술은 언제 해야 할까?</h2>
+      <p>모든 탈구가 수술을 필요로 하지는 않습니다. 하지만 2단계 후반에서 3단계 초입, 혹은 통증이 빈번하게 나타난다면 수술을 고려해야 합니다. 수술 시기를 너무 늦추면 뼈의 변형이 심해져 재발률이 높아지고 회복 속도가 느려집니다. 수의사와 정밀 상담을 통해 아이의 보행 상태, 근육량, 염증 정도를 종합적으로 판단해야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 관절 영양제와 근력 강화</h2>
+      <p>글루코사민, 콘드로이친, MSM, 초록입홍합 성분은 연골을 보호하고 염증을 완화하는 데 도움을 줍니다. 또한, 적절한 산책(평지 걷기)과 수영은 관절 주변 근육을 강화하여 슬개골이 빠지지 않도록 지탱해주는 힘을 길러줍니다. 과체중은 관절에 치명적이므로 항상 '비만도 계산기'를 활용해 적정 체중을 유지해 주세요.</p>
+    </div>
+  ),
+  '6': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"함께한 지 엊그제 같은데 어느덧 하얘진 주둥이... 노령견 케어의 핵심입니다."</p>
+      <p>강아지의 시간은 인간보다 빠르게 흐릅니다. 보통 7~8세가 되면 시니어 단계로 접어들며, 신체 기능이 서서히 저하됩니다. 하지만 노화는 질병이 아니라 삶의 한 과정입니다. 보호자가 아이의 변화를 미리 알고 세심하게 관리해준다면 노령견도 충분히 건강하고 활기찬 노후를 보낼 수 있습니다. 오늘 '똑똑한 집사'가 시니어견 보호자를 위한 심층 케어법을 전해드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 우리 아이도 혹시 치매? 인지기능장애(CCD) 이해하기</h2>
+      <p>강아지도 인간처럼 치매를 앓습니다. 밤에 잠을 자지 않고 서성거리거나, 벽을 보고 멍하니 서 있고, 평소 잘 가리던 배변 실수를 한다면 단순한 노화가 아닌 CCD(Cognitive Dysfunction Syndrome)일 수 있습니다. 이를 예방하기 위해선 노년기에도 꾸준한 두뇌 자극이 필요합니다. 쉬운 노즈워크 장난감이나 새로운 산책 코스는 뇌세포 활성화에 큰 도움을 줍니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 감각의 퇴화와 환경의 변화</h2>
+      <p>나이가 들면 시력(백내장 등)과 청력이 약해집니다. 이때 보호자가 주의해야 할 점은 다음과 같습니다.</p>
+      <ul className="list-disc pl-5 space-y-3">
+        <li><strong>가구 배치 유지:</strong> 눈이 잘 안 보이는 아이들은 집안 구조를 외워서 움직입니다. 갑작스러운 가구 배치는 사고를 유발할 수 있습니다.</li>
+        <li><strong>촉각적인 신호:</strong> 소리가 안 들리는 아이에게는 바닥을 쳐서 진동을 주거나, 손짓으로 신호를 보내는 등 새로운 소통 방식을 만들어주세요.</li>
+        <li><strong>낙상 방지:</strong> 근력이 약해져 작은 단차에도 다칠 수 있으니 집안의 턱을 없애거나 경사로를 설치해 주세요.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 노령견 식단: 양보다 질, 소화력이 우선</h2>
+      <div className="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 shadow-sm">
+        <h4 className="font-black text-indigo-800 mb-4">🍽️ 시니어견 식사 가이드</h4>
+        <p className="text-sm text-indigo-900 leading-relaxed">
+          - <strong>고품질 단백질:</strong> 근감소를 막기 위해 흡수율이 높은 양질의 단백질이 필요합니다.<br/>
+          - <strong>낮은 칼로리:</strong> 활동량이 줄어들므로 비만을 막기 위해 칼로리는 낮춰야 합니다.<br/>
+          - <strong>수분 섭취:</strong> 신장 기능 저하 예방을 위해 습식 사료를 병행하거나 음수량을 늘려주세요.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 정기검진은 '반년에 한 번'</h2>
+      <p>노령견에게 6개월은 사람의 3~4년과 같습니다. 1년에 한 번 하던 건강검진을 6개월 단위로 늘려주세요. 특히 신장, 간, 심장 수치를 정밀하게 체크하고 초음파 검사를 통해 내장 기관의 종양 유무를 확인하는 것이 중요합니다. 일찍 발견된 질병은 관리만 잘하면 아이의 수명을 획기적으로 늘릴 수 있습니다.</p>
+
+      <p className="text-gray-600 italic">"강아지에게 최고의 보약은 집사의 따뜻한 눈맞춤과 부드러운 손길입니다. 조금 느려진 아이의 발걸음에 맞춰 걷는 여유를 가져보세요. 당신과 함께하는 모든 순간이 아이에게는 생애 최고의 시간입니다."</p>
+    </div>
+  ),
   '1': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"보호자를 바라보며 환하게 웃는 우리 강아지, 그 속마음은 어떨까요?"</p>

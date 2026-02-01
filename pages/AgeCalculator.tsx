@@ -65,14 +65,14 @@ const AgeCalculator: React.FC = () => {
     <>
       <PageMeta 
         title="강아지 나이 계산기 | 사람 나이 환산 및 견종별 건강 관리 가이드" 
-        description="우리 강아지 나이, 사람으로 치면 몇 살일까요? 소형견, 중형견, 대형견별 정확한 나이 환산법과 노령견 증상 및 수명 연장 관리 팁을 제공합니다." 
+        description="우리 강아지 나이, 사람으로 치면 몇 살일까요? 최신 수의학 데이터를 기반으로 한 소형, 중형, 대형견별 나이 환산 도구와 노화 방지 팁." 
       />
       <div className="w-full max-w-2xl mx-auto space-y-12">
         <div className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-orange-100">
           <div className="text-center mb-8">
             <span className="bg-orange-100 text-orange-600 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Life Cycle AI</span>
             <h1 className="text-3xl md:text-4xl font-black text-gray-800 mt-4 mb-2">강아지 나이 계산기</h1>
-            <p className="text-gray-500 font-medium">우리 아이의 생애 주기를 정확히 진단해 보세요.</p>
+            <p className="text-gray-500 font-medium">정확한 생애 주기를 아는 것이 건강 관리의 시작입니다.</p>
           </div>
 
           <form onSubmit={calculateAge} className="space-y-6">
@@ -85,7 +85,7 @@ const AgeCalculator: React.FC = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700 ml-1">현재 나이 (만 나이)</label>
-                <input type="number" value={dogAge} onChange={(e) => setDogAge(e.target.value)} placeholder="숫자만 입력 (예: 3)" className="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-orange-400 rounded-2xl outline-none transition-all" />
+                <input type="number" value={dogAge} onChange={(e) => setDogAge(e.target.value)} placeholder="숫자만 입력 (예: 5)" className="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-orange-400 rounded-2xl outline-none transition-all" />
               </div>
             </div>
             <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-5 rounded-2xl shadow-lg transition-all text-xl active:scale-[0.98]">
@@ -105,10 +105,10 @@ const AgeCalculator: React.FC = () => {
                 <div className="bg-white/80 p-5 rounded-2xl text-left border border-orange-100">
                    <h4 className="font-black text-gray-800 mb-2">🏡 집사의 건강 가이드</h4>
                    <p className="text-sm text-gray-600 leading-relaxed">
-                     {lifeStage.includes('퍼피') ? "성장이 매우 빠른 시기입니다. 뼈와 근육 형성을 위해 고단백 퍼피용 사료를 급여하고 기초 예방접종을 완료해 주세요." :
-                      lifeStage.includes('청년기') ? "가장 에너지가 넘치는 황금기입니다. 충분한 산책과 놀이로 스트레스를 풀어주고, 치아 관리를 시작해야 하는 시기입니다." :
-                      lifeStage.includes('장년기') ? "신진대사가 조금씩 느려지기 시작합니다. 과도한 체중 증가를 경계하고 1년에 한 번 건강검진을 추천합니다." :
-                      "노령기에 접어들었습니다. 소화력이 떨어질 수 있으니 사료를 불려주거나 고품질 단백질 위주로 급여하고 관절 보호에 힘써주세요."}
+                     {lifeStage.includes('퍼피') ? "성장이 가장 빠른 시기입니다. 뼈와 근육 형성을 위해 고단백 사료를 급여하고, 사회화 교육에 신경 써주세요." :
+                      lifeStage.includes('청년기') ? "에너지가 넘치는 시기입니다. 충분한 운동량 확보와 함께 영구치가 모두 난 상태이므로 치아 관리에 집중하세요." :
+                      lifeStage.includes('장년기') ? "조금씩 신진대사가 느려집니다. 과체중이 되지 않도록 식사량을 조절하고 정기적인 건강검진이 필수입니다." :
+                      "시니어 단계입니다. 소화가 편한 부드러운 사료와 관절 영양제를 추천하며, 시력과 청력의 변화를 세심히 관찰해 주세요."}
                    </p>
                 </div>
               </div>
@@ -116,53 +116,41 @@ const AgeCalculator: React.FC = () => {
           )}
         </div>
 
-        {/* 관련 서비스 링크 유도 섹션 */}
-        <section className="bg-gray-50 p-6 rounded-3xl border border-gray-100">
-          <h3 className="font-black text-gray-800 mb-4 text-center">다른 보호자들이 많이 이용한 기능</h3>
-          <div className="grid grid-cols-2 gap-4">
-            <Link to="/obesity" className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 hover:bg-orange-50 transition-colors">
-              <span className="text-2xl">⚖️</span>
-              <span className="font-bold text-sm">비만도 체크</span>
-            </Link>
-            <Link to="/food" className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-2 hover:bg-orange-50 transition-colors">
-              <span className="text-2xl">🥣</span>
-              <span className="font-bold text-sm">사료량 계산</span>
-            </Link>
-          </div>
-        </section>
-
         <AdPlaceholder placement="중단" />
 
-        <section className="space-y-12">
-          <article className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-black text-gray-800 mb-6 border-l-4 border-orange-500 pl-4">강아지 나이 계산, 견종 크기가 핵심인 이유</h2>
-            <div className="prose prose-orange text-gray-600 leading-loose space-y-5">
-              <p>강아지의 1년을 사람의 7년으로 단순히 곱하는 '7의 법칙'은 현대 수의학에서 더 이상 사용되지 않습니다. 최신 연구에 따르면 강아지는 종의 크기에 따라 노화 메커니즘이 완전히 다르게 작동하기 때문입니다.</p>
-              
-              <h3 className="text-xl font-bold text-gray-800 mt-8 mb-4">크기별 노화 곡선의 차이</h3>
-              <ul className="list-disc pl-5 space-y-3">
-                <li><strong>소형견:</strong> 초기 성장이 빠르지만, 성견이 된 이후 세포 노화 속도가 중/대형견에 비해 현저히 낮습니다. 평균 15세 이상의 수명을 가집니다.</li>
-                <li><strong>중형견:</strong> 소형견보다 완만한 노화 곡선을 그리며, 10세 이후부터 노화 관련 질병이 나타나기 시작합니다.</li>
-                <li><strong>대형견:</strong> 성견이 되는 시점은 가장 늦지만, 5~6세부터 세포 노화가 가속화됩니다. 신체 크기가 클수록 심혈관계와 관절에 가해지는 부담이 크기 때문입니다.</li>
-              </ul>
+        {/* 1,500자 이상의 SEO 전문 콘텐츠 */}
+        <section className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 space-y-10">
+          <div className="prose prose-orange max-w-none text-gray-600 leading-loose">
+            <h2 className="text-3xl font-black text-gray-800 border-l-8 border-orange-500 pl-4 mb-8">강아지 나이 계산, 왜 '7의 법칙'은 틀렸을까?</h2>
+            
+            <p>오랫동안 많은 보호자들이 강아지의 1년을 사람의 7년으로 계산해 왔습니다. 하지만 최신 수의학 연구, 특히 **캘리포니아 대학(UCSD)**의 연구진들이 발표한 '후성유전학적 시계(Epigenetic Clock)' 연구에 따르면, 강아지의 노화 속도는 인간의 직선적인 노화와는 완전히 다른 양상을 보입니다. 강아지는 태어난 후 첫 1~2년 동안 인간보다 훨씬 빠르게 노화하며, 이후에는 그 속도가 완만하게 줄어드는 '로그 함수' 곡선을 그리게 됩니다.</p>
 
-              <h2 className="text-2xl font-black text-gray-800 mt-10 mb-6">노령견 보호자가 주의해야 할 3가지 증상</h2>
-              <div className="space-y-6">
-                <div className="p-5 bg-gray-50 rounded-2xl">
-                  <h4 className="font-bold text-gray-800 mb-1">1. 갑작스러운 활동량 감소와 수면 증가</h4>
-                  <p className="text-sm">단순히 '나이가 들어서'라고 생각하기 쉽지만, 관절 통증이나 심장 기능 저하의 신호일 수 있습니다. 아이가 산책을 거부하거나 평소보다 잠이 너무 많아졌다면 정밀 검진이 필요합니다.</p>
-                </div>
-                <div className="p-5 bg-gray-50 rounded-2xl">
-                  <h4 className="font-bold text-gray-800 mb-1">2. 인지 기능 장애 (강아지 치매)</h4>
-                  <p className="text-sm">밤에 이유 없이 짖거나, 구석진 곳에서 나오지 못하고, 배변 실수가 잦아지는 증상이 나타납니다. 노즈워크와 가벼운 산책으로 뇌 자극을 지속해주는 것이 예방의 핵심입니다.</p>
-                </div>
-                <div className="p-5 bg-gray-50 rounded-2xl">
-                  <h4 className="font-bold text-gray-800 mb-1">3. 식이 및 음수량 변화</h4>
-                  <p className="text-sm">물을 너무 많이 마시거나 소변량이 급증하는 것은 당뇨나 신장 질환의 전조 증상입니다. 체중 변화를 정기적으로 기록하는 습관이 중요합니다.</p>
-                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">1. 견종 크기별 노화의 차이: 소형견 vs 대형견</h3>
+            <p>강아지 나이 계산기에서 가장 중요한 변수는 바로 **'성견 시의 몸무게'**입니다. 소형견은 보통 10~15kg 미만의 견종을 의미하며, 이들은 대형견에 비해 초기 성장은 매우 빠르지만 성견이 된 이후 세포 노화 속도가 현저히 느립니다. 말티즈나 치와와 같은 소형견이 15~20년까지 사는 반면, 골든 리트리버나 그레이트 데인 같은 대형견은 8~12년 정도의 상대적으로 짧은 수명을 가지는 이유가 여기에 있습니다. 대형견은 신체가 크기 때문에 심혈관계와 관절에 가해지는 물리적 부담이 크며, 이는 세포 분열 속도를 높여 암 발생률을 높이는 결과로 이어집니다.</p>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">2. 생애 주기별 필수 체크리스트</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+              <div className="bg-orange-50 p-6 rounded-2xl">
+                <h4 className="font-black text-orange-600 mb-2">퍼피(Puppy) 단계</h4>
+                <p className="text-sm">사람 나이로 치면 유아기에서 청소년기입니다. 이때 형성된 식습관과 사회성이 평생을 좌우합니다. 고품질의 성장기 전용 사료와 5차 예방접종까지의 철저한 스케줄 관리가 필요합니다.</p>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-2xl">
+                <h4 className="font-black text-blue-600 mb-2">시니어(Senior) 단계</h4>
+                <p className="text-sm">보통 사람 나이 50대 이후에 해당합니다. 육안으로는 건강해 보여도 장기 내부의 기능은 저하되기 시작합니다. 특히 신장 수치와 간 수치를 정기적으로 확인하고, 인지 기능 장애(CCD) 예방을 위한 노즈워크 활동을 추천합니다.</p>
               </div>
             </div>
-          </article>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">3. 노화 방지와 수명 연장을 위한 3대 핵심 습관</h3>
+            <p>우리가 강아지 나이를 사람 나이로 환산해보는 이유는 결국 **'어떻게 하면 더 오랫동안 건강하게 함께 살 수 있을까?'**에 대한 답을 얻기 위해서입니다. 수명 연장을 위한 수의학적 권장 사항은 다음과 같습니다.</p>
+            <ul className="list-disc pl-5 space-y-4">
+              <li><strong>치주 질환 예방:</strong> 강아지의 잇몸 염증은 혈류를 타고 심장과 신장으로 박테리아를 옮깁니다. 매일 칫솔질을 하는 강아지는 그렇지 않은 강아지보다 평균 2년 더 오래 산다는 연구 결과가 있습니다.</li>
+              <li><strong>체중 관리:</strong> 비만은 만병의 근원입니다. 특히 슬개골 탈구가 잦은 소형견이나 고관절 이형성증이 있는 대형견에게 과체중은 삶의 질을 직접적으로 떨어뜨리는 치명적인 요인입니다.</li>
+              <li><strong>정기적인 건강검진:</strong> 강아지는 아픈 것을 숨기는 본능이 있습니다. 육안으로 증상이 나타났을 때는 이미 병세가 깊은 경우가 많습니다. 7세 이후부터는 1년에 최소 한 번 정밀 검진을 권장합니다.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">4. 당신의 사랑이 아이의 시간표를 바꿉니다</h3>
+            <p>강아지의 시간은 인간보다 5~7배 빠르게 흐릅니다. 오늘 우리가 함께한 1시간이 강아지에게는 6시간과 같은 소중한 의미일 수 있습니다. '강아지 나이 계산기' 결과를 확인하셨다면, 오늘 우리 아이가 인생의 어느 지점을 지나고 있는지 이해하고 그에 맞는 깊은 애정과 배려를 선물해 주세요. 똑똑한 집사가 당신의 건강한 반려 생활을 응원합니다.</p>
+          </div>
         </section>
 
         <AdPlaceholder placement="하단" />
