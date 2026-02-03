@@ -55,7 +55,7 @@ const About: React.FC = () => {
             </div>
             
             <div className="pt-8 border-t border-gray-100 flex flex-col items-center gap-4 text-center">
-              <p className="text-gray-400 text-sm">운영 및 제휴 문의: <span className="text-orange-500 font-bold">support@dogcalculator.co.kr</span></p>
+              <p className="text-gray-400 text-sm">운영 및 제휴 문의: <span className="text-orange-500 font-bold">dogcalculatorsite@gmail.com</span></p>
               <div className="flex gap-4">
                 <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-400">Ver 1.2.0</span>
                 <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-400">Since 2024</span>
