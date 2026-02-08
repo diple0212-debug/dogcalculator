@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
@@ -255,6 +255,68 @@ const POST_CONTENTS: Record<string, React.ReactNode> = {
 const PostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const post = POSTS_DATA.find(p => p.id === id);
+
+  useEffect(() => {
+    if (post) {
+      // 1. 브라우저 타이틀 설정
+      document.title = `${post.title} | 똑똑한 집사 건강 칼럼`;
+      
+      // 2. 메타 설명 태그 업데이트
+      const descriptionMeta = document.querySelector('meta[name="description"]');
+      if (descriptionMeta) descriptionMeta.setAttribute('content', post.excerpt);
+
+      // 3. Open Graph 태그 업데이트 (소셜 공유용)
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', post.title);
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', post.excerpt);
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+
+      // 4. 구조화 데이터(JSON-LD) 삽입 (구글 검색 최적화)
+      const scriptId = 'post-structured-data';
+      let script = document.getElementById(scriptId) as HTMLScriptElement;
+      if (!script) {
+        script = document.createElement('script');
+        script.id = scriptId;
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+      
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt,
+        "author": {
+          "@type": "Organization",
+          "name": "똑똑한 집사"
+        },
+        "datePublished": post.date.replace(/\./g, '-'),
+        "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000",
+        "publisher": {
+          "@type": "Organization",
+          "name": "똑똑한 집사",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dogcalculator.co.kr/favicon.ico"
+          }
+        }
+      };
+      script.text = JSON.stringify(structuredData);
+
+      // 5. Canonical Link 설정
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', window.location.href);
+    }
+  }, [post]);
 
   if (!post) {
     return (
