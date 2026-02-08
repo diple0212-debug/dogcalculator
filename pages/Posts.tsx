@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '7',
+    title: '2026년 반려동물 트렌드: AI와 함께하는 펫 테크와 헬스케어 혁명',
+    excerpt: '반려동물을 가족처럼 여기는 "펫 휴머니제이션"을 넘어, 이제는 AI가 24시간 아이들의 건강을 지키는 시대입니다. 2026년에 펼쳐질 놀라운 변화들을 미리 만나보세요.',
+    date: '2024.05.28',
+    category: '트렌드/IT',
+    icon: '🚀',
+    color: 'bg-purple-50'
+  },
+  {
     id: '4',
     title: '강아지가 초콜릿을 먹었어요! 치사량과 골든타임 응급처치',
     excerpt: '초콜릿 속 테오브로민 성분이 강아지에게 왜 치명적일까요? 먹은 즉시 해야 할 행동과 병원 방문 전 체크리스트를 정리했습니다.',
