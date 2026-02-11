@@ -5,6 +5,102 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '9': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리가 맛있게 먹는 음식이 우리 아이에게는 치명적인 독약이 될 수 있습니다."</p>
+      <p>반려견은 가족과 같습니다. 그래서 맛있는 것을 먹을 때 옆에서 초롱초롱한 눈망울로 쳐다보면 마음이 약해져 '한 입 정도는 괜찮겠지'라며 음식을 나눠주곤 합니다. 하지만 강아지의 신체 구조와 신진대사 능력은 사람과 근본적으로 다릅니다. 사람이 즐겨 먹는 식재료 중 상당수가 강아지에게는 급성 신부전, 용혈성 빈혈, 심부전 등을 유발하며 생명을 위협할 수 있습니다. 2026년 최신 수의학 정보를 바탕으로 보호자가 반드시 숙지해야 할 **강아지 금기 음식 10가지**를 심도 있게 분석해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 초콜릿 (Chocolate)</h2>
+      <p>초콜릿은 가장 잘 알려진 위험 음식이지만, 그 위험성은 여전히 높습니다. 카카오에 함유된 **테오브로민(Theobromine)** 성분 때문입니다. 강아지는 테오브로민을 분해하는 속도가 매우 느려 체내에 축적되면 중추신경계를 자극하고 심장 박동을 급격히 높입니다. 카카오 함량이 높은 다크 초콜릿일수록 위험하며, 섭취 시 구토, 과호흡, 경련, 심장마비를 일으킬 수 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 자일리톨 (Xylitol)</h2>
+      <p>껌, 사탕, 무설탕 구운 과자에 들어가는 자일리톨은 강아지에게 초콜릿보다 더 위험할 수 있습니다. 강아지가 자일리톨을 먹으면 인슐린이 과다 분비되어 혈당이 급격히 떨어지는 **저혈당 쇼크**가 발생합니다. 소량으로도 30분 이내에 증상이 나타나며, 간 부전을 일으켜 며칠 내에 사망에 이르게 할 수 있는 무서운 성분입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 포도와 건포도 (Grape & Raisin)</h2>
+      <p>포도가 강아지에게 왜 독성이 있는지에 대해서는 아직 명확한 원인 물질이 밝혀지지 않았습니다. 하지만 단 한 알의 포도 섭취만으로도 **급성 신부전**을 일으켜 생명이 위태로워지는 사례가 보고되고 있습니다. 껍질, 씨앗뿐만 아니라 말린 건포도 역시 독성이 농축되어 있어 매우 위험합니다. 섭취 후 소변량이 줄어들거나 구토를 한다면 즉시 병원을 가야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 양파, 마늘, 파 (Allium Family)</h2>
+      <p>한국 음식에 필수적으로 들어가는 이 식재료들은 강아지의 적혈구를 파괴하는 성분을 포함하고 있습니다. 이는 **용혈성 빈혈**을 유발하여 산소 공급을 차단합니다. 생것뿐만 아니라 익힌 것, 가루 형태도 위험하며, 소변 색이 붉게 변하거나 무기력증을 보인다면 빈혈을 의심해야 합니다. 짜장면이나 고기 요리에 섞인 양파 조각 하나도 소형견에게는 치명적입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 카페인 (Caffeine)</h2>
+      <p>커피, 차, 에너지 음료의 카페인은 초콜릿 중독과 유사한 증상을 보입니다. 강아지의 심박수를 높이고 신경계를 과도하게 흥분시켜 혈압 상승과 부정맥을 유발합니다. 컵 바닥에 남은 커피 한 모금도 작은 강아지에게는 위험한 자극이 될 수 있습니다.</p>
+
+      <div className="bg-red-50 p-6 rounded-3xl border-l-4 border-red-400 shadow-sm text-gray-700 my-6">
+        <h4 className="font-bold text-red-800 mb-2">🚨 실수로 금기 음식을 먹었을 때 응급 대처법</h4>
+        <ul className="text-sm m-0 space-y-2">
+          <li>- <strong>억지로 구토 금지:</strong> 부식성 물질이나 날카로운 것이 섞인 경우 식도에 상처를 낼 수 있습니다.</li>
+          <li>- <strong>섭취물 확인:</strong> 무엇을, 언제, 얼마나 먹었는지 정확히 파악하여 병원에 알리세요.</li>
+          <li>- <strong>즉시 동물병원 방문:</strong> '지켜보자'는 생각은 골든타임을 놓치게 합니다. 24시 응급 병원으로 달려가세요.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 마카다미아 (Macadamia Nuts)</h2>
+      <p>마카다미아는 강아지에게 독특한 중독 증상을 보입니다. 뒷다리의 무력감, 몸 떨림, 고열, 구토 등을 유발합니다. 정확한 메커니즘은 밝혀지지 않았지만 신경계에 직접적인 악영향을 미치며, 보통 섭취 후 12시간 이내에 증상이 나타납니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">7. 알코올 (Alcohol)</h2>
+      <p>강아지의 간은 알코올을 해독할 수 없습니다. 아주 적은 양의 술로도 알코올 중독을 일으켜 구토, 호흡 곤란, 혼수상태, 심지어 사망에 이를 수 있습니다. 특히 맥주에 들어가는 홉(Hop) 성분도 강아지에게 독성이 있으니 절대 주의해야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">8. 익힌 뼈 (Cooked Bones)</h2>
+      <p>생뼈와 달리 익힌 뼈는 부러질 때 단면이 매우 날카로운 바늘처럼 변합니다. 이는 강아지의 식도나 위, 장벽을 찔러 **천공**을 일으키거나 장폐색의 원인이 됩니다. 치킨 뼈를 쓰레기통에서 꺼내 먹지 않도록 뚜껑이 있는 쓰레기통을 사용하는 것이 좋습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">9. 아보카도 (Avocado)</h2>
+      <p>아보카도의 잎, 씨앗, 껍질에는 '퍼신(Persin)'이라는 독성 성분이 있습니다. 강아지에게는 심각한 설사와 구토를 유발할 수 있으며, 특히 커다란 씨앗은 삼킬 경우 질식하거나 장을 막는 치명적인 사고로 이어집니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">10. 소금과 설탕이 과한 가공식품</h2>
+      <p>사람이 먹는 햄, 과자 등은 강아지에게 과도한 염분과 당분을 공급합니다. 강아지는 땀으로 염분을 배출할 수 없어 신장에 큰 무리를 주며 전해질 불균형을 일으킵니다. 또한 높은 칼로리는 비만과 당뇨의 주범이 되어 수명을 단축시킵니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">결론: 예방이 가장 훌륭한 사랑입니다</h3>
+      <p>강아지는 본능적으로 음식을 탐색합니다. 하지만 그 판단은 보호자의 몫입니다. "이건 괜찮겠지"라는 안일한 생각이 아이의 건강을 해칠 수 있음을 기억하세요. 가장 안전한 것은 강아지 전용 사료와 간식입니다. 똑똑한 집사의 건강 가이드와 함께 우리 아이의 식단을 철저히 관리하여 20살까지 건강하게 함께하시길 응원합니다.</p>
+    </div>
+  ),
+  '8': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리가 맛있게 먹는 음식이 아이에게는 치명적인 독이 될 수 있습니다."</p>
+      <p>강아지는 사람과 함께 살아온 지 수만 년이 지났지만, 신체 구조와 대사 능력은 여전히 인간과 크게 다릅니다. 사람이 먹어도 무해하거나 오히려 건강에 좋은 음식이 강아지에게는 급성 신부전, 용혈성 빈혈, 심지어 사망에 이르게 할 수 있는 '독극물'이 될 수 있습니다. 2026년 현재까지 보고된 수의학 임상 데이터를 바탕으로, 집사가 반드시 기억해야 할 금기 음식 10가지를 정리했습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 포도와 건포도 (Grape & Raisin)</h2>
+      <p>포도는 강아지에게 가장 위험한 과일 중 하나입니다. 아직 정확한 독성 성분이 무엇인지 완벽히 규명되지 않았음에도 불구하고, 단 한 알의 포도 섭취만으로도 급성 신부전을 일으켜 사망에 이르는 사례가 빈번합니다. 특히 말린 건포도는 독성 농도가 훨씬 높습니다. 섭취 후 구토, 무기력증, 소변량 감소 등의 증상이 보이면 즉시 병원으로 달려가야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 양파, 마늘, 파 종류 (Allium Family)</h2>
+      <p>양파와 마늘에 포함된 '티오황산염' 성분은 강아지의 적혈구를 파괴하여 용혈성 빈혈을 유발합니다. 생것뿐만 아니라 익힌 것, 가루 형태(마늘 분말 등)도 모두 위험합니다. 한국 음식에는 양파와 마늘이 들어가는 경우가 많으므로 사람이 먹는 찌개나 고기 요리를 나누어 주는 것은 매우 위험합니다. 소변 색이 붉거나 짙은 갈색으로 변한다면 적혈구 파괴 신호입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 초콜릿 (Chocolate)</h2>
+      <p>초콜릿의 카카오 성분에 들어있는 '테오브로민'은 강아지의 심박수를 급격히 높이고 중추 신경계를 마비시킵니다. 카카오 함량이 높은 다크 초콜릿일수록 치명적입니다. 흥분, 헐떡임, 몸 떨림, 발작 등의 증상을 보이며 심할 경우 심장마비를 일으킵니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 자일리톨 (Xylitol)</h2>
+      <p>최근 무설탕 껌이나 사탕, 일부 구운 과자에 들어가는 자일리톨은 강아지에게 설탕보다 무섭습니다. 강아지가 자일리톨을 섭취하면 인슐린이 과다 분비되어 혈당이 급격히 떨어지는 저혈당 쇼크가 발생합니다. 또한 간부전을 일으킬 수 있어 소량으로도 생명이 위태로워질 수 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 마카다미아 (Macadamia Nuts)</h2>
+      <p>마카다미아를 먹은 강아지는 뒷다리의 무력감, 마비, 구토, 고열 증상을 보입니다. 섭취 후 12시간 이내에 증상이 나타나며, 신경계에 직접적인 악영향을 미칩니다. 다른 견과류도 높은 지방 함량으로 췌장염을 유발할 수 있으므로 주의가 필요합니다.</p>
+
+      <div className="bg-red-50 p-6 rounded-3xl border-l-4 border-red-400 shadow-sm text-gray-700">
+        <h4 className="font-bold text-red-800 mb-2">🚨 실수로 먹었을 때의 응급 대처법</h4>
+        <p className="text-sm m-0 leading-relaxed">
+          - <strong>억지로 구토 금지:</strong> 부식성 물질이나 날카로운 것이 섞여 있을 경우 식도에 상처를 낼 수 있습니다.<br/>
+          - <strong>섭취 시간과 양 파악:</strong> 수의사가 정확한 처방을 내릴 수 있도록 언제, 얼마나 먹었는지 기록하세요.<br/>
+          - <strong>즉시 동물병원 방문:</strong> '지켜보기'보다는 전문가의 판단을 받는 것이 골든타임을 지키는 유일한 방법입니다.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 알코올 (Alcohol)</h2>
+      <p>강아지의 간과 신장은 알코올을 해독할 능력이 거의 없습니다. 아주 적은 양의 술로도 알코올 중독 증상을 보이며, 혼수상태나 호흡 곤란을 일으킵니다. 특히 맥주에 들어있는 홉(Hop) 성분도 독성이 있으니 절대 주의해야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">7. 카페인 (Caffeine)</h2>
+      <p>커피, 차, 에너지 음료에 들어있는 카페인은 초콜릿 중독과 비슷한 증상을 일으킵니다. 카페인은 강아지에게 강한 흥분제로 작용하여 고혈압과 부정맥을 유발합니다. 컵 바닥에 남은 커피 한 모금도 작은 강아지에게는 위험할 수 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">8. 익힌 뼈 (Cooked Bones)</h2>
+      <p>익힌 뼈, 특히 닭 뼈는 부러질 때 단면이 날카로운 바늘처럼 변합니다. 이는 강아지의 식도나 위, 장벽을 찔러 천공을 일으키거나 장폐색의 원인이 됩니다. 뼈는 오직 생뼈(Raw bone) 상태로만 급여하되 전문가의 지도를 따라야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">9. 아보카도 (Avocado)</h2>
+      <p>아보카도의 '퍼신(Persin)' 성분은 강아지에게 구토와 설사를 유발할 수 있습니다. 특히 씨앗은 크기가 커서 삼킬 경우 질식이나 장폐색을 일으키는 주범이 됩니다. 과육 자체도 지방 함량이 너무 높아 췌장염 위험이 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">10. 소금과 설탕이 과한 가공식품</h2>
+      <p>강아지는 사람보다 염분 배출 능력이 현저히 낮습니다. 과도한 소금 섭취는 전해질 불균형을 일으키고 신장에 무리를 줍니다. 설탕 또한 비만과 당뇨의 직접적인 원인이 되며, 특히 가공식품에 들어가는 인공 감미료들은 강아지 대사 체계를 망가뜨립니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">결론: 예방이 최고의 치료입니다</h3>
+      <p>강아지에게 가장 안전한 음식은 검증된 사료와 강아지 전용 간식입니다. "한 번 줬는데 괜찮던데?"라는 안일한 생각이 아이의 수명을 갉아먹을 수 있습니다. 똑똑한 집사의 건강 가이드를 통해 우리 아이의 식단을 철저히 관리하고, 조금이라도 이상 징후가 보인다면 지체 없이 수의사와 상담하시기 바랍니다. 당신의 세심한 주의가 반려견의 20살을 만듭니다.</p>
+    </div>
+  ),
   '7': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"2026년, 이제 강아지의 짖음은 소음이 아니라 데이터가 됩니다."</p>
@@ -175,7 +271,7 @@ const POST_CONTENTS: Record<string, React.ReactNode> = {
 
       <div className="bg-blue-50 p-6 rounded-3xl border-l-4 border-blue-400 shadow-sm text-gray-700">
         <h4 className="font-bold text-blue-800 mb-2">💡 수의사가 추천하는 '45도 법칙'</h4>
-        <p className="text-sm m-0 leading-relaxed">칫솔을 잇몸 라인에 45도 각도로 대고 원을 그리듯 부드럽게 닦아주세요. 강아지는 이빨 안쪽보다 바깥쪽(볼 쪽)에 치석이 훨씬 많이 생깁니다. 입을 억지로 벌리지 말고 입술만 살짝 들어 올려 송곳니와 어금니 바깥쪽 면을 집중적으로 공략하세요.</p>
+        <p className="text-sm m-0 leading-relaxed">칫솔을 잇몸 라인에 45도 각도로 대고 원을 그리듯 부드럽게 닦어주세요. 강아지는 이빨 안쪽보다 바깥쪽(볼 쪽)에 치석이 훨씬 많이 생깁니다. 입을 억지로 벌리지 말고 입술만 살짝 들어 올려 송곳니와 어금니 바깥쪽 면을 집중적으로 공략하세요.</p>
       </div>
 
       <h2 className="text-2xl font-black text-gray-800">3. 2단계: 실전! 3분 양치 루틴</h2>
@@ -258,24 +354,17 @@ const PostDetail: React.FC = () => {
 
   useEffect(() => {
     if (post) {
-      // 1. 브라우저 타이틀 설정
       document.title = `${post.title} | 똑똑한 집사 건강 칼럼`;
-      
-      // 2. 메타 설명 태그 업데이트
       const descriptionMeta = document.querySelector('meta[name="description"]');
       if (descriptionMeta) descriptionMeta.setAttribute('content', post.excerpt);
 
-      // 3. Open Graph 태그 업데이트 (소셜 공유용)
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', post.title);
-      
       const ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', post.excerpt);
-
       const ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) ogUrl.setAttribute('content', window.location.href);
 
-      // 4. 구조화 데이터(JSON-LD) 삽입 (구글 검색 최적화)
       const scriptId = 'post-structured-data';
       let script = document.getElementById(scriptId) as HTMLScriptElement;
       if (!script) {
@@ -307,7 +396,6 @@ const PostDetail: React.FC = () => {
       };
       script.text = JSON.stringify(structuredData);
 
-      // 5. Canonical Link 설정
       let canonical = document.querySelector('link[rel="canonical"]');
       if (!canonical) {
         canonical = document.createElement('link');

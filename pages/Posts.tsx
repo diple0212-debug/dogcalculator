@@ -5,6 +5,24 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '9',
+    title: '강아지가 절대 먹으면 안 되는 치명적인 음식 10가지 (2026년 업데이트)',
+    excerpt: '무심코 준 간식 한 입이 반려견의 생명을 위협할 수 있습니다. 수의학적 근거로 정리한 반드시 피해야 할 금기 음식 완벽 가이드.',
+    date: '2026.02.11',
+    category: '영양/안전',
+    icon: '🚫',
+    color: 'bg-red-50'
+  },
+  {
+    id: '8',
+    title: '강아지가 먹으면 안 되는 음식 10가지 (상세 분석)',
+    excerpt: '반려견의 건강을 위해 집사가 꼭 알아야 할 금기 음식 리스트와 응급처치 방법.',
+    date: '2026.02.08',
+    category: '응급처치/영양',
+    icon: '🍖',
+    color: 'bg-orange-50'
+  },
+  {
     id: '7',
     title: '2026년 반려동물 트렌드: AI와 함께하는 펫 테크와 헬스케어 혁명',
     excerpt: '반려동물을 가족처럼 여기는 "펫 휴머니제이션"을 넘어, 이제는 AI가 24시간 아이들의 건강을 지키는 시대입니다. 2026년에 펼쳐질 놀라운 변화들을 미리 만나보세요.',
@@ -72,7 +90,6 @@ export const POSTS_DATA = [
 const Posts: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // 검색 로직: 제목, 요약, 카테고리에서 키워드 포함 여부 확인
   const filteredPosts = useMemo(() => {
     const term = searchTerm.toLowerCase().trim();
     if (!term) return POSTS_DATA;
@@ -91,7 +108,6 @@ const Posts: React.FC = () => {
         <p className="text-gray-500 text-lg font-medium">반려견 전문가들이 전하는 생생한 지식과 팁</p>
       </div>
 
-      {/* 검색 바 영역 */}
       <div className="relative max-w-lg mx-auto mb-12">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +116,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 슬개골, 초콜릿)"
+          placeholder="궁금한 키워드를 검색해보세요 (예: 금기음식, 슬개골)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
