@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '10',
+    title: '노령견 건강 관리 필수 체크리스트: 우리 아이의 시계를 천천히 돌리는 법 (2026)',
+    excerpt: '어느덧 하얘진 입 주변, 느려진 걸음걸이... 노화는 질병이 아니라 과정입니다. 7세 이후 시니어견을 위한 수의학적 7단계 케어 가이드.',
+    date: '2026.02.12',
+    category: '시니어케어',
+    icon: '👴🐕',
+    color: 'bg-indigo-50'
+  },
+  {
     id: '9',
     title: '강아지가 절대 먹으면 안 되는 치명적인 음식 10가지 (2026년 업데이트)',
     excerpt: '무심코 준 간식 한 입이 반려견의 생명을 위협할 수 있습니다. 수의학적 근거로 정리한 반드시 피해야 할 금기 음식 완벽 가이드.',
@@ -116,7 +125,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 금기음식, 슬개골)"
+          placeholder="궁금한 키워드를 검색해보세요 (예: 노령견, 금기음식)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
