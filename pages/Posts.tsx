@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '11',
+    title: '강아지 눈물 자국 원인과 지우는 법: 2026년 집사들의 필독 건강 관리 가이드',
+    excerpt: '말티즈, 비숑 집사들의 최대 고민 눈물 자국! 단순한 미용 문제가 아닌 건강 신호일 수 있습니다. 과학적 원인 분석부터 식단 개선까지.',
+    date: '2026.02.13',
+    category: '건강관리/위생',
+    icon: '💧🐕',
+    color: 'bg-blue-50'
+  },
+  {
     id: '10',
     title: '노령견 건강 관리 필수 체크리스트: 우리 아이의 시계를 천천히 돌리는 법 (2026)',
     excerpt: '어느덧 하얘진 입 주변, 느려진 걸음걸이... 노화는 질병이 아니라 과정입니다. 7세 이후 시니어견을 위한 수의학적 7단계 케어 가이드.',
@@ -125,7 +134,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 노령견, 금기음식)"
+          placeholder="궁금한 키워드를 검색해보세요 (예: 눈물자국, 사료)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
