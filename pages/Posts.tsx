@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '12',
+    title: '강아지 영양제 추천 및 고르는 법: 2026년 수의학 전문가가 제안하는 필수 성분 가이드',
+    excerpt: '관절, 피부, 장 건강... 영양제 홍수 시대에 내 아이에게 꼭 필요한 것만 고르는 혜안. 실패 없는 선택을 위한 3대 핵심 기준을 공개합니다.',
+    date: '2026.02.14',
+    category: '영양/건강',
+    icon: '💊🐕',
+    color: 'bg-emerald-50'
+  },
+  {
     id: '11',
     title: '강아지 눈물 자국 원인과 지우는 법: 2026년 집사들의 필독 건강 관리 가이드',
     excerpt: '말티즈, 비숑 집사들의 최대 고민 눈물 자국! 단순한 미용 문제가 아닌 건강 신호일 수 있습니다. 과학적 원인 분석부터 식단 개선까지.',
@@ -134,7 +143,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 눈물자국, 사료)"
+          placeholder="궁금한 키워드를 검색해보세요 (예: 영양제, 관절)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
