@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '14',
+    title: '강아지 귀 염증 관리와 올바른 귀 청소법: 원인부터 주기까지 완벽 가이드',
+    excerpt: '자꾸 귀를 털고 긁는 우리 아이, 혹시 외이염일까요? 강아지 귀 구조의 비밀부터 전문가가 알려주는 안전한 귀 청소 기술까지 정리했습니다.',
+    date: '2026.02.17',
+    category: '건강관리/위생',
+    icon: '👂🐕',
+    color: 'bg-amber-50'
+  },
+  {
     id: '13',
     title: '강아지 구토 색깔별 원인과 응급처치: 색깔만 봐도 건강이 보인다 (2026)',
     excerpt: '노란토, 하얀토, 피토... 강아지 구토 색깔에 담긴 위험 신호들. 집에서 지켜봐도 되는 경우와 즉시 병원에 달려가야 할 골든타임을 구분해 드립니다.',
@@ -152,7 +161,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 구토, 노란토)"
+          placeholder="궁금한 키워드를 검색해보세요 (예: 귀염증, 귓병)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
