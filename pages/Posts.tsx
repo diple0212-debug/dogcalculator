@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '16',
+    title: '강아지 혈변 시 의심해 봐야 할 상황: 선홍색 변부터 흑변까지 완벽 가이드',
+    excerpt: '갑작스러운 강아지의 피똥, 당황하지 마세요. 변의 색깔과 형태에 담긴 몸속 이상 신호와 즉시 병원에 달려가야 할 응급 상황을 정리했습니다.',
+    date: '2026.02.19',
+    category: '응급처치/질병',
+    icon: '🩸🐕',
+    color: 'bg-red-50'
+  },
+  {
     id: '15',
     title: '건식 사료 vs 습식 사료 완벽 비교: 우리 아이에게 딱 맞는 선택 가이드',
     excerpt: '사료 결정 장애는 이제 그만! 건식의 편리함과 습식의 영양 사이에서 고민하는 집사님들을 위해 수의학적 관점의 장단점과 혼합 급여 비법을 공개합니다.',
@@ -48,15 +57,6 @@ export const POSTS_DATA = [
     category: '건강관리/위생',
     icon: '💧🐕',
     color: 'bg-blue-50'
-  },
-  {
-    id: '10',
-    title: '노령견 건강 관리 필수 체크리스트: 우리 아이의 시계를 천천히 돌리는 법 (2026)',
-    excerpt: '어느덧 하얘진 입 주변, 느려진 걸음걸이... 노화는 질병이 아니라 과정입니다. 7세 이후 시니어견을 위한 수의학적 7단계 케어 가이드.',
-    date: '2026.02.12',
-    category: '시니어케어',
-    icon: '👴🐕',
-    color: 'bg-indigo-50'
   }
 ];
 
@@ -89,7 +89,7 @@ const Posts: React.FC = () => {
         </div>
         <input
           type="text"
-          placeholder="궁금한 키워드를 검색해보세요 (예: 사료, 영양)"
+          placeholder="궁금한 증상을 검색하세요 (예: 혈변, 구토)"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
@@ -130,7 +130,7 @@ const Posts: React.FC = () => {
             onClick={() => setSearchTerm('')}
             className="mt-6 text-orange-500 font-bold underline"
           >
-            검색어 초기화하기
+             전체 글 보기
           </button>
         </div>
       )}
