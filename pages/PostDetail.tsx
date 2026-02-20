@@ -63,7 +63,135 @@ const POST_CONTENTS: Record<string, React.ReactNode> = {
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"건강을 생각하면 습식인데, 치아와 편의성을 생각하면 건식... 도대체 어떤 사료가 우리 아이에게 최고일까요?"</p>
       <p>강아지 사료 선택의 영원한 숙제인 건식과 습식의 차이를 수의학적 관점에서 분석했습니다. 편리함의 건식과 영양/기호성의 습식 사이에서 고민하는 보호자들을 위한 최적의 가이드입니다.</p>
-      {/* ... (기존 15번 상세 내용 생략) ... */}
+      <h2 className="text-2xl font-black text-gray-800">1. 건식 사료의 장단점</h2>
+      <p>건식 사료는 보관이 쉽고 경제적이며, 알갱이를 씹는 과정에서 치석 제거에 도움을 줄 수 있습니다. 하지만 수분 함량이 낮아 음수량이 부족한 아이들에게는 결석 등의 위험이 있을 수 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">2. 습식 사료의 장단점</h2>
+      <p>습식 사료는 기호성이 매우 높고 수분 함량이 70~80%에 달해 음수량 확보에 유리합니다. 하지만 가격이 비싸고 개봉 후 부패가 빠르며 치석이 생기기 쉽다는 단점이 있습니다.</p>
+    </div>
+  ),
+  '14': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지가 자꾸 귀를 긁거나 머리를 흔든다면? 귀 안쪽을 확인해 봐야 할 때입니다."</p>
+      <p>강아지의 귀는 'L'자 구조로 되어 있어 통풍이 어렵고 습기가 차기 쉽습니다. 특히 귀가 덮여 있는 견종들은 외이염에 매우 취약합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 올바른 귀 청소 방법</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>전용 세정제를 귀 안에 적당량 넣습니다.</li>
+        <li>귀 뿌리 부분을 부드럽게 마사지하여 귀지를 녹입니다.</li>
+        <li>강아지가 머리를 흔들어 세정제를 털어내게 합니다.</li>
+        <li>겉으로 나온 이물질만 부드러운 솜으로 닦아냅니다. 면봉 사용은 절대 금물입니다!</li>
+      </ul>
+    </div>
+  ),
+  '13': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 구토, 색깔만 잘 봐도 응급 상황인지 아닌지 알 수 있습니다."</p>
+      <p>구토는 강아지에게 흔한 증상이지만, 그 색깔과 횟수에 따라 단순 과식일 수도, 생명을 위협하는 질병일 수도 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 구토 색깔별 의미</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>노란색:</strong> 공복 토인 경우가 많습니다. 식사 간격을 조절해 보세요.</li>
+        <li><strong>하얀색(거품):</strong> 위산 과다나 기관지 문제일 수 있습니다.</li>
+        <li><strong>초록색:</strong> 담즙이 섞인 것으로, 췌장염이나 이물질 섭취를 의심해야 합니다.</li>
+        <li><strong>붉은색/갈색:</strong> 위장 출혈의 신호입니다. 즉시 병원을 방문하세요.</li>
+      </ul>
+    </div>
+  ),
+  '12': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"영양제, 많이 먹인다고 좋은 게 아닙니다. 우리 아이에게 지금 꼭 필요한 것만 골라주세요."</p>
+      <p>나이와 건강 상태에 따라 필요한 영양 성분은 다릅니다. 과잉 섭취는 오히려 장기에 부담을 줄 수 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 생애 주기별 추천 영양제</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>성장기:</strong> 면역력 강화를 위한 유산균과 오메가3</li>
+        <li><strong>성견기:</strong> 활동량에 따른 관절 영양제와 항산화제</li>
+        <li><strong>노령기:</strong> 심장, 신장 기능 보조제와 인지 기능 개선 영양제</li>
+      </ul>
+    </div>
+  ),
+  '11': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"눈 밑의 붉은 자국, 단순한 미용 문제가 아니라 건강의 적신호일 수 있습니다."</p>
+      <p>눈물 속의 '포르피린' 성분이 공기와 만나 산화되면서 붉은 자국을 남깁니다. 이는 알레르기나 눈 구조의 문제 때문일 수 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 눈물 자국 관리법</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>식단 개선:</strong> 알레르기를 유발하는 간식이나 사료를 중단해 보세요.</li>
+        <li><strong>청결 유지:</strong> 눈물을 자주 닦아주고 눈 주변 털을 정리해 줍니다.</li>
+        <li><strong>음수 관리:</strong> 깨끗한 물을 충분히 마시게 하여 노폐물 배출을 돕습니다.</li>
+      </ul>
+    </div>
+  ),
+  '10': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"뒷다리를 절뚝거리거나 토끼처럼 두 발로 뛰나요? 소형견 집사라면 절대 간과해서는 안 될 신호입니다."</p>
+      <p>슬개골 탈구는 국내 반려견의 상당수를 차지하는 소형견들에게 가장 흔한 관절 질환 중 하나입니다. 유전적인 요인이 크지만, 평소 생활 습관과 환경 개선만으로도 진행 속도를 늦추거나 예방할 수 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 슬개골 탈구란 무엇인가요?</h2>
+      <p>무릎 관절 위에 있는 작은 뼈인 슬개골이 원래 있어야 할 활차구 고랑에서 벗어나는 상태를 말합니다. 1기부터 4기까지 나뉘며, 기수가 높아질수록 통증과 보행 장애가 심해집니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">2. 집에서 할 수 있는 예방법</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>미끄럼 방지 매트:</strong> 거실과 복도에 매트를 깔아 관절에 가해지는 충격을 줄여주세요.</li>
+        <li><strong>발바닥 털 관리:</strong> 발바닥 털이 길면 쉽게 미끄러집니다. 주기적으로 정리해 주세요.</li>
+        <li><strong>계단 설치:</strong> 침대나 소파를 오르내릴 때 점프하지 않도록 전용 계단을 설치하세요.</li>
+        <li><strong>체중 조절:</strong> 과체중은 관절에 가장 큰 적입니다. 적정 체중을 유지해 주세요.</li>
+      </ul>
+    </div>
+  ),
+  '9': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지는 사람보다 체온이 높고 땀샘이 적어 열에 매우 취약합니다. 여름철 산책은 생명과 직결될 수 있습니다."</p>
+      <p>여름철 한낮의 기온은 강아지에게 치명적입니다. 특히 지면과 가까운 강아지들은 아스팔트의 열기를 온몸으로 받게 됩니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 열사병 의심 증상</h2>
+      <p>과도한 헐떡임, 끈적한 침, 붉은 잇몸, 구토, 기력 저하 등이 나타난다면 즉시 산책을 중단하고 시원한 곳으로 이동해야 합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">2. 안전한 여름 산책 팁</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>낮 12시~오후 4시 사이의 산책은 피하세요.</li>
+        <li>손등을 아스팔트에 5초간 대보았을 때 뜨겁다면 산책하지 마세요.</li>
+        <li>항상 신선한 물을 지참하고 자주 급여하세요.</li>
+      </ul>
+    </div>
+  ),
+  '8': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"양치질만 잘해도 강아지의 수명이 2~3년 연장된다는 사실, 알고 계셨나요?"</p>
+      <p>치주 질환은 단순히 입 냄새의 원인이 아니라, 세균이 혈관을 타고 들어가 심장이나 신장에 문제를 일으킬 수 있는 무서운 질병입니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 양치질과 친해지는 단계</h2>
+      <ol className="list-decimal pl-5 space-y-2">
+        <li>맛있는 치약을 손가락에 묻혀 핥아먹게 합니다.</li>
+        <li>입 주변과 잇몸을 만지는 것에 익숙해지게 합니다.</li>
+        <li>거즈나 손가락 칫솔로 가볍게 문지릅니다.</li>
+        <li>본격적으로 칫솔을 사용하여 어금니 안쪽까지 닦아줍니다.</li>
+      </ol>
+      <p>각 단계마다 충분한 칭찬과 보상을 잊지 마세요!</p>
+    </div>
+  ),
+  '7': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"대용량 사료가 경제적이지만, 마지막 한 알까지 신선하게 먹이고 계신가요?"</p>
+      <p>사료는 공기와 접촉하는 순간부터 산화가 시작됩니다. 산패된 사료는 영양소가 파괴될 뿐만 아니라 강아지의 건강에 해로울 수 있습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 올바른 보관 원칙</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>밀폐 용기 사용:</strong> 공기와의 접촉을 최소화하는 진공 용기나 밀폐 용기가 좋습니다.</li>
+        <li><strong>서늘한 곳 보관:</strong> 직사광선과 습기가 없는 곳에 보관하세요.</li>
+        <li><strong>소분 보관:</strong> 일주일 분량씩 나누어 담아두면 사료 전체가 공기에 노출되는 횟수를 줄일 수 있습니다.</li>
+      </ul>
+    </div>
+  ),
+  '6': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지가 발을 계속 핥는다면 '맛있어서'가 아니라 '아파서'일 확률이 높습니다."</p>
+      <p>발바닥 습진은 많은 강아지들이 겪는 만성 질환입니다. 축축한 상태가 유지되면 세균과 곰팡이가 번식하기 쉬운 환경이 됩니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 습진 예방의 핵심: 건조</h2>
+      <p>산책 후 발을 닦아준 뒤에는 반드시 드라이기(찬바람)를 이용해 발가락 사이사이까지 완벽하게 말려주어야 합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">2. 넥카라 활용</h2>
+      <p>이미 염증이 생겼다면 핥지 못하게 하는 것이 가장 중요합니다. 핥을수록 침 속의 세균 때문에 증상이 악화됩니다.</p>
+    </div>
+  ),
+  '5': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"사회화는 '친구 만들기'가 아니라 '세상 적응하기'입니다."</p>
+      <p>생후 3개월에서 4개월 사이가 사회화의 골든타임입니다. 이 시기에 겪는 긍정적인 경험이 강아지의 평생 성격을 결정합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 다양한 자극 노출</h2>
+      <p>다른 강아지뿐만 아니라 낯선 사람, 자동차 소리, 우산 펴는 소리, 다양한 바닥 재질(잔디, 흙, 아스팔트) 등을 경험하게 해주세요.</p>
+      <h2 className="text-2xl font-black text-gray-800">2. 무리하지 않기</h2>
+      <p>강아지가 무서워한다면 억지로 다가가게 하지 마세요. 멀리서 지켜보는 것부터 시작하여 천천히 거리를 좁혀가는 것이 중요합니다.</p>
     </div>
   )
 };
