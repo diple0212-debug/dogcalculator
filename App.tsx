@@ -13,6 +13,7 @@ import About from './pages/About.tsx';
 import Terms from './pages/Terms.tsx';
 import Privacy from './pages/Privacy.tsx';
 import HealthAdvisor from './pages/HealthAdvisor.tsx';
+import DreamInterpreter from './pages/DreamInterpreter.tsx';
 import Posts from './pages/Posts.tsx';
 import PostDetail from './pages/PostDetail.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/food" element={<FoodCalculator />} />
           <Route path="/anxiety-test" element={<AnxietyTest />} />
           <Route path="/dog-mbti" element={<DogMBTI />} />
+          <Route path="/dream" element={<DreamInterpreter />} />
           <Route path="/health-advisor" element={<HealthAdvisor />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<PostDetail />} />
