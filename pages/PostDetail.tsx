@@ -5,6 +5,79 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '17': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 입 냄새가 심해졌다면? 그것은 단순한 냄새가 아니라 우리 아이의 건강이 보내는 위험 신호일 수 있습니다."</p>
+      
+      <p>반려견의 구강 건강은 단순히 깨끗한 치아를 유지하는 미용적인 문제를 넘어, 전체적인 수명과 직결되는 매우 중요한 요소입니다. 연구에 따르면 3세 이상의 강아지 중 약 80%가 치주 질환을 앓고 있다고 합니다. 하지만 많은 보호자님들이 양치질의 어려움 때문에 이를 방치하곤 하죠. 오늘 '똑똑한 집사'에서는 <strong>강아지 치석의 위험성부터 거부감 없는 단계별 양치질 교육법</strong>까지, 1500자 이상의 상세한 가이드를 통해 완벽하게 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 치석, 왜 그렇게 위험할까요?</h2>
+      <p>강아지의 입안에 남은 음식물 찌꺼기와 세균이 결합하면 '플라그(치태)'가 형성됩니다. 이 플라그가 침 속의 미네랄과 만나 딱딱하게 굳어지면 우리가 흔히 아는 '치석'이 됩니다. 치석은 그 자체로도 문제지만, 더 큰 위험은 치석이 잇몸 안쪽으로 파고들면서 발생하는 '치주염'입니다.</p>
+      <div className="bg-orange-50 p-6 rounded-3xl border border-orange-100 space-y-4 my-6">
+        <p><strong>● 전신 질환의 시작점:</strong> 잇몸의 염증을 통해 침투한 세균은 혈관을 타고 온몸을 돌아다닙니다. 이는 심장 판막 질환, 신부전, 간 질환 등 치명적인 전신 질환의 원인이 됩니다.</p>
+        <p><strong>● 극심한 통증과 식욕 부진:</strong> 강아지는 통증을 잘 숨기는 동물이지만, 치통은 매우 고통스럽습니다. 사료를 씹지 못하거나 한쪽으로만 씹는 행동, 입 주변을 만지는 것을 극도로 싫어하는 행동은 모두 치통의 신호입니다.</p>
+        <p><strong>● 턱뼈 손상:</strong> 심한 치주염은 치아를 지탱하는 치조골을 녹여 턱뼈 골절로 이어지기도 합니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 실패 없는 단계별 양치질 교육법 (2주 완성 플랜)</h2>
+      <p>처음부터 칫솔을 입에 넣으려 하면 강아지는 평생 양치질을 싫어하게 될 수 있습니다. '양치질 = 즐거운 시간'이라는 인식을 심어주는 것이 핵심입니다.</p>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">1단계: 입 주변 터치에 익숙해지기 (1~3일)</h4>
+            <p className="text-gray-600">간식을 주면서 입 주변과 잇몸을 가볍게 만져줍니다. 강아지가 거부감을 보이지 않을 때까지 반복하며, 만질 때마다 칭찬과 보상을 듬뿍 해줍니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">2단계: 치약 맛 보여주기 (4~6일)</h4>
+            <p className="text-gray-600">강아지 전용 치약은 대개 닭고기나 소고기 맛이 납니다. 손가락에 치약을 묻혀 강아지가 핥아먹게 하세요. 치약이 '맛있는 간식'이라는 인식을 심어주는 과정입니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">3단계: 손가락 칫솔로 문지르기 (7~10일)</h4>
+            <p className="text-gray-600">손가락에 거즈를 감거나 실리콘 손가락 칫솔을 끼우고 치약을 묻혀 앞니부터 살살 문질러줍니다. 어금니까지 범위를 조금씩 넓혀가며, 짧은 시간(10~20초)부터 시작하세요.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">4단계: 본격적인 칫솔 사용 (11일 이후)</h4>
+            <p className="text-gray-600">강아지용 칫솔을 사용하여 45도 각도로 잇몸 경계선을 닦아줍니다. 가장 중요한 곳은 치석이 잘 생기는 윗송곳니와 어금니 바깥쪽입니다. 안쪽 면은 혀가 닿아 비교적 깨끗하므로 바깥쪽 위주로 관리해도 충분합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 집사가 꼭 알아야 할 구강 관리 꿀팁</h2>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>사람 치약은 절대 금지:</strong> 사람 치약에는 불소와 자일리톨이 들어있어 강아지에게 독이 됩니다. 반드시 강아지 전용 제품을 사용하세요.</li>
+        <li><strong>매일 하는 것이 가장 좋습니다:</strong> 플라그가 치석으로 변하는 데는 단 48시간이 걸립니다. 적어도 이틀에 한 번, 가급적 매일 밤 자기 전에 닦아주는 습관을 들이세요.</li>
+        <li><strong>보조 제품 활용:</strong> 양치질을 너무 싫어한다면 바르는 치약, 물에 타 먹는 세정제, 치석 제거 껌 등을 병행하세요. 하지만 이는 보조 수단일 뿐, 직접적인 양치질을 대체할 수는 없습니다.</li>
+        <li><strong>정기적인 스케일링:</strong> 이미 딱딱하게 굳은 치석은 양치질로 제거되지 않습니다. 1년에 한 번 정기 검진을 통해 필요시 전문가의 스케일링을 받는 것이 좋습니다.</li>
+      </ul>
+
+      <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 my-10">
+        <h3 className="text-xl font-black text-blue-800 mb-4">💡 전문가의 한마디</h3>
+        <p className="text-blue-900 leading-relaxed">
+          "양치질 교육에서 가장 중요한 것은 보호자의 인내심입니다. 강아지가 싫어하면 즉시 멈추고 다음 기회를 노리세요. 억지로 하면 공포심만 커집니다. 아주 작은 부분이라도 닦았다면 폭풍 칭찬과 함께 가장 좋아하는 간식으로 보상해 주세요. 양치질이 끝나면 좋은 일이 생긴다는 것을 알게 되면, 나중에는 칫솔만 들어도 꼬리를 흔들며 달려오게 될 것입니다."
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 치석 제거 껌과 장난감의 효과</h2>
+      <p>양치질 외에도 구강 관리에 도움을 주는 도구들이 있습니다. 덴탈 껌은 씹는 과정에서 치아 표면을 마찰시켜 플라그를 제거하는 데 도움을 줍니다. 또한, 거친 질감의 로프 장난감이나 고무 장난감을 씹는 행위도 자연스러운 치석 예방 효과가 있습니다. 단, 너무 딱딱한 뼈나 돌 같은 장난감은 치아 파절(부러짐)을 유발할 수 있으니 주의해야 합니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 건강한 미소로 오래오래 함께하세요</h3>
+      <p>강아지의 구강 관리는 단순히 입 냄새를 없애는 것이 아니라, 사랑하는 아이와 더 건강하게 오래 함께하기 위한 약속입니다. 오늘부터라도 손가락에 치약을 묻혀 맛을 보여주는 것부터 시작해 보는 건 어떨까요? 똑똑한 집사는 여러분의 반려견이 건강한 치아로 맛있는 음식을 마음껏 즐길 수 있도록 항상 응원하겠습니다.</p>
+    </div>
+  ),
   '16': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"평소와 다름없이 배변판을 치우려는데 붉은 피가 섞여 있다면? 보호자에게 이보다 가슴 철렁한 순간은 없을 것입니다."</p>
@@ -192,6 +265,53 @@ const POST_CONTENTS: Record<string, React.ReactNode> = {
       <p>다른 강아지뿐만 아니라 낯선 사람, 자동차 소리, 우산 펴는 소리, 다양한 바닥 재질(잔디, 흙, 아스팔트) 등을 경험하게 해주세요.</p>
       <h2 className="text-2xl font-black text-gray-800">2. 무리하지 않기</h2>
       <p>강아지가 무서워한다면 억지로 다가가게 하지 마세요. 멀리서 지켜보는 것부터 시작하여 천천히 거리를 좁혀가는 것이 중요합니다.</p>
+    </div>
+  ),
+  '4': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"중성화 수술, 우리 아이를 위한 최선의 선택일까요?"</p>
+      <p>중성화 수술은 반려견의 생식기 관련 질병을 예방하고, 원치 않는 번식을 막는 가장 확실한 방법입니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 수술의 장점</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>암컷: 자궁축농증, 유선종양 예방</li>
+        <li>수컷: 전립선 질환, 고환암 예방 및 마킹/마운팅 감소</li>
+      </ul>
+      <h2 className="text-2xl font-black text-gray-800">2. 적절한 시기</h2>
+      <p>보통 생후 6~10개월 사이를 권장하지만, 견종과 건강 상태에 따라 차이가 있을 수 있으므로 수의사와 충분한 상담이 필요합니다.</p>
+    </div>
+  ),
+  '3': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"산책할 때마다 끌려다니시나요? 리드줄 교육으로 편안한 산책을 시작하세요."</p>
+      <p>강아지가 줄을 당기는 이유는 호기심 때문이기도 하지만, 당기면 앞으로 나갈 수 있다는 학습 때문이기도 합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 교육의 핵심</h2>
+      <p>줄이 팽팽해지면 즉시 멈추세요. 강아지가 줄을 늦추고 보호자를 쳐다볼 때 간식과 칭찬으로 보상하세요. '당기면 멈추고, 늦추면 간다'는 원칙을 일관되게 적용해야 합니다.</p>
+    </div>
+  ),
+  '2': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리에겐 보약이지만 강아지에겐 독약이 될 수 있습니다."</p>
+      <p>사람이 먹는 음식 중에는 강아지의 체내에서 분해되지 못하거나 치명적인 중독을 일으키는 성분이 포함된 경우가 많습니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 절대 금지 음식</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>초콜릿:</strong> 테오브로민 성분이 심장과 신경계에 치명적입니다.</li>
+        <li><strong>포도/건포도:</strong> 급성 신부전을 유발할 수 있습니다.</li>
+        <li><strong>양파/마늘:</strong> 적혈구를 파괴하여 빈혈을 일으킵니다.</li>
+        <li><strong>자일리톨:</strong> 급격한 저혈당과 간 손상을 유발합니다.</li>
+      </ul>
+    </div>
+  ),
+  '1': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 입양, 15년 이상의 책임을 약속하는 일입니다."</p>
+      <p>귀여운 모습에 이끌려 충동적으로 입양하기보다는, 자신의 라이프스타일과 경제적 여건을 냉정하게 따져봐야 합니다.</p>
+      <h2 className="text-2xl font-black text-gray-800">1. 입양 전 자가 진단</h2>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>매일 최소 1시간 이상 산책시킬 여유가 있는가?</li>
+        <li>매달 사료, 간식, 병원비 등 고정 지출을 감당할 수 있는가?</li>
+        <li>가족 모두가 입양에 동의하는가?</li>
+        <li>털 날림이나 짖음 문제를 인내할 수 있는가?</li>
+      </ul>
     </div>
   )
 };

@@ -1,9 +1,18 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
+  {
+    id: '17',
+    title: '강아지 치석 제거와 양치질 교육: 완벽한 구강 관리 가이드',
+    excerpt: '강아지 수명을 결정하는 구강 건강! 치석이 쌓이면 단순한 입 냄새를 넘어 전신 질환으로 이어질 수 있습니다. 단계별 양치 교육법과 치석 관리 비법을 공개합니다.',
+    date: '2026.02.20',
+    category: '건강관리/위생',
+    icon: '🦷🐕',
+    color: 'bg-cyan-50'
+  },
   {
     id: '16',
     title: '강아지 혈변 시 의심해 봐야 할 상황: 선홍색 변부터 흑변까지 완벽 가이드',
@@ -97,7 +106,7 @@ export const POSTS_DATA = [
   {
     id: '6',
     title: '강아지 발바닥 습진(지간염) 원인과 홈케어 관리법',
-    excerpt: '자꾸 발을 핥는 우리 아이, 발가락 사이가 빨갛다면? 습진의 원인인 습기 관리부터 집에서 할 수 있는 안전한 케어 방법까지.',
+    excerpt: '자꾸 발을 핥와는 우리 아이, 발가락 사이가 빨갛다면? 습진의 원인인 습기 관리부터 집에서 할 수 있는 안전한 케어 방법까지.',
     date: '2026.02.01',
     category: '건강관리/위생',
     icon: '🐾🐕',
@@ -111,11 +120,50 @@ export const POSTS_DATA = [
     category: '행동/교육',
     icon: '🤝🐕',
     color: 'bg-violet-50'
+  },
+  {
+    id: '4',
+    title: '강아지 중성화 수술, 꼭 해야 할까요? 장단점 완벽 정리',
+    excerpt: '중성화 수술의 시기와 건강상 이점, 그리고 발생할 수 있는 부작용까지. 보호자가 결정하기 전 꼭 알아야 할 의학적 사실들.',
+    date: '2026.01.25',
+    category: '건강관리/수술',
+    icon: '🏥🐕',
+    color: 'bg-slate-50'
+  },
+  {
+    id: '3',
+    title: '강아지 산책 매너 교육: 줄 당기지 않게 걷는 법',
+    excerpt: '산책이 고통이 아닌 즐거움이 되려면? 줄을 당기는 원인 분석과 리드줄 핸들링 기술, 보상 기반 교육법을 소개합니다.',
+    date: '2026.01.20',
+    category: '행동/교육',
+    icon: '🦮🐕',
+    color: 'bg-lime-50'
+  },
+  {
+    id: '2',
+    title: '강아지에게 위험한 음식 10가지: 절대 주지 마세요',
+    excerpt: '초콜릿, 양파, 포도... 우리가 즐겨 먹지만 강아지에게는 독이 되는 음식들. 섭취 시 증상과 대처법을 미리 숙지하세요.',
+    date: '2026.01.15',
+    category: '영양/안전',
+    icon: '🚫🍎',
+    color: 'bg-red-50'
+  },
+  {
+    id: '1',
+    title: '반려견 입양 전 체크리스트: 준비된 집사가 되는 법',
+    excerpt: '강아지를 가족으로 맞이하기 위해 필요한 마음가짐, 환경 준비, 그리고 경제적 책임까지. 행복한 반려 생활의 첫걸음을 가이드합니다.',
+    date: '2026.01.10',
+    category: '입양/준비',
+    icon: '🏠🐕',
+    color: 'bg-orange-50'
   }
 ];
 
+const ITEMS_PER_PAGE = 6;
+
 const Posts: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = useMemo(() => {
     const term = searchTerm.toLowerCase().trim();
@@ -127,6 +175,22 @@ const Posts: React.FC = () => {
       post.category.toLowerCase().includes(term)
     );
   }, [searchTerm]);
+
+  const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
+  const currentPosts = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredPosts.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+    window.scrollTo(0, 0);
+  }, [searchTerm]);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="max-w-4xl mx-auto space-y-8 px-4">
@@ -151,30 +215,70 @@ const Posts: React.FC = () => {
       </div>
 
       {filteredPosts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
-          {filteredPosts.map((post) => (
-            <Link 
-              key={post.id} 
-              to={`/posts/${post.id}`}
-              className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col"
-            >
-              <div className={`h-48 ${post.color} flex items-center justify-center text-7xl group-hover:scale-110 transition-transform`}>
-                {post.icon}
-              </div>
-              <div className="p-6 space-y-3 flex-grow">
-                <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold text-orange-500 px-2 py-1 bg-orange-50 rounded-full">{post.category}</span>
-                  <span className="text-xs text-gray-400">{post.date}</span>
+        <div className="space-y-12 pb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            {currentPosts.map((post) => (
+              <Link 
+                key={post.id} 
+                to={`/posts/${post.id}`}
+                className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col"
+              >
+                <div className={`h-48 ${post.color} flex items-center justify-center text-7xl group-hover:scale-110 transition-transform`}>
+                  {post.icon}
                 </div>
-                <h2 className="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors leading-tight">
-                  {post.title}
-                </h2>
-                <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
-                  {post.excerpt}
-                </p>
-              </div>
-            </Link>
-          ))}
+                <div className="p-6 space-y-3 flex-grow">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-bold text-orange-500 px-2 py-1 bg-orange-50 rounded-full">{post.category}</span>
+                    <span className="text-xs text-gray-400">{post.date}</span>
+                  </div>
+                  <h2 className="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors leading-tight">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-2 pt-8">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="p-2 rounded-xl bg-white border border-gray-200 text-gray-600 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-orange-50 hover:text-orange-500 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i + 1}
+                  onClick={() => handlePageChange(i + 1)}
+                  className={`w-12 h-12 rounded-xl font-bold transition-all ${
+                    currentPage === i + 1
+                      ? 'bg-orange-500 text-white shadow-lg scale-110'
+                      : 'bg-white border border-gray-200 text-gray-600 hover:bg-orange-50 hover:text-orange-500'
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="p-2 rounded-xl bg-white border border-gray-200 text-gray-600 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-orange-50 hover:text-orange-500 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       ) : (
         <div className="py-20 text-center animate-in zoom-in duration-300">
