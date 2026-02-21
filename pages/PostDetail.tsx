@@ -5,6 +5,82 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '18': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"가족이었던 아이를 떠나보낸 후, 세상이 멈춘 것 같은 기분이 드시나요? 당신의 슬픔은 지극히 당연하고 소중한 감정입니다."</p>
+      
+      <p>반려견은 우리에게 단순한 동물이 아닙니다. 기쁠 때나 슬플 때나 언제나 곁을 지켜주던 가족이자, 조건 없는 사랑을 가르쳐준 스승이기도 합니다. 그런 존재를 잃었을 때 느끼는 상실감은 상상할 수 없을 만큼 깊고 아픕니다. 이를 <strong>'펫로스 증후군(Pet Loss Syndrome)'</strong>이라고 부릅니다. 오늘은 이 깊은 슬픔을 어떻게 마주하고, 어떻게 건강하게 치유해 나갈 수 있을지 심리학적 관점에서 깊이 있게 다루어보고자 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 펫로스 증후군, 왜 이렇게 아픈 걸까요?</h2>
+      <p>많은 분들이 "강아지 한 마리 죽은 것 가지고 왜 유난이냐"는 주변의 무심한 말에 더 큰 상처를 받곤 합니다. 하지만 반려견과의 이별은 자녀나 배우자를 잃었을 때와 유사한 수준의 심리적 고통을 유발한다는 연구 결과가 있습니다. 이는 반려견이 우리의 일상에 깊숙이 스며들어 정서적 지지대 역할을 해왔기 때문입니다. 일상의 루틴(산책, 급여, 잠자리)이 한순간에 사라지면서 오는 공허함은 삶의 의미 자체를 흔들어놓기도 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 슬픔의 단계를 이해하기</h2>
+      <p>심리학자 엘리자베스 퀴블러 로스가 말한 '죽음을 받아들이는 5단계'는 펫로스에도 적용됩니다. 자신이 어느 단계에 있는지 아는 것만으로도 마음이 조금은 편안해질 수 있습니다.</p>
+      <div className="bg-purple-50 p-6 rounded-3xl border border-purple-100 space-y-4 my-6">
+        <p><strong>● 부정:</strong> "아직 살아있는 것 같아", "현관문을 열면 달려 나올 것 같아"라며 현실을 부정하는 단계입니다.</p>
+        <p><strong>● 분노:</strong> "왜 더 일찍 병원에 가지 않았을까?", "그때 산책을 나가지 말걸"이라며 자신이나 수의사, 혹은 세상을 향해 분노를 느낍니다.</p>
+        <p><strong>● 타협:</strong> "내가 대신 아팠더라면", "다시 살려만 준다면 뭐든 할 텐데"라며 불가능한 가정을 세웁니다.</p>
+        <p><strong>● 우울:</strong> 극심한 무력감과 슬픔이 밀려오며 일상생활이 힘들어지는 시기입니다.</p>
+        <p><strong>● 수용:</strong> 이별을 현실로 받아들이고, 슬픔보다는 아름다웠던 추억을 더 많이 떠올리게 되는 단계입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 마음을 치유하는 5가지 방법</h2>
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">충분히 슬퍼하세요 (Grieving)</h4>
+            <p className="text-gray-600">슬픔을 억누르지 마세요. 눈물이 나면 울고, 보고 싶으면 이름을 불러보세요. 감정을 표출하는 것은 치유의 첫걸음입니다. 주변의 시선을 의식해 슬픔을 숨기는 것은 오히려 마음의 병을 키울 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">죄책감에서 벗어나세요</h4>
+            <p className="text-gray-600">"내가 부족해서 일찍 떠난 건 아닐까?"라는 생각은 가장 위험합니다. 당신은 그 아이에게 세상의 전부였고, 아이는 당신의 사랑 덕분에 행복한 생을 마감했습니다. 아이는 당신이 죄책감에 시달리는 것을 결코 원하지 않을 것입니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">추모의 시간을 가지세요</h4>
+            <p className="text-gray-600">아이를 위한 작은 제단을 차리거나, 사진첩을 만들거나, 편지를 써보세요. 나무를 심거나 유골함을 예쁘게 꾸며주는 것도 좋습니다. 이러한 의식은 마음속에서 아이를 아름답게 보내주는 과정이 됩니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">공감받을 수 있는 사람들과 소통하세요</h4>
+            <p className="text-gray-600">반려견을 키워본 경험이 있는 친구나 온라인 커뮤니티의 도움을 받으세요. 같은 아픔을 공유하는 것만으로도 큰 위로가 됩니다. 만약 일상생활이 불가능할 정도의 우울감이 지속된다면 전문가의 상담을 받는 것을 권장합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">5</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">아이의 물건을 천천히 정리하세요</h4>
+            <p className="text-gray-600">너무 서두를 필요도, 너무 오래 방치할 필요도 없습니다. 마음이 준비되었을 때 하나씩 정리해 나가세요. 가장 아끼던 장난감 하나 정도는 간직해도 좋습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 새로운 만남에 대하여</h2>
+      <p>어떤 분들은 상실감을 채우기 위해 곧바로 새로운 아이를 입양하기도 하고, 어떤 분들은 다시는 이런 아픔을 겪고 싶지 않아 평생 반려견을 키우지 않겠다고 다짐하기도 합니다. 정답은 없습니다. 다만, 새로운 아이를 입양할 때는 떠난 아이의 '대체재'가 아닌, '새로운 인연'으로 받아들일 준비가 되었을 때 결정하시길 바랍니다.</p>
+
+      <div className="bg-indigo-50 p-8 rounded-[2.5rem] border border-indigo-100 my-10">
+        <h3 className="text-xl font-black text-indigo-800 mb-4">🌈 무지개다리 너머에서</h3>
+        <p className="text-indigo-900 leading-relaxed italic">
+          "엄마, 아빠. 나 여기서 친구들이랑 신나게 뛰어놀고 있어. 이제 아픈 곳도 하나도 없어! 그러니까 너무 많이 울지 마. 내가 준 사랑만 기억해 줘. 우린 나중에 꼭 다시 만날 거니까. 그때까지 나 잊지 말고 행복하게 지내야 해. 사랑해!"
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 시간이 약이라는 말보다 중요한 것</h3>
+      <p>시간이 흐르면 슬픔의 파도는 낮아지겠지만, 아이를 향한 그리움은 영원히 남을 것입니다. 그 그리움을 고통이 아닌, 따뜻한 온기로 간직할 수 있을 때까지 스스로에게 충분한 시간을 주시길 바랍니다. 당신은 충분히 훌륭한 보호자였고, 그 아이는 당신을 만나 세상에서 가장 행복한 강아지였습니다.</p>
+    </div>
+  ),
   '17': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 입 냄새가 심해졌다면? 그것은 단순한 냄새가 아니라 우리 아이의 건강이 보내는 위험 신호일 수 있습니다."</p>
