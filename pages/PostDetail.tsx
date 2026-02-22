@@ -5,6 +5,75 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '19': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"중성화 수술, 우리 아이를 위한 선택일까요? 아니면 보호자를 위한 선택일까요? 그 해답을 의학적 근거와 함께 찾아봅니다."</p>
+      
+      <p>반려견을 키우면서 가장 먼저 마주하게 되는 큰 결정 중 하나가 바로 <strong>'중성화 수술'</strong>입니다. 수술에 대한 막연한 두려움과 미안함 때문에 결정을 미루는 보호자님들이 많으신데요. 중성화 수술은 단순히 번식을 막는 목적을 넘어, 반려견의 건강한 노후와 삶의 질 향상에 매우 중요한 역할을 합니다. 오늘은 중성화 수술의 장단점부터 적절한 시기, 그리고 수술 후 집에서 실천해야 할 케어 방법까지 1500자 이상의 상세한 가이드를 전해드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 중성화 수술의 의학적 장점</h2>
+      <p>중성화 수술은 성호르몬과 관련된 다양한 질병을 원천적으로 차단하거나 발생 확률을 획기적으로 낮춰줍니다.</p>
+      <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100 space-y-4 my-6">
+        <p><strong>● 암컷의 경우:</strong> 자궁축농증(치사율이 높은 질환)을 100% 예방할 수 있으며, 첫 발정 전 수술 시 유선종양 발생률을 0.5% 미만으로 낮출 수 있습니다. 또한 반복되는 발정 스트레스와 상상 임신을 방지합니다.</p>
+        <p><strong>● 수컷의 경우:</strong> 전립선 비대증, 고환암, 항문 주위 선종 등을 예방합니다. 또한 영역 표시(마킹), 공격성, 가출 본능 등 호르몬에 의한 본능적 행동 문제를 완화하는 데 도움을 줍니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 고려해야 할 단점과 부작용</h2>
+      <p>모든 수술에는 리스크가 따르듯, 중성화 수술 역시 신중히 고려해야 할 점들이 있습니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>기초 대사량 감소:</strong> 호르몬 변화로 인해 살이 찌기 쉬운 체질로 변합니다. 수술 후에는 식단 관리와 운동이 필수입니다.</li>
+        <li><strong>전신 마취 리스크:</strong> 드물지만 마취에 대한 부작용이 있을 수 있으므로 수술 전 혈액 검사 등 사전 검사가 반드시 필요합니다.</li>
+        <li><strong>성장 영향:</strong> 너무 이른 시기에 수술할 경우 골격 성장에 영향을 줄 수 있다는 연구 결과도 있으므로, 견종별 적정 시기를 수의사와 상담해야 합니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 수술 후 집사님이 챙겨야 할 핵심 케어 (Post-Op Care)</h2>
+      <p>수술만큼 중요한 것이 바로 회복기 관리입니다. 집에서의 세심한 관리가 합병증 없는 빠른 회복을 돕습니다.</p>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">넥카라 착용은 필수 (최소 7~10일)</h4>
+            <p className="text-gray-600">강아지가 수술 부위를 핥거나 깨물면 실밥이 풀리거나 세균 감염이 일어날 수 있습니다. 아이가 불편해하더라도 실밥을 제거할 때까지는 절대 넥카라를 벗기지 마세요.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">운동 제한 및 안정</h4>
+            <p className="text-gray-600">수술 후 3~5일간은 격한 뛰어놀기, 점프, 계단 오르내리기를 금지해야 합니다. 산책은 수의사의 허락 하에 가벼운 평지 산책부터 시작하세요.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">수술 부위 관찰</h4>
+            <p className="text-gray-600">하루에 두 번 이상 수술 부위가 붉게 부어오르지는 않는지, 진물이 나지는 않는지 확인하세요. 이상 징후 발견 시 즉시 병원에 연락해야 합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">식단 조절 시작</h4>
+            <p className="text-gray-600">수술 직후에는 소화가 잘 되는 부드러운 음식을 소량 급여하고, 회복 후에는 중성화 전용 사료나 칼로리가 낮은 식단으로 교체하여 비만을 예방하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 my-10">
+        <h3 className="text-xl font-black text-amber-800 mb-4">💡 수의사의 조언: 수술 시기</h3>
+        <p className="text-amber-900 leading-relaxed">
+          "일반적으로 소형견은 생후 6~8개월, 대형견은 성장이 어느 정도 마무리되는 12~18개월 사이를 권장합니다. 하지만 개체마다 발육 상태가 다르므로, 유치 잔존 여부와 신체 검사를 통해 최적의 타이밍을 잡는 것이 중요합니다. 중성화는 아이와 더 건강하게 오래 살기 위한 '예방 의학'의 관점에서 접근하시길 바랍니다."
+        </p>
+      </div>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 사랑하는 아이를 위한 용기 있는 결정</h3>
+      <p>중성화 수술은 보호자에게 심리적으로 큰 부담이 되는 일입니다. 하지만 이 짧은 수술과 며칠간의 회복기가 우리 아이의 남은 10년, 15년을 질병의 고통 없이 보낼 수 있게 해주는 가장 큰 선물이 될 수 있습니다. 충분한 상담과 준비를 통해 우리 아이에게 가장 안전하고 편안한 수술이 될 수 있도록 도와주세요. 똑똑한 집사는 모든 반려견의 건강한 삶을 응원합니다.</p>
+    </div>
+  ),
   '18': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"가족이었던 아이를 떠나보낸 후, 세상이 멈춘 것 같은 기분이 드시나요? 당신의 슬픔은 지극히 당연하고 소중한 감정입니다."</p>
