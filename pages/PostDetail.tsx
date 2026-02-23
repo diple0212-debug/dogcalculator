@@ -5,6 +5,84 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '20': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"초인종 소리만 들리면 전쟁터가 되는 우리 집, 손님이 오셔도 반가움보다 걱정이 앞서시나요? 흥분하는 강아지를 진정시키는 마법 같은 훈련법을 공개합니다."</p>
+      
+      <p>반려견을 키우는 집이라면 누구나 한 번쯤 겪는 고민입니다. 초인종이 울리는 순간 시작되는 우렁찬 짖음, 현관문이 열리자마자 손님에게 달려들어 앞발을 올리는 행동, 너무 기쁜 나머지 조절하지 못하고 실수를 하는 '희열 배뇨'까지. 보호자님들은 손님에게 미안한 마음과 아이를 통제하지 못하는 답답함 사이에서 곤혹스러워하시곤 하죠. 오늘 '똑똑한 집사'에서는 <strong>외부인 방문 시 흥분하는 강아지의 심리를 분석하고, 평온한 일상을 되찾아줄 단계별 대처법</strong>을 1500자 이상의 상세한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 왜 우리 강아지는 외부인을 보면 흥분할까요?</h2>
+      <p>훈련을 시작하기 전, 아이가 왜 그런 행동을 하는지 원인을 파악하는 것이 중요합니다. 흥분은 단순히 '기쁨'만을 의미하지 않습니다.</p>
+      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100 space-y-4 my-6">
+        <p><strong>● 과도한 반가움과 기대:</strong> 사람이 오면 즐거운 일이 생긴다(간식, 놀이, 관심)고 학습된 경우입니다. 에너지가 넘치는 어린 강아지들에게서 흔히 나타납니다.</p>
+        <p><strong>● 경계심과 두려움:</strong> 낯선 사람이 자신의 영역(집)에 침입했다고 느껴 방어적인 태도를 취하는 것입니다. 짖는 행위는 "저리 가!"라는 경고의 의미일 수 있습니다.</p>
+        <p><strong>● 사회화 부족:</strong> 낯선 사람을 접해본 경험이 적어 어떻게 반응해야 할지 몰라 혼란스러운 상태가 흥분으로 표출되는 경우입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 평소에 실천하는 단계별 진정 훈련법</h2>
+      <p>손님이 왔을 때만 교육하려 하면 이미 늦습니다. 평소에 '차분함'이 보상받는다는 것을 가르쳐야 합니다.</p>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">초인종 소리 둔감화 교육</h4>
+            <p className="text-gray-600">초인종 소리 = 손님 방문 = 흥분이라는 연결 고리를 끊어야 합니다. 평소에 아무 이유 없이 초인종을 누르고, 강아지가 짖지 않거나 차분할 때 간식을 줍니다. 초인종 소리가 들려도 별일 일어나지 않는다는 것을 깨닫게 해주는 과정입니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">'하우스' 또는 '방석' 교육 (Place Command)</h4>
+            <p className="text-gray-600">손님이 왔을 때 강아지가 가 있어야 할 지정된 장소를 정해줍니다. "하우스" 명령어를 내렸을 때 자신의 방석으로 가서 기다리면 아주 맛있는 간식을 보상합니다. 이 장소는 강아지에게 가장 안전하고 편안한 피난처가 되어야 합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-amber-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">기다려 훈련의 강화</h4>
+            <p className="text-gray-600">흥분도가 높은 아이일수록 '기다려' 훈련이 필수입니다. 앉아서 기다리는 시간이 길어질수록 보상을 늘려가며 자제력을 키워주세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 손님이 방문했을 때의 실전 대처 매뉴얼</h2>
+      <p>실제 상황이 닥쳤을 때 보호자가 당황하면 강아지는 더 흥분합니다. 차분하고 단호한 대처가 필요합니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>무관심이 최고의 약:</strong> 강아지가 흥분해서 뛰어오를 때 소리를 지르거나 밀쳐내는 행위는 강아지 입장에서 '보호자가 나랑 같이 놀아준다'고 오해하게 만듭니다. 완전히 무시하고 등을 돌리세요. 네 발이 모두 바닥에 닿고 차분해졌을 때만 관심을 줍니다.</li>
+        <li><strong>미리 간식 뿌려주기:</strong> 손님이 들어오는 순간, 현관에서 멀리 떨어진 곳에 간식을 흩뿌려주어 관심을 분산시키는 것도 좋은 방법입니다. 코를 사용하는 '노즈워크' 활동은 강아지의 흥분도를 낮추는 데 효과적입니다.</li>
+        <li><strong>리드줄 활용하기:</strong> 통제가 너무 힘든 경우, 집 안에서도 리드줄을 착용시켜 물리적인 거리를 유지하게 하세요. 손님에게 달려들지 못하게 제어하면서 차분해질 때까지 기다립니다.</li>
+      </ul>
+
+      <div className="bg-indigo-50 p-8 rounded-[2.5rem] border border-indigo-100 my-10">
+        <h3 className="text-xl font-black text-indigo-800 mb-4">🤝 방문객에게 부탁해야 할 에티켓 (3 No 법칙)</h3>
+        <p className="text-indigo-900 leading-relaxed mb-4">
+          강아지의 교육은 보호자 혼자만의 힘으로 부족합니다. 방문하시는 손님께 미리 다음 사항을 정중히 부탁드리세요.
+        </p>
+        <ul className="space-y-2 text-indigo-900 font-medium">
+          <li><strong>1. No Touch:</strong> 강아지를 만지지 마세요.</li>
+          <li><strong>2. No Talk:</strong> 강아지에게 말을 걸거나 이름을 부르지 마세요.</li>
+          <li><strong>3. No Eye Contact:</strong> 강아지와 눈을 마주치지 마세요.</li>
+        </ul>
+        <p className="text-indigo-800 mt-4 text-sm">
+          강아지가 완전히 진정되어 먼저 다가와 냄새를 맡을 때까지 손님이 유령처럼 행동해 주시는 것이 가장 빠른 진정 방법입니다.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 상황별 추가 팁</h2>
+      <p>강아지의 성향에 따라 대처법이 조금씩 다를 수 있습니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>겁이 많은 아이:</strong> 억지로 손님에게 인사시키지 마세요. 스스로 안전하다고 느낄 때까지 숨어있게 두는 것이 좋습니다.</li>
+        <li><strong>공격성이 보이는 아이:</strong> 짖음이 심하거나 입질의 기미가 보인다면 즉시 분리(울타리나 다른 방)하고 전문가의 도움을 받는 것이 안전합니다.</li>
+        <li><strong>산책 후 방문:</strong> 손님이 오기 전 충분한 산책을 통해 에너지를 발산시켜두면 흥분도가 현저히 낮아집니다.</li>
+      </ul>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 일관성이 평화를 만듭니다</h3>
+      <p>강아지의 행동 교정은 하루아침에 이루어지지 않습니다. 어제는 안 된다고 했다가 오늘은 귀엽다고 받아주는 식의 불일치는 강아지를 혼란스럽게 할 뿐입니다. 모든 가족 구성원이 동일한 규칙을 가지고 인내심 있게 반복한다면, 언젠가 초인종 소리에도 꼬리만 살랑이며 방석에서 기다리는 기특한 모습을 보게 될 것입니다. 똑똑한 집사는 여러분과 반려견의 평화로운 공존을 응원합니다!</p>
+    </div>
+  ),
   '19': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"중성화 수술, 우리 아이를 위한 선택일까요? 아니면 보호자를 위한 선택일까요? 그 해답을 의학적 근거와 함께 찾아봅니다."</p>
