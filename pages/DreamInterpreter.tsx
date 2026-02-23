@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { GoogleGenAI } from "@google/genai";
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import AdPlaceholder from '../components/AdPlaceholder';
 
 const DreamInterpreter: React.FC = () => {
@@ -100,7 +100,7 @@ const DreamInterpreter: React.FC = () => {
             <h2 className="text-2xl font-black">신비로운 꿈의 해석</h2>
           </div>
           <div className="p-8 md:p-12 prose prose-purple max-w-none text-gray-700 leading-relaxed">
-            <Markdown>{result}</Markdown>
+            <ReactMarkdown>{result}</ReactMarkdown>
           </div>
           <div className="p-8 bg-gray-50 border-t border-gray-100 text-center">
             <p className="text-gray-400 text-sm mb-4">※ 꿈 해몽은 심리적인 참고 용도로만 활용해 주세요.</p>
