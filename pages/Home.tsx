@@ -45,14 +45,6 @@ const tools = [
     border: "border-red-200"
   },
   {
-    to: "/dream",
-    title: "강아지 꿈해몽",
-    desc: "어젯밤 꿈속 강아지의 신비로운 의미",
-    icon: "🌙",
-    color: "bg-purple-100 text-purple-600",
-    border: "border-purple-200"
-  },
-  {
     to: "/health-advisor",
     title: "AI 건강상담",
     desc: "증상으로 물어보는 AI 수의사",
