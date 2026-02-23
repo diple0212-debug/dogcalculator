@@ -13,7 +13,6 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           genai: ['@google/genai'],
-          markdown: ['react-markdown'],
         },
       },
     },
