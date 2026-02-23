@@ -20,7 +20,6 @@ const Header: React.FC = () => {
     { to: "/food", label: "사료량" },
     { to: "/anxiety-test", label: "분리불안" },
     { to: "/dog-mbti", label: "MBTI" },
-    { to: "/dream", label: "꿈해몽" },
     { to: "/health-advisor", label: "AI상담" },
     { to: "/faq", label: "FAQ" },
   ];
