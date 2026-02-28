@@ -5,6 +5,98 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '20': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리 아이가 갑자기 물을 너무 많이 마시고 배가 뽈록하게 나오나요? 단순한 노화가 아닌 '침묵의 살인자' 쿠싱증후군일 수 있습니다."</p>
+      
+      <p>강아지 쿠싱증후군(부신피질기능항진증)은 노령견을 키우는 보호자님들에게 가장 두려운 질환 중 하나입니다. 호르몬의 불균형으로 인해 전신에 영향을 미치는 이 병은 초기 증상이 노화와 매우 흡사하여 발견이 늦어지는 경우가 많습니다. 하지만 적절한 관리와 치료만 병행된다면 아이의 삶의 질을 충분히 유지할 수 있는 질환이기도 합니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 쿠싱증후군의 원인, 놓치기 쉬운 증상, 그리고 집에서 실천할 수 있는 관리법</strong>을 1500자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 강아지 쿠싱증후군이란 무엇인가요?</h2>
+      <p>쿠싱증후군은 신장 옆에 위치한 작은 기관인 '부신'에서 스트레스 호르몬인 <strong>코르티솔(Cortisol)</strong>이 과도하게 분비되는 질환입니다. 코르티솔은 신진대사 조절, 면역 반응, 혈당 조절 등 생존에 필수적인 역할을 하지만, 너무 많이 나오게 되면 몸의 균형이 무너지게 됩니다.</p>
+      <div className="bg-rose-50 p-6 rounded-3xl border border-rose-100 space-y-4 my-6">
+        <p><strong>● 뇌하수체 의존성 (PDH):</strong> 전체 쿠싱의 약 80~85%를 차지하며, 뇌하수체에 생긴 종양으로 인해 부신을 계속 자극하는 경우입니다.</p>
+        <p><strong>● 부신 의존성 (AT):</strong> 부신 자체에 종양이 생겨 호르몬을 직접 과다 분비하는 경우입니다.</p>
+        <p><strong>● 의원성 쿠싱:</strong> 피부병이나 알레르기 치료를 위해 스테로이드제를 장기간 과다 복용했을 때 부작용으로 나타납니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 절대 놓쳐선 안 될 쿠싱증후군 5대 증상</h2>
+      <p>보통 7~10세 이상의 노령견에서 많이 발생하며, 다음 증상들이 복합적으로 나타난다면 즉시 검사를 받아야 합니다.</p>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">다갈, 다뇨 (PU/PD)</h4>
+            <p className="text-gray-600">가장 대표적인 증상입니다. 물을 평소보다 훨씬 많이 마시고(다갈), 그만큼 소변을 자주 봅니다(다뇨). 밤중에 실수를 하지 않던 아이가 갑자기 집안에 실수를 하기 시작한다면 의심해 봐야 합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">다식 (Polyphagia)</h4>
+            <p className="text-gray-600">식욕이 비정상적으로 증가합니다. 사료를 먹고도 계속 먹을 것을 찾거나, 평소 먹지 않던 음식에도 강한 집착을 보입니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">올챙이 배 (Pot-bellied appearance)</h4>
+            <p className="text-gray-600">팔다리는 가늘어지는데 배만 볼록하게 나옵니다. 이는 간이 비대해지고 복부 근력이 약해지면서 내부 장기가 아래로 처지기 때문입니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">피부 변화 및 탈모</h4>
+            <p className="text-gray-600">피부가 종잇장처럼 얇아지고 혈관이 비치기도 합니다. 특히 몸통 양쪽에 대칭적으로 털이 빠지는 대칭성 탈모가 나타나며, 상처가 잘 아물지 않습니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-rose-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">5</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">헐떡임 (Panting)</h4>
+            <p className="text-gray-600">덥지 않은 환경에서도 혀를 내밀고 심하게 헐떡입니다. 이는 호흡 근육의 약화나 복부 팽만으로 인한 압박 때문일 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 쿠싱증후군 확진을 위한 검사 과정</h2>
+      <p>쿠싱은 일반 혈액검사만으로는 확진이 어렵습니다. 호르몬 수치를 정밀하게 측정하는 특수 검사가 필요합니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>LDDST (저용량 덱사메타손 억제 검사):</strong> 가장 신뢰도가 높은 검사로, 스테로이드를 주입한 후 호르몬 수치 변화를 8시간 동안 관찰합니다.</li>
+        <li><strong>ACTH 자극 검사:</strong> 부신을 자극하여 코르티솔이 얼마나 과하게 분비되는지 확인합니다. 약 1~2시간이 소요됩니다.</li>
+        <li><strong>복부 초음파:</strong> 부신의 크기와 모양을 확인하여 종양 여부를 판단합니다.</li>
+      </ul>
+
+      <div className="bg-indigo-50 p-8 rounded-[2.5rem] border border-indigo-100 my-10">
+        <h3 className="text-xl font-black text-indigo-800 mb-4">🏠 집에서 실천하는 쿠싱견 케어 가이드</h3>
+        <p className="text-indigo-900 leading-relaxed mb-4">
+          병원 치료만큼 중요한 것이 가정 내 관리입니다. 호르몬 질환은 생활 습관이 치료의 절반입니다.
+        </p>
+        <ul className="space-y-4 text-indigo-900 font-medium">
+          <li><strong>1. 깨끗한 물 무제한 공급:</strong> 소변을 많이 본다고 물을 제한하면 탈수로 위험해질 수 있습니다. 언제든 신선한 물을 마실 수 있게 해주세요.</li>
+          <li><strong>2. 저지방, 고단백 식단:</strong> 간에 무리가 가기 쉬우므로 지방 함량은 낮추고 양질의 단백질을 공급해야 합니다. 수의사와 상담하여 처방 사료를 이용하는 것이 좋습니다.</li>
+          <li><strong>3. 규칙적인 투약 시간 엄수:</strong> 호르몬제는 혈중 농도를 일정하게 유지하는 것이 핵심입니다. 매일 같은 시간에 약을 먹이는 것이 매우 중요합니다.</li>
+          <li><strong>4. 스트레스 최소화:</strong> 코르티솔은 스트레스 호르몬입니다. 아이가 편안함을 느낄 수 있는 조용한 환경을 조성해 주세요.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 합병증을 주의하세요</h2>
+      <p>쿠싱증후군 자체보다 무서운 것은 합병증입니다. 면역력이 떨어지기 때문에 다양한 질병에 노출됩니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>당뇨병:</strong> 코르티솔이 인슐린 작용을 방해하여 당뇨가 동반되는 경우가 많습니다.</li>
+        <li><strong>방광염 및 요로감염:</strong> 소변이 묽어지고 면역력이 떨어져 세균 번식이 쉽습니다.</li>
+        <li><strong>고혈압 및 혈전:</strong> 혈관 건강이 악화되어 폐혈전색전증 같은 응급 상황이 발생할 수 있습니다.</li>
+      </ul>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 보호자의 관찰이 아이의 시간을 늘립니다</h3>
+      <p>쿠싱증후군은 완치라는 개념보다는 '평생 관리'하는 질환입니다. 하지만 보호자님이 아이의 증상을 세밀하게 관찰하고, 정기적인 검진과 투약을 소홀히 하지 않는다면 강아지는 남은 견생을 충분히 행복하게 보낼 수 있습니다. "나이가 들어서 그래"라고 치부하기엔 아이가 보내는 신호가 너무 간절할 수 있습니다. 오늘 우리 아이의 물 마시는 양과 배 모양을 다시 한번 체크해 보시는 건 어떨까요? 똑똑한 집사는 모든 노령견의 건강한 노후를 응원합니다!</p>
+    </div>
+  ),
   '19': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"중성화 수술, 우리 아이를 위한 선택일까요? 아니면 보호자를 위한 선택일까요? 그 해답을 의학적 근거와 함께 찾아봅니다."</p>

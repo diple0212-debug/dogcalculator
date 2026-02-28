@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '20',
+    title: '강아지 쿠싱증후군 완벽 가이드: 증상부터 식단 관리까지',
+    excerpt: '노령견에게 흔히 발생하는 호르몬 질환, 쿠싱증후군. 단순한 노화로 착착하기 쉬운 초기 증상과 삶의 질을 높여주는 핵심 관리법을 상세히 알려드립니다.',
+    date: '2026.02.28',
+    category: '건강/질병',
+    icon: '🧪🐕',
+    color: 'bg-rose-50'
+  },
+  {
     id: '19',
     title: '강아지 중성화 수술의 모든 것: 장단점부터 수술 후 케어까지 완벽 가이드',
     excerpt: '중성화 수술, 꼭 해야 할까요? 수술을 통해 예방할 수 있는 질병과 성격 변화, 그리고 수술 후 집사님이 챙겨야 할 핵심 관리법을 상세히 알려드립니다.',
