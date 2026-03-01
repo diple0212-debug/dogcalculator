@@ -5,6 +5,70 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '21': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지는 키우고 싶지만 집안 가득 날리는 털과 알레르기 때문에 망설여지시나요? 털 빠짐이 거의 없어 실내 생활에 최적화된 '천사 같은' 견종들을 소개합니다."</p>
+      
+      <p>반려견을 맞이할 때 가장 큰 현실적인 고민 중 하나가 바로 '털 빠짐'입니다. 특히 비염이나 강아지 털 알레르기가 있는 가족이 있거나, 청결에 민감한 분들에게는 견종 선택이 무엇보다 중요하죠. 사실 모든 강아지는 털이 빠지지만, 견종에 따라 그 정도는 천차만별입니다. 오늘 '똑똑한 집사'에서는 <strong>털 빠짐이 매우 적어 관리가 편하고 알레르기 유발 가능성도 낮은 견종 TOP 7</strong>을 2000자 이상의 상세한 정보와 함께 추천해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 푸들 (Poodle) - 털 안 빠지는 강아지의 대명사</h2>
+      <p>푸들은 전 세계적으로 가장 인기 있는 견종 중 하나이며, 털 빠짐이 적은 견종을 꼽을 때 항상 1위를 차지합니다. 곱슬곱슬한 털이 빠진 털을 붙잡고 있어 바닥에 떨어지는 양이 거의 없습니다.</p>
+      <div className="bg-emerald-50 p-6 rounded-3xl border border-emerald-100 space-y-4 my-6">
+        <p><strong>● 특징:</strong> 지능 순위 2위로 매우 영리하며 훈련 습득력이 빠릅니다. 토이, 미니어처, 스탠다드 등 크기가 다양해 주거 환경에 맞춰 선택할 수 있습니다.</p>
+        <p><strong>● 관리 팁:</strong> 털이 엉키기 쉬우므로 매일 빗질이 필요하며, 주기적인 미용(약 1~2개월 주기)이 필수입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 비숑 프리제 (Bichon Frise) - 솜사탕 같은 매력</h2>
+      <p>프랑스어로 '곱슬거리는 털'이라는 뜻을 가진 비숑은 이름처럼 풍성하고 곱슬거리는 털을 가졌지만, 의외로 털 빠짐은 매우 적습니다. 속털과 겉털이 촘촘하게 얽혀 있어 털 날림이 거의 없습니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>성격:</strong> 명랑하고 사교적이며 독립심도 강해 분리불안이 상대적으로 적은 편입니다.</li>
+        <li><strong>주의사항:</strong> 특유의 '하이바 미용'을 유지하려면 전문적인 미용 관리가 필요하며 비용이 다소 발생할 수 있습니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 말티즈 (Maltese) - 국민 강아지의 위엄</h2>
+      <p>한국에서 가장 사랑받는 견종인 말티즈는 싱글 코트(단일모)를 가지고 있어 털 빠짐이 매우 적습니다. 털이 계속 자라는 성질을 가지고 있어 사람의 머리카락과 비슷하다고 생각하시면 됩니다.</p>
+      <p>작은 체구와 애교 섞인 성격으로 아파트나 빌라 같은 공동주택에서 키우기 가장 적합한 견종 중 하나입니다. 다만, 눈가 관리를 소홀히 하면 눈물 자국이 생기기 쉬우니 주의해야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 슈나우저 (Schnauzer) - 튼튼하고 털 안 빠지는 테리어</h2>
+      <p>슈나우저는 거친 겉털과 부드러운 속털을 가진 이중모임에도 불구하고 털 빠짐이 거의 없는 신기한 견종입니다. 과거 농장에서 쥐를 잡던 습성이 있어 체력이 좋고 잔병치레가 적은 편입니다.</p>
+      <div className="bg-gray-50 p-6 rounded-3xl border border-gray-200 my-6">
+        <p className="font-bold text-gray-800 mb-2">💡 슈나우저 키우기 전 체크!</p>
+        <p className="text-gray-600">활동량이 많아 충분한 산책이 필요하며, 고집이 있는 편이라 어릴 때부터 일관된 교육이 중요합니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 시츄 (Shih Tzu) - 느긋한 성격의 털 안 빠지는 강아지</h2>
+      <p>시츄는 긴 털을 가졌음에도 털 빠짐이 매우 적은 견종입니다. 성격이 온순하고 게으른 편이라 운동량이 적은 보호자나 어르신들이 키우기에 아주 좋습니다. 헛짖음도 적어 조용한 환경을 선호하시는 분들께 추천합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 요크셔 테리어 (Yorkshire Terrier) - 움직이는 보석</h2>
+      <p>비단결 같은 긴 털을 자랑하는 요크셔 테리어 역시 싱글 코트로 털 빠짐이 거의 없습니다. 털의 질감이 사람의 머리카락과 매우 유사하여 알레르기 반응을 일으키는 단백질 배출이 적은 것으로 알려져 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">7. 베들링턴 테리어 (Bedlington Terrier) - 양을 닮은 우아함</h2>
+      <p>최근 인기가 높아진 베들링턴 테리어는 양처럼 곱슬거리는 털을 가졌으며 털 빠짐이 거의 없습니다. 테리어 종 특유의 활발함과 우아한 외모를 동시에 갖추고 있습니다.</p>
+
+      <div className="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 my-10">
+        <h3 className="text-xl font-black text-amber-800 mb-4">⚠️ 털 안 빠지는 강아지, 이것만은 꼭 기억하세요!</h3>
+        <p className="text-amber-900 leading-relaxed mb-4">
+          털이 안 빠진다는 것은 <strong>'털이 계속 자란다'</strong>는 뜻이기도 합니다. 따라서 다음 관리법을 반드시 지켜주셔야 합니다.
+        </p>
+        <ul className="space-y-4 text-amber-900 font-medium">
+          <li><strong>1. 매일 빗질:</strong> 빠지지 않은 털이 몸에 엉키면 피부병의 원인이 됩니다. 슬리커 브러시 등으로 꼼꼼히 빗어주세요.</li>
+          <li><strong>2. 정기적인 미용:</strong> 털이 무한정 자라기 때문에 1~2개월에 한 번은 전체 미용이나 위생 미용이 필요합니다.</li>
+          <li><strong>3. 피부 관리:</strong> 털이 촘촘한 견종은 통풍이 잘 안 될 수 있으므로 목욕 후 바짝 말려주는 것이 중요합니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">알레르기가 있다면? 추가 팁</h2>
+      <p>강아지 알레르기는 사실 털 자체보다는 강아지의 침, 각질(비듬), 소변에 포함된 특정 단백질 때문에 발생합니다. 털이 안 빠지는 견종은 털에 묻은 각질이 집안에 흩어지는 것을 막아주기 때문에 알레르기 환자에게 도움이 되는 것입니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li>입양 전 해당 견종과 30분 이상 시간을 보내며 반응을 체크해 보세요.</li>
+        <li>공기청정기를 사용하고 침실에는 강아지 출입을 제한하는 것이 좋습니다.</li>
+        <li>자주 목욕을 시켜 각질을 제거해 주는 것도 효과적입니다.</li>
+      </ul>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 완벽한 견종보다 나에게 맞는 견종을</h3>
+      <p>털 빠짐이 적은 견종들은 실내 청결 유지에 큰 장점이 있지만, 그만큼 보호자의 부지런한 빗질과 미용 관리가 뒤따라야 합니다. 또한 털 빠짐 외에도 활동량, 짖음 정도, 크기 등 고려해야 할 요소가 많습니다. 오늘 소개해 드린 TOP 7 견종 중 여러분의 라이프스타일과 가장 잘 맞는 단짝을 찾으시길 바랍니다. 똑똑한 집사는 여러분의 행복한 반려생활을 언제나 응원합니다!</p>
+    </div>
+  ),
   '20': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"우리 아이가 갑자기 물을 너무 많이 마시고 배가 뽈록하게 나오나요? 단순한 노화가 아닌 '침묵의 살인자' 쿠싱증후군일 수 있습니다."</p>

@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '21',
+    title: '털 빠짐 적은 견종 TOP 7: 알레르기 걱정 없는 반려생활 가이드',
+    excerpt: '강아지를 키우고 싶지만 털 빠짐 때문에 고민이신가요? 털이 거의 빠지지 않아 실내에서 키우기 좋고 알레르기 반응도 적은 견종 TOP 7을 상세히 소개합니다.',
+    date: '2026.03.01',
+    category: '견종정보/상식',
+    icon: '🐩✨',
+    color: 'bg-emerald-50'
+  },
+  {
     id: '20',
     title: '강아지 쿠싱증후군 완벽 가이드: 증상부터 식단 관리까지',
     excerpt: '노령견에게 흔히 발생하는 호르몬 질환, 쿠싱증후군. 단순한 노화로 착착하기 쉬운 초기 증상과 삶의 질을 높여주는 핵심 관리법을 상세히 알려드립니다.',
