@@ -5,6 +5,90 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '22': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 몸의 70% 이상은 수분입니다. 단 10%의 수분만 부족해도 생명이 위험할 수 있다는 사실, 알고 계셨나요? 우리 아이의 탈수 신호를 읽는 법을 알려드립니다."</p>
+      
+      <p>강아지에게 물은 단순한 갈증 해소 수단이 아닙니다. 체온 조절, 영양소 운반, 노폐물 배출, 관절 윤활 등 생존에 필수적인 모든 대사 과정에 관여하죠. 특히 스스로 갈증을 말로 표현할 수 없는 반려견의 경우, 보호자가 탈수의 징후를 미리 파악하는 것이 무엇보다 중요합니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 탈수 증상을 확인하는 3가지 자가 진단법과 물을 잘 안 마시는 아이들을 위한 음수량 유도 꿀팁</strong>을 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 우리 강아지, 지금 탈수인가요? (자가 진단법)</h2>
+      <p>탈수가 의심될 때 집에서 즉시 확인할 수 있는 3가지 핵심 체크리스트입니다.</p>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">피부 탄력 테스트 (Skin Turgor Test)</h4>
+            <p className="text-gray-600">강아지의 목 뒷덜미나 어깨 사이의 피부를 가볍게 잡아당겼다가 놓아보세요. 건강한 상태라면 즉시 제자리로 돌아가지만, 탈수 상태라면 피부가 천천히 내려가거나 텐트 모양으로 잠시 유지됩니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">잇몸 상태 확인 (Gum Check)</h4>
+            <p className="text-gray-600">강아지의 입술을 들어 올려 잇몸을 만져보세요. 정상적인 잇몸은 촉촉하고 매끄럽지만, 탈수 시에는 끈적거리거나 마른 느낌이 납니다. 또한 손가락으로 잇몸을 눌렀다 뗐을 때, 하얗게 변한 부위가 원래의 분홍색으로 돌아오는 데 2초 이상 걸린다면 탈수를 의심해야 합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">눈과 코의 상태</h4>
+            <p className="text-gray-600">눈이 움푹 들어간 것처럼 보이거나(안구 함몰), 코가 평소보다 지나치게 건조하고 갈라져 있다면 심한 수분 부족 상태일 가능성이 높습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 강아지 탈수의 주요 원인</h2>
+      <p>단순히 물을 안 마시는 것 외에도 탈수를 유발하는 다양한 요인이 있습니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>과도한 운동 및 고온 노출:</strong> 여름철 산책이나 격렬한 놀이는 체온을 높여 수분 증발을 가속화합니다.</li>
+        <li><strong>구토 및 설사:</strong> 질병으로 인해 체내 수분이 급격히 빠져나가는 가장 흔한 원인입니다.</li>
+        <li><strong>질환적 요인:</strong> 신부전, 당뇨병, 쿠싱증후군 등은 소변량을 늘려 탈수를 유발할 수 있습니다.</li>
+        <li><strong>노화:</strong> 노령견은 갈증 감각이 둔해져 스스로 물을 찾는 횟수가 줄어들 수 있습니다.</li>
+      </ul>
+
+      <div className="bg-cyan-50 p-8 rounded-[2.5rem] border border-cyan-100 my-10">
+        <h3 className="text-xl font-black text-cyan-800 mb-4">🥤 물 안 마시는 아이를 위한 음수량 늘리기 꿀팁</h3>
+        <p className="text-cyan-900 leading-relaxed mb-4">
+          억지로 물을 먹일 수는 없지만, 물을 마시고 싶게 만드는 환경을 조성할 수는 있습니다.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-5 rounded-2xl shadow-sm">
+            <h5 className="font-bold text-cyan-700 mb-2">1. 물그릇 위치 다변화</h5>
+            <p className="text-sm text-gray-600">아이가 자주 머무는 곳마다 물그릇을 배치하세요. 동선이 짧아지면 물을 마실 확률이 높아집니다.</p>
+          </div>
+          <div className="bg-white p-5 rounded-2xl shadow-sm">
+            <h5 className="font-bold text-cyan-700 mb-2">2. 맛있는 물 만들기</h5>
+            <p className="text-sm text-gray-600">염분이 없는 황태 국물이나 닭가슴살 삶은 물을 아주 조금 섞어주면 기호성이 폭발적으로 좋아집니다.</p>
+          </div>
+          <div className="bg-white p-5 rounded-2xl shadow-sm">
+            <h5 className="font-bold text-cyan-700 mb-2">3. 습식 사료 활용</h5>
+            <p className="text-sm text-gray-600">건사료 대신 습식 사료를 급여하거나, 건사료에 따뜻한 물을 부어 불려주면 자연스럽게 수분을 섭취하게 됩니다.</p>
+          </div>
+          <div className="bg-white p-5 rounded-2xl shadow-sm">
+            <h5 className="font-bold text-cyan-700 mb-2">4. 얼음 과자 제공</h5>
+            <p className="text-sm text-gray-600">여름철에는 얼음을 간식처럼 주거나 물그릇에 띄워주세요. 얼음을 핥아 먹는 과정에서 수분이 보충됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 적정 음수량은 얼마인가요?</h2>
+      <p>일반적으로 강아지의 하루 적정 음수량은 <strong>체중 1kg당 약 50~60ml</strong>입니다. 예를 들어 5kg인 강아지라면 하루에 종이컵 1.5~2컵 정도의 물을 마셔야 합니다. 하지만 활동량, 사료의 종류(건식 vs 습식), 날씨에 따라 이 수치는 변동될 수 있으므로 우리 아이만의 평균치를 파악해 두는 것이 좋습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 주의사항: 갑자기 물을 너무 많이 마신다면?</h2>
+      <p>탈수도 문제지만, 평소보다 물을 지나치게 많이 마시는 <strong>'다갈'</strong> 증상 역시 위험 신호일 수 있습니다. 이는 신부전, 당뇨, 자궁축농증 등의 초기 증상일 수 있으므로 음수량이 갑자기 2배 이상 늘었다면 반드시 수의사의 진찰을 받아야 합니다.</p>
+
+      <div className="bg-rose-50 p-6 rounded-3xl border border-rose-100 my-6">
+        <p className="text-rose-800 font-bold">🚨 이런 경우엔 즉시 병원으로!</p>
+        <p className="text-rose-700 text-sm mt-2">아이가 기력이 없고, 잇몸이 하얗게 변했으며, 피부 탄력이 현저히 떨어졌다면 심각한 탈수 상태입니다. 집에서 물을 먹이려 하기보다 즉시 동물병원을 방문하여 수액 처치를 받아야 합니다.</p>
+      </div>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 물 한 그릇의 사랑</h3>
+      <p>강아지에게 깨끗하고 신선한 물을 제공하는 것은 가장 기본적인 케어이자 가장 큰 사랑의 표현입니다. 매일 물그릇을 씻어주고 신선한 물로 갈아주는 작은 습관이 우리 아이의 신장 건강과 활력을 결정짓습니다. 오늘 우리 아이의 잇몸을 한번 만져보며 수분 상태를 체크해 보시는 건 어떨까요? 똑똑한 집사는 모든 반려견의 촉촉하고 건강한 일상을 응원합니다!</p>
+    </div>
+  ),
   '21': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지는 키우고 싶지만 집안 가득 날리는 털과 알레르기 때문에 망설여지시나요? 털 빠짐이 거의 없어 실내 생활에 최적화된 '천사 같은' 견종들을 소개합니다."</p>
