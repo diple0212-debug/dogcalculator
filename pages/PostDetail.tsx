@@ -5,6 +5,58 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '23': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"화려한 사료 포장지의 광고 문구에 현혹되지 마세요. 우리 아이의 건강을 결정짓는 진짜 정보는 뒷면의 작은 '성분표'에 숨어 있습니다."</p>
+      
+      <p>강아지에게 사료는 평생 먹는 주식입니다. 사람으로 치면 매일 먹는 밥과 반찬이 모두 들어있는 셈이죠. 하지만 시중에는 수많은 사료가 쏟아져 나오고, 저마다 '최고급', '홀리스틱', '그레인프리'라는 수식어를 붙여 광고합니다. 과연 이 수식어들이 정말 좋은 사료를 보장할까요? 오늘 '똑똑한 집사'에서는 <strong>사료 뒷면의 복잡한 성분표를 읽는 법과 좋은 사료를 고르기 위해 반드시 체크해야 할 5가지 핵심 포인트</strong>를 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 원재료 명칭: 첫 번째 성분이 핵심입니다</h2>
+      <p>사료의 원재료 목록은 함량이 높은 순서대로 기재됩니다. 따라서 가장 먼저 나오는 1~3번째 성분이 사료의 질을 결정합니다.</p>
+      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100 space-y-4 my-6">
+        <p><strong>● 구체적인 육류 명칭을 확인하세요:</strong> '육류', '가금류'처럼 모호한 표현보다는 '닭고기', '연어', '양고기'처럼 구체적인 이름이 적힌 것이 좋습니다.</p>
+        <p><strong>● 생고기 vs 육분(Meal):</strong> 생고기는 수분이 포함된 무게라 첫 번째에 올 수 있지만, 실제 건조 후 단백질 함량은 낮을 수 있습니다. '닭고기분'처럼 건조된 육분은 수분을 뺀 순수 단백질 함량이 높아 효율적인 영양 공급원이 됩니다. 단, '육골분'이나 출처 불명의 '가금류 부산물'은 피하는 것이 좋습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 등록 성분량(Guaranteed Analysis) 이해하기</h2>
+      <p>단백질, 지방, 섬유, 회분 등의 비율을 나타냅니다. 아이의 연령과 활동량에 따라 적절한 비율이 다릅니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>조단백질:</strong> 성장기 강아지는 25% 이상, 성견은 18% 이상이 권장됩니다.</li>
+        <li><strong>조지방:</strong> 에너지원이며 피부 건강에 중요합니다. 비만견은 10% 내외, 활동량이 많은 개는 15% 이상이 적당합니다.</li>
+        <li><strong>조회분:</strong> 사료를 태웠을 때 남는 미네랄 성분입니다. 너무 높으면(10% 이상) 저급 원료를 썼을 가능성이 있습니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">3. AAFCO 기준과 '완전하고 균형 잡힌' 문구</h2>
+      <p>미국사료관리협회(AAFCO)의 영양 기준을 충족했는지 확인하는 것은 기본 중의 기본입니다. 포장지에 <strong>"Complete and Balanced for all life stages"</strong>(전 연령대를 위한 완전하고 균형 잡힌 영양)라는 문구가 있는지 꼭 확인하세요. 이 문구가 없다면 주식이 아닌 간식용 사료일 수 있습니다.</p>
+
+      <div className="bg-rose-50 p-8 rounded-[2.5rem] border border-rose-100 my-10">
+        <h3 className="text-xl font-black text-rose-800 mb-4">🚫 피해야 할 '나쁜' 성분 체크리스트</h3>
+        <p className="text-rose-900 leading-relaxed mb-4">
+          다음 성분들이 포함되어 있다면 구매를 재고해 보시는 것이 좋습니다.
+        </p>
+        <ul className="space-y-4 text-rose-900 font-medium">
+          <li><strong>1. 인공 방부제:</strong> BHA, BHT, 에톡시퀸(Ethoxyquin) 등은 발암 가능성이 제기된 화학 방부제입니다. 대신 토코페롤(비타민 E)이나 로즈마리 추출물을 사용한 제품을 고르세요.</li>
+          <li><strong>2. 인공 색소 및 감미료:</strong> 강아지는 색을 잘 구별하지 못합니다. 사료의 알록달록한 색깔은 오직 사람의 눈을 즐겁게 하기 위한 화학 첨가물일 뿐입니다.</li>
+          <li><strong>3. 불분명한 부산물:</strong> '가금류 부산물', '동물성 지방'처럼 어떤 동물의 것인지 알 수 없는 원료는 알레르기를 유발하고 질이 낮을 확률이 높습니다.</li>
+          <li><strong>4. 과도한 충전제(Fillers):</strong> 옥수수 글루텐 밀, 밀가루 등이 주원료보다 많이 들어간 사료는 영양가 없이 배만 채우는 사료입니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 그레인프리(Grain-Free)의 오해와 진실</h2>
+      <p>곡물 알레르기가 있는 아이에게는 그레인프리가 필수적입니다. 하지만 곡물 대신 감자, 고구마, 완두콩이 너무 많이 들어간 경우 탄수화물 함량이 지나치게 높을 수 있습니다. 최근에는 그레인프리 사료와 심장병(DCM) 간의 연관성에 대한 연구도 진행 중이므로, 무조건적인 유행보다는 아이의 체질에 맞는 선택이 중요합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 제조사와 유통기한 확인</h2>
+      <p>자체 공장을 운영하는지, 리콜 이력은 없는지 확인하는 것도 좋은 방법입니다. 또한 사료는 개봉 후 산패가 시작되므로, 유통기한이 넉넉하더라도 소포장 제품을 구매하여 신선하게 급여하는 것이 가장 좋습니다.</p>
+
+      <div className="bg-indigo-50 p-6 rounded-3xl border border-indigo-100 my-6">
+        <p className="text-indigo-800 font-bold">💡 똑똑한 집사의 한마디!</p>
+        <p className="text-indigo-700 text-sm mt-2">비싼 사료가 무조건 좋은 사료는 아닙니다. 하지만 너무 저렴한 사료는 그만큼 원가를 낮추기 위해 저급 원료를 썼을 가능성이 큽니다. 사료 성분표를 읽는 5분 투자가 우리 아이의 10년 건강을 결정합니다.</p>
+      </div>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 우리 아이에게 가장 맛있는 밥은 '건강한 밥'입니다</h3>
+      <p>좋은 사료를 고르는 것은 보호자가 줄 수 있는 가장 큰 선물 중 하나입니다. 오늘 알려드린 체크리스트를 들고 지금 급여 중인 사료 뒷면을 한번 확인해 보세요. 처음에는 낯선 용어들이 어렵게 느껴질 수 있지만, 조금만 관심을 가지면 우리 아이에게 꼭 맞는 최고의 식단을 찾아줄 수 있습니다. 똑똑한 집사는 모든 반려견이 건강하고 맛있는 식사를 즐기는 세상을 꿈꿉니다!</p>
+    </div>
+  ),
   '22': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 몸의 70% 이상은 수분입니다. 단 10%의 수분만 부족해도 생명이 위험할 수 있다는 사실, 알고 계셨나요? 우리 아이의 탈수 신호를 읽는 법을 알려드립니다."</p>
