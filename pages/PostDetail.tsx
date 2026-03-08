@@ -5,6 +5,95 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '24': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 목욕, 깨끗하게 씻기는 것보다 중요한 것은 '피부 건강'과 '심리적 안정'입니다. 우리 아이가 목욕 시간을 즐겁게 기다리게 만드는 비법을 공개합니다."</p>
+      
+      <p>반려견과 함께 생활하다 보면 꼬질꼬질해진 털과 특유의 냄새 때문에 목욕을 시키게 됩니다. 하지만 강아지의 피부는 사람보다 훨씬 얇고 예민하다는 사실, 알고 계셨나요? 너무 잦은 목욕은 오히려 피부 보호막을 파괴해 피부병을 유발할 수 있고, 잘못된 방식은 아이에게 평생 가는 트라우마를 남길 수 있습니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 피부 타입별 적정 목욕 주기와 스트레스를 최소화하는 올바른 목욕 단계</strong>를 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 강아지 목욕, 얼마나 자주 해야 할까요?</h2>
+      <p>목욕 주기는 견종, 털의 종류, 피부 상태, 그리고 생활 환경에 따라 달라집니다.</p>
+      <div className="bg-sky-50 p-6 rounded-3xl border border-sky-100 space-y-4 my-6">
+        <p><strong>● 일반적인 건강한 강아지:</strong> 보통 2주~4주에 한 번이 적당합니다. 강아지의 피부 세포 재생 주기가 약 21일임을 고려할 때, 너무 잦은 목욕은 자연적인 유분을 제거해 건조증을 유발합니다.</p>
+        <p><strong>● 실외 활동이 많은 경우:</strong> 산책 후 발과 배 부분만 부분 세정을 해주고, 전체 목욕은 주기를 유지하는 것이 좋습니다.</p>
+        <p><strong>● 피부 질환이 있는 경우:</strong> 수의사의 처방에 따라 약용 샴푸를 사용하며, 보통 주 1~2회 등 지시된 주기를 엄격히 따라야 합니다.</p>
+        <p><strong>● 이중모 견종 (포메라니안, 스피츠 등):</strong> 털이 빽빽해 통풍이 안 되므로 목욕보다는 잦은 빗질로 먼지를 제거해 주는 것이 피부 건강에 더 이롭습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 목욕 전 반드시 챙겨야 할 준비물과 과정</h2>
+      <p>목욕을 시작하기 전 완벽한 준비가 목욕 시간을 단축시키고 아이의 불안감을 줄여줍니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>철저한 빗질:</strong> 목욕 전 엉킨 털을 풀어주지 않으면 물에 젖은 후 더 단단하게 꼬여 피부를 압박합니다. 죽은 털을 미리 제거해야 샴푸가 피부까지 잘 전달됩니다.</li>
+        <li><strong>미끄럼 방지 매트:</strong> 욕조나 바닥이 미끄러우면 강아지는 극도의 불안감을 느끼고 관절에도 무리가 갑니다. 반드시 고무 매트를 깔아주세요.</li>
+        <li><strong>적정 온도 체크:</strong> 강아지의 체온은 사람보다 높지만, 피부는 뜨거운 물에 약합니다. 미지근한 온도(약 35~38도)가 가장 적당합니다.</li>
+        <li><strong>전용 샴푸 선택:</strong> 사람의 피부는 약산성이지만 강아지는 중성에 가깝습니다. 반드시 강아지 전용 샴푸를 사용해야 합니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 스트레스 없는 5단계 올바른 목욕법</h2>
+      
+      <div className="space-y-6">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">물 적시기 (뒤에서 앞으로)</h4>
+            <p className="text-gray-600">샤워기를 몸에 직접 대기보다는 보호자의 손을 거쳐 물이 닿게 하세요. 엉덩이부터 시작해 등, 배, 다리 순으로 천천히 적셔줍니다. 머리 부분은 가장 마지막에, 눈과 귀에 물이 들어가지 않도록 주의하며 씻깁니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">샴푸질과 마사지</h4>
+            <p className="text-gray-600">샴푸를 직접 피부에 짜기보다 거품망을 이용해 풍성한 거품을 내어 발라주세요. 손가락 끝(지문 부분)을 이용해 부드럽게 마사지하듯 문질러줍니다. 겨드랑이, 발가락 사이, 항문 주위를 꼼꼼히 닦아주세요.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">철저한 헹구기 (가장 중요!)</h4>
+            <p className="text-gray-600">샴푸 잔여물이 남으면 가려움증과 습진의 원인이 됩니다. 맑은 물이 나올 때까지, 특히 털이 밀집된 부위를 손으로 헤치며 깨끗이 헹궈내야 합니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">4</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">타월 드라이</h4>
+            <p className="text-gray-600">물기를 털어내도록 유도한 후, 큰 타월로 몸을 감싸 꾹꾹 누르듯 물기를 흡수시킵니다. 털을 너무 세게 비비면 털이 상하고 엉킬 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div className="flex gap-4">
+          <div className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold shrink-0">5</div>
+          <div>
+            <h4 className="font-bold text-lg text-gray-800 mb-1">완벽한 건조</h4>
+            <p className="text-gray-600">드라이어는 약한 바람과 낮은 온도로 설정하고, 피부 안쪽까지 바짝 말려야 합니다. 덜 마른 상태로 방치하면 곰팡이성 피부염이 생기기 쉽습니다. 특히 발가락 사이와 귀 안쪽을 신경 써주세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 my-10">
+        <h3 className="text-xl font-black text-amber-800 mb-4">💡 목욕 공포증 극복을 위한 꿀팁</h3>
+        <ul className="space-y-4 text-amber-900 font-medium">
+          <li><strong>간식 보상:</strong> 목욕 중간중간, 그리고 끝난 직후에 가장 좋아하는 간식을 주어 '목욕=맛있는 것'이라는 인식을 심어주세요.</li>
+          <li><strong>Lick Mat 활용:</strong> 벽에 붙이는 간식 매트에 피넛버터나 츄르를 발라주면 아이가 간식을 핥는 동안 집중력이 분산되어 수월하게 씻길 수 있습니다.</li>
+          <li><strong>칭찬 세례:</strong> 부드럽고 높은 톤의 목소리로 계속해서 칭찬해 주어 아이를 안심시키세요.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 목욕 후 마무리 케어</h2>
+      <p>목욕이 끝났다고 다가 아닙니다. 습해진 귀와 눈가를 정리해 줘야 합니다.</p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700">
+        <li><strong>귀 세정:</strong> 목욕 중 들어갔을지 모를 물기를 제거하고 귀 세정제로 가볍게 닦아줍니다.</li>
+        <li><strong>보습제 사용:</strong> 피부가 건조한 아이라면 목욕 후 강아지 전용 미스트나 보습제를 뿌려 수분을 공급해 주세요.</li>
+        <li><strong>발톱 정리:</strong> 목욕 후에는 발톱이 불어 있어 깎기가 훨씬 수월합니다.</li>
+      </ul>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 행복한 목욕 시간이 건강한 피부를 만듭니다</h3>
+      <p>강아지에게 목욕은 단순한 위생 관리를 넘어 보호자와의 깊은 교감 시간이 될 수 있습니다. 서두르지 말고 아이의 속도에 맞춰 천천히 적응시켜 주세요. 깨끗해진 털을 만지며 나누는 포옹은 반려생활의 큰 기쁨 중 하나입니다. 오늘 알려드린 올바른 목욕법으로 우리 아이의 피부 건강과 행복을 동시에 지켜주세요! 똑똑한 집사는 모든 반려견의 뽀송뽀송하고 건강한 일상을 응원합니다.</p>
+    </div>
+  ),
   '23': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"화려한 사료 포장지의 광고 문구에 현혹되지 마세요. 우리 아이의 건강을 결정짓는 진짜 정보는 뒷면의 작은 '성분표'에 숨어 있습니다."</p>

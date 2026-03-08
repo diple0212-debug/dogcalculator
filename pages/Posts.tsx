@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '24',
+    title: '강아지 올바른 목욕 가이드: 주기 설정부터 스트레스 없는 목욕법까지',
+    excerpt: '강아지 목욕, 얼마나 자주 시켜야 할까요? 피부 건강을 지키는 적정 주기와 목욕을 싫어하는 아이들을 위한 단계별 적응 훈련법을 상세히 알려드립니다.',
+    date: '2026.03.08',
+    category: '건강관리/위생',
+    icon: '🛁🐕',
+    color: 'bg-sky-50'
+  },
+  {
     id: '23',
     title: '강아지 사료 성분표 완벽 분석: 우리 아이를 위한 진짜 좋은 사료 고르는 법',
     excerpt: '사료 뒷면의 복잡한 성분표, 어떻게 읽어야 할까요? 원재료 명칭의 비밀부터 피해야 할 성분, 그리고 AAFCO 기준까지 똑똑한 집사가 상세히 알려드립니다.',

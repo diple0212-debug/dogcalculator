@@ -45,6 +45,11 @@
   
   <!-- 개별 칼럼 페이지 -->
   <url>
+    <loc>https://dogcalculator.co.kr/posts/24</loc>
+    <lastmod>2026-03-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dogcalculator.co.kr/posts/23</loc>
     <lastmod>2026-03-07</lastmod>
     <priority>0.7</priority>
