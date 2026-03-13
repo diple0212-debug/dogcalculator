@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '25',
+    title: '아파트에서 키우기 좋은 견종 추천: 층간소음 걱정 없는 반려생활 가이드',
+    excerpt: '좁은 공간에서도 행복하게 지낼 수 있고, 짖음이 적어 아파트 생활에 최적화된 견종들을 소개합니다. 우리 집 환경에 꼭 맞는 반려견을 찾아보세요.',
+    date: '2026.03.13',
+    category: '견종정보/상식',
+    icon: '🏢🐕',
+    color: 'bg-indigo-50'
+  },
+  {
     id: '24',
     title: '강아지 올바른 목욕 가이드: 주기 설정부터 스트레스 없는 목욕법까지',
     excerpt: '강아지 목욕, 얼마나 자주 시켜야 할까요? 피부 건강을 지키는 적정 주기와 목욕을 싫어하는 아이들을 위한 단계별 적응 훈련법을 상세히 알려드립니다.',

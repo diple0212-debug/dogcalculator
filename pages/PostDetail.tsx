@@ -5,6 +5,77 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '25': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"아파트라는 제한된 공간, 이웃과의 소음 문제... 반려견을 맞이하기 전 가장 큰 고민거리입니다. 좁은 실내에서도 스트레스 없이 행복하게 지낼 수 있는 최고의 견종들을 추천해 드립니다."</p>
+      
+      <p>대한민국의 주거 형태 중 아파트가 차지하는 비중은 매우 높습니다. 아파트에서 강아지를 키울 때는 마당이 있는 단독주택과는 다른 기준이 필요합니다. 활동량이 너무 많아 좁은 공간에서 스트레스를 받지는 않는지, 헛짖음이 많아 이웃에게 피해를 주지는 않는지, 그리고 털 빠짐이 심해 실내 위생 관리가 어렵지는 않은지 등을 꼼꼼히 따져봐야 하죠. 오늘 '똑똑한 집사'에서는 <strong>아파트 생활에 최적화된 견종 추천 TOP 7과 공동주택 반려생활 에티켓</strong>을 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 아파트용 견종 선택의 4가지 핵심 기준</h2>
+      <p>단순히 '작고 귀여워서' 선택하기보다는 다음의 실질적인 기준들을 고려해야 합니다.</p>
+      <div className="bg-indigo-50 p-6 rounded-3xl border border-indigo-100 space-y-4 my-6">
+        <p><strong>● 낮은 짖음 빈도:</strong> 아파트 생활의 최대 적은 '층간소음'입니다. 경계심이 너무 강해 작은 소리에도 예민하게 짖는 견종은 피하는 것이 좋습니다.</p>
+        <p><strong>● 적절한 에너지 레벨:</strong> 실내 공간이 좁기 때문에, 집 안에서 우다다를 심하게 하지 않고 차분하게 쉴 줄 아는 성향이 중요합니다.</p>
+        <p><strong>● 털 빠짐 정도:</strong> 환기가 어려운 겨울철이나 비염 환자가 있는 가정이라면 털이 덜 빠지는 견종이 위생 관리에 유리합니다.</p>
+        <p><strong>● 사회성:</strong> 엘리베이터나 복도에서 이웃 사람이나 다른 강아지를 만났을 때 공격성을 보이지 않는 온순한 성격이 필수입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 아파트에서 키우기 좋은 추천 견종 TOP 7</h2>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 푸들 (Poodle)</h4>
+          <p className="text-gray-700 leading-relaxed">푸들은 지능이 매우 높아 훈련이 쉽고, 무엇보다 털이 거의 빠지지 않는다는 독보적인 장점이 있습니다. 토이 푸들이나 미니어처 푸들은 크기도 작아 아파트 생활에 가장 완벽한 견종으로 꼽힙니다. 다만, 지능이 높은 만큼 분리불안이 생기기 쉬우므로 적절한 교육이 필요합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 비숑 프리제 (Bichon Frise)</h4>
+          <p className="text-gray-700 leading-relaxed">'솜사탕' 같은 외모의 비숑은 성격이 매우 밝고 친화력이 좋습니다. 헛짖음이 적고 독립적인 면도 있어 아파트에서 키우기 수월합니다. 푸들처럼 털 빠짐이 매우 적지만, 특유의 곱슬털을 유지하기 위해 주기적인 미용과 빗질이 필수적입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 말티즈 (Maltese)</h4>
+          <p className="text-gray-700 leading-relaxed">한국에서 가장 사랑받는 견종 중 하나인 말티즈는 크기가 작고 활동량이 실내 생활에 적합합니다. 주인에 대한 애정이 깊고 영리합니다. 다만, 자기주장이 강하고 예민한 면이 있어 어릴 때부터 사회화 교육을 통해 불필요한 짖음을 예방해야 합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">④ 시츄 (Shih Tzu)</h4>
+          <p className="text-gray-700 leading-relaxed">'강아지계의 보살'이라 불릴 만큼 성격이 느긋하고 게으른 편입니다. 활동량이 많지 않아 좁은 아파트에서도 스트레스를 덜 받으며, 짖음도 매우 적은 편에 속합니다. 혼자 있는 시간도 비교적 잘 견디는 편이라 직장인 가정에도 추천됩니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑤ 요크셔 테리어 (Yorkshire Terrier)</h4>
+          <p className="text-gray-700 leading-relaxed">작은 체구에도 불구하고 용감하고 활발합니다. 털이 비단결처럼 부드럽고 잘 빠지지 않아 실내에서 키우기 좋습니다. 주인과 함께 있는 것을 좋아하며, 아파트 내에서의 이동성도 매우 뛰어납니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑥ 카발리에 킹 찰스 스패니얼 (Cavalier King Charles Spaniel)</h4>
+          <p className="text-gray-700 leading-relaxed">매우 온순하고 다정한 성격을 가진 견종입니다. 사람을 잘 따르고 짖음이 거의 없어 공동주택 생활에 아주 적합합니다. 다만, 외로움을 많이 타는 성격이므로 오랜 시간 집을 비우는 가정보다는 가족과 함께하는 시간이 많은 환경에 더 좋습니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑦ 그레이하운드 (Greyhound - 이탈리안 그레이하운드 포함)</h4>
+          <p className="text-gray-700 leading-relaxed">의외라고 생각하실 수 있지만, 그레이하운드는 실내에서 '카우치 포테이토(소파에 누워 지내는 사람)'라고 불릴 만큼 매우 조용하고 잠이 많습니다. 특히 소형인 이탈리안 그레이하운드는 털이 짧고 냄새가 적어 아파트 생활에 매우 인기가 높습니다.</p>
+        </div>
+      </div>
+
+      <div className="bg-rose-50 p-8 rounded-[2.5rem] border border-rose-100 my-10">
+        <h3 className="text-xl font-black text-rose-800 mb-4">⚠️ 아파트 반려생활, 이것만은 꼭 지켜주세요!</h3>
+        <ul className="space-y-4 text-rose-900 font-medium">
+          <li><strong>1. 산책은 선택이 아닌 필수:</strong> 실내 공간이 좁은 만큼, 매일 30분 이상의 산책을 통해 에너지를 발산시켜줘야 실내 사고(파괴 행위)와 헛짖음을 예방할 수 있습니다.</li>
+          <li><strong>2. 엘리베이터 에티켓:</strong> 엘리베이터에서는 강아지를 안거나 짧게 리드줄을 잡아 이웃에게 위협이 되지 않도록 합니다. 강아지를 무서워하는 이웃이 있을 수 있음을 항상 기억해야 합니다.</li>
+          <li><strong>3. 소음 방지 매트 설치:</strong> 강아지가 뛰어다니는 소리가 아래층에 소음이 될 수 있습니다. 주요 활동 구역에 매트를 깔아 층간소음을 방지하고 강아지의 관절 건강도 지켜주세요.</li>
+          <li><strong>4. 분리불안 예방 교육:</strong> 보호자가 외출했을 때 하울링이나 짖음이 발생하지 않도록 어릴 때부터 독립심을 키워주는 교육이 필요합니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 결론: 견종보다 중요한 것은 보호자의 노력</h2>
+      <p>아파트에서 키우기 좋은 견종이 따로 있긴 하지만, 어떤 견종이든 보호자의 교육과 케어에 따라 최고의 아파트 반려견이 될 수도, 문제견이 될 수도 있습니다. 우리 아이의 성향을 잘 파악하고, 공동체 생활을 위한 기본 매너를 가르치는 노력이 병행될 때 비로소 행복한 반려생활이 완성됩니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 좁은 공간을 채우는 넓은 사랑</h3>
+      <p>아파트라는 공간적 제약이 반려견과의 행복을 가로막지는 못합니다. 적절한 견종 선택과 세심한 배려가 있다면, 아파트는 세상에서 가장 따뜻하고 안전한 우리 아이의 보금자리가 될 것입니다. 오늘 추천해 드린 견종 리스트가 여러분의 새로운 가족을 맞이하는 데 도움이 되기를 바랍니다. 똑똑한 집사는 모든 반려견과 반려인이 이웃과 더불어 행복하게 지내는 세상을 응원합니다!</p>
+    </div>
+  ),
   '24': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지 목욕, 깨끗하게 씻기는 것보다 중요한 것은 '피부 건강'과 '심리적 안정'입니다. 우리 아이가 목욕 시간을 즐겁게 기다리게 만드는 비법을 공개합니다."</p>
