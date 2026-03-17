@@ -5,6 +5,68 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '26': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지와 함께하는 드라이브, 즐거운 추억이 되기 위해서는 '안전'이 최우선입니다. 왜 강아지에게도 전용 카시트가 필요한지, 그리고 어떤 제품을 선택해야 하는지 상세히 알려드립니다."</p>
+      
+      <p>날씨가 좋아지면 반려견과 함께 근교로 나들이를 떠나는 분들이 많습니다. 하지만 많은 보호자분들이 강아지를 조수석에 그냥 앉히거나, 무릎 위에 올리고 운전하는 위험한 행동을 하곤 합니다. 강아지는 사람보다 훨씬 가볍고 작은 충격에도 큰 부상을 입을 수 있습니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 카시트 설치가 왜 선택이 아닌 필수인지, 그리고 우리 아이에게 꼭 맞는 카시트를 고르는 법</strong>을 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 강아지 카시트가 반드시 필요한 4가지 이유</h2>
+      <p>단순히 '편안함'을 위해서가 아닙니다. 카시트는 생명과 직결되는 안전 장치입니다.</p>
+      <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100 space-y-4 my-6">
+        <p><strong>● 급정거 및 사고 시 충격 완화:</strong> 자동차가 시속 40km로 달리다 급정거할 때, 고정되지 않은 강아지는 앞으로 튕겨 나가 대시보드나 앞 유리에 부딪힐 수 있습니다. 카시트는 강아지를 한 공간에 고정시켜 튕겨 나가는 것을 방지합니다.</p>
+        <p><strong>● 운전자 집중력 분산 방지:</strong> 강아지가 차 안에서 자유롭게 돌아다니거나 운전자의 무릎으로 올라오려고 하면 큰 사고로 이어질 수 있습니다. 카시트는 강아지의 활동 범위를 제한하여 운전자가 운전에만 집중할 수 있게 돕습니다.</p>
+        <p><strong>● 멀미 예방 및 심리적 안정:</strong> 차 안에서 흔들림을 많이 느끼면 강아지도 멀미를 합니다. 카시트는 몸을 안정적으로 지탱해 주어 흔들림을 줄이고, 자신만의 독립된 공간이라는 인식을 주어 불안감을 해소해 줍니다.</p>
+        <p><strong>● 시트 오염 및 털 빠짐 방지:</strong> 야외 활동 후 묻어온 흙먼지나 털이 자동차 시트에 직접 닿는 것을 방지하여 차량 내부를 청결하게 유지할 수 있습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 우리 아이에게 맞는 카시트 유형 선택하기</h2>
+      <p>강아지의 크기와 성향에 따라 적합한 카시트 형태가 다릅니다.</p>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 박스형 카시트 (Box Type)</h4>
+          <p className="text-gray-700 leading-relaxed">사방이 벽으로 둘러싸인 상자 형태입니다. 겁이 많거나 안정감을 원하는 강아지에게 좋습니다. 벽면이 튼튼하여 급정거 시에도 강아지를 안전하게 보호해 줍니다. 주로 소형견에게 적합합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 쿠션형 카시트 (Cushion Type)</h4>
+          <p className="text-gray-700 leading-relaxed">푹신한 침대와 같은 형태입니다. 장거리 이동 시 강아지가 편안하게 쉴 수 있으며, 평소 집에서 사용하는 방석과 비슷한 느낌을 주어 적응이 빠릅니다. 턱을 괴고 쉬는 것을 좋아하는 아이들에게 추천합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 해먹형 카시트 (Hammock Type)</h4>
+          <p className="text-gray-700 leading-relaxed">뒷좌석 전체를 덮는 형태입니다. 중대형견이나 활동량이 많은 강아지에게 적합합니다. 발밑 공간으로 떨어지는 것을 방지하고 뒷좌석 시트 전체를 보호할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 카시트 구매 시 반드시 체크해야 할 5가지</h2>
+      <p>디자인보다 중요한 것은 기능과 안전성입니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>안전 고리 유무:</strong> 카시트 내부에 강아지의 하네스와 연결할 수 있는 안전 고리가 있는지 반드시 확인하세요. 고리가 없으면 카시트 밖으로 튀어나갈 수 있습니다.</li>
+        <li><strong>고정 방식의 견고함:</strong> 자동차 시트 헤드레스트나 등받이에 카시트가 얼마나 단단하게 고정되는지 확인해야 합니다. 흔들림이 없어야 안전합니다.</li>
+        <li><strong>세탁 용이성:</strong> 강아지의 침, 털, 발자국 등으로 쉽게 오염될 수 있으므로 커버가 분리되어 세탁이 가능한 제품이 위생적입니다.</li>
+        <li><strong>적정 사이즈:</strong> 강아지가 편안하게 눕거나 앉을 수 있는 크기여야 합니다. 너무 작으면 불편해하고, 너무 크면 안정감이 떨어집니다.</li>
+        <li><strong>충전재의 질:</strong> 너무 딱딱하지 않으면서도 몸을 잘 지탱해 줄 수 있는 적당한 탄성력이 있는 제품이 좋습니다.</li>
+      </ul>
+
+      <div className="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 my-10">
+        <h3 className="text-xl font-black text-amber-800 mb-4">💡 카시트 적응을 위한 단계별 훈련법</h3>
+        <ul className="space-y-4 text-amber-900 font-medium">
+          <li><strong>1단계: 집에서 먼저 사용하기:</strong> 카시트를 집 거실에 두고 강아지가 그 안에서 간식을 먹거나 잠을 자게 하여 익숙한 장소로 인식하게 만드세요.</li>
+          <li><strong>2단계: 정차된 차 안에서 적응하기:</strong> 시동을 걸지 않은 차 안의 카시트에 앉히고 칭찬과 간식을 줍니다.</li>
+          <li><strong>3단계: 짧은 거리 이동하기:</strong> 집 근처를 5~10분 정도 가볍게 돌며 차의 움직임에 적응하게 합니다.</li>
+          <li><strong>4단계: 목적지 보상:</strong> 카시트를 타고 도착한 곳이 애견 카페나 공원처럼 즐거운 장소라면 카시트에 대한 긍정적인 인식이 강화됩니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 결론: 안전한 동행을 위한 첫걸음</h2>
+      <p>강아지 카시트는 단순히 차량용 액세서리가 아닙니다. 사고는 예고 없이 찾아오며, 그때 우리 아이를 지켜줄 수 있는 유일한 장치가 바로 카시트와 안전벨트입니다. 보호자의 무릎 위가 아닌, 전용 카시트에서 안전하게 드라이브를 즐기는 습관을 들여주세요.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 함께 가는 길, 더 안전하게</h3>
+      <p>반려견과 함께하는 여행은 언제나 설레는 일입니다. 그 설렘이 끝까지 행복으로 남기 위해서는 철저한 안전 준비가 필요합니다. 오늘 알려드린 카시트 가이드가 여러분과 반려견의 안전한 드라이브에 큰 도움이 되기를 바랍니다. 똑똑한 집사는 모든 반려견이 어디든 안전하고 편안하게 보호자와 함께할 수 있는 세상을 꿈꿉니다!</p>
+    </div>
+  ),
   '25': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"아파트라는 제한된 공간, 이웃과의 소음 문제... 반려견을 맞이하기 전 가장 큰 고민거리입니다. 좁은 실내에서도 스트레스 없이 행복하게 지낼 수 있는 최고의 견종들을 추천해 드립니다."</p>
