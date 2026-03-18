@@ -5,6 +5,72 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '27': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"여름철 무더위, 털이 복슬복슬한 우리 아이가 너무 더워 보여 털을 싹 밀어주고 싶으신가요? 하지만 이중모 견종에게 삭발은 오히려 독이 될 수 있습니다."</p>
+      
+      <p>포메라니안, 스피츠, 웰시코기, 골든 리트리버, 진돗개... 이들의 공통점은 바로 '이중모(Double Coat)'를 가졌다는 것입니다. 날씨가 더워지면 많은 보호자분들이 아이들이 시원해지길 바라는 마음에서 이른바 '빡빡이 미용'이라 불리는 삭발을 선택하곤 합니다. 하지만 이는 강아지의 신체 구조와 생리적 특성을 고려하지 않은 위험한 선택일 수 있습니다. 오늘 '똑똑한 집사'에서는 <strong>이중모 강아지에게 삭발 미용이 왜 위험한지, 그리고 여름철 올바른 털 관리법</strong>을 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 이중모(Double Coat)란 무엇인가요?</h2>
+      <p>이중모는 겉털(Guard Hair)과 속털(Undercoat) 두 층으로 이루어진 털 구조를 말합니다.</p>
+      <div className="bg-rose-50 p-6 rounded-3xl border border-rose-100 space-y-4 my-6">
+        <p><strong>● 겉털 (Guard Hair):</strong> 빳빳하고 긴 털로, 외부의 먼지, 습기, 자외선으로부터 피부를 보호하는 역할을 합니다. 색상이 선명하고 물을 튕겨내는 성질이 있습니다.</p>
+        <p><strong>● 속털 (Undercoat):</strong> 부드럽고 촘촘한 털로, 체온을 유지하는 절연체 역할을 합니다. 겨울에는 빽빽하게 자라 추위를 막아주고, 여름에는 적절히 빠지면서 공기층을 형성해 열기를 차단합니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 삭발 미용이 위험한 4가지 결정적 이유</h2>
+      <p>털을 밀면 시원할 것 같지만, 실제로는 정반대의 현상이 일어납니다.</p>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-rose-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 체온 조절 능력의 상실</h4>
+          <p className="text-gray-700 leading-relaxed">강아지의 털은 '천연 단열재'입니다. 겨울에는 온기를 가두고, 여름에는 외부의 뜨거운 열기가 피부에 직접 닿는 것을 막아줍니다. 털을 싹 밀어버리면 이 단열층이 사라져 외부 열기가 피부로 바로 전달됩니다. 즉, 털이 있을 때보다 더 쉽게 체온이 올라가고 일사병에 걸릴 위험이 커집니다.</p>
+        </div>
+
+        <div className="border-l-4 border-rose-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 자외선 노출과 화상 위험</h4>
+          <p className="text-gray-700 leading-relaxed">강아지의 피부는 사람보다 훨씬 얇고 예민합니다. 겉털이 자외선을 차단해 주는데, 이를 밀어버리면 무방비 상태로 태양빛에 노출됩니다. 이는 심각한 일광 화상을 유발할 수 있으며, 장기적으로는 피부암의 원인이 되기도 합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-rose-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 외부 자극 및 해충 노출</h4>
+          <p className="text-gray-700 leading-relaxed">털은 풀숲의 날카로운 풀잎, 나뭇가지, 그리고 모기나 진드기 같은 해충으로부터 피부를 보호하는 물리적 방어막입니다. 삭발 상태에서는 작은 자극에도 쉽게 상처가 나고 벌레에 물리기 쉬워져 각종 피부염과 감염병에 취약해집니다.</p>
+        </div>
+
+        <div className="border-l-4 border-rose-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">④ 알러지 및 가려움증 유발</h4>
+          <p className="text-gray-700 leading-relaxed">털이 짧게 잘리면 잘린 털 끝이 피부를 찔러 극심한 가려움증을 유발할 수 있습니다. 강아지가 이를 참지 못하고 긁거나 핥으면서 2차적인 피부 감염이 발생하기도 합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 가장 무서운 부작용: 클리퍼 증후군 (Post-Clipping Alopecia)</h2>
+      <p>이중모 견종에게 삭발 미용 후 가장 흔하게 발생하는 심각한 문제입니다.</p>
+      <div className="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 my-10">
+        <h3 className="text-xl font-black text-amber-800 mb-4">⚠️ 클리퍼 증후군이란?</h3>
+        <p className="text-amber-900 mb-4">기계(클리퍼)로 털을 짧게 민 후, 털이 다시 자라지 않거나 매우 불규칙하게 자라는 현상을 말합니다. 털의 질감이 거칠어지고 색이 변하며, 심한 경우 영구적인 탈모로 이어질 수 있습니다.</p>
+        <ul className="space-y-2 text-amber-900 font-medium">
+          <li>- 털이 자라는 주기가 파괴되어 발생합니다.</li>
+          <li>- 특히 포메라니안, 스피츠 계열에서 빈번하게 나타납니다.</li>
+          <li>- 원래 상태로 회복하는 데 수개월에서 수년이 걸릴 수 있으며, 100% 회복되지 않을 수도 있습니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 여름철 올바른 이중모 관리법</h2>
+      <p>삭발 대신 다음과 같은 방법으로 아이들의 여름을 시원하게 만들어주세요.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>잦은 빗질 (가장 중요):</strong> 속털을 솎아내 주는 빗질은 공기 순환을 도와 체온 조절 능력을 극대화합니다. 죽은 털을 제거하는 것만으로도 아이들은 훨씬 시원함을 느낍니다.</li>
+        <li><strong>부분 미용 활용:</strong> 위생을 위해 발바닥, 항문 주위, 배 부분만 짧게 다듬어주는 것은 괜찮습니다.</li>
+        <li><strong>가위 컷 선택:</strong> 전체적인 길이를 줄이고 싶다면 기계 미용보다는 가위로 털의 끝부분만 다듬는 '가위 컷'을 추천합니다. 피부를 보호할 수 있는 최소한의 길이는 남겨야 합니다.</li>
+        <li><strong>환경 조절:</strong> 털을 미는 것보다 실내 온도를 적절히 유지하고, 쿨매트나 신선한 물을 제공하는 것이 훨씬 효과적인 열사병 예방책입니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 털은 아이들의 옷이자 방패입니다</h2>
+      <p>사람의 시각에서 "더워 보인다"는 이유로 아이들의 소중한 보호막을 제거하지 말아 주세요. 이중모 강아지에게 털은 여름에는 에어컨, 겨울에는 히터 역할을 하는 정교한 시스템입니다. 올바른 빗질과 세심한 환경 관리로 우리 아이들이 건강하고 시원하게 여름을 날 수 있도록 도와주세요.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 지혜로운 반려인의 선택</h3>
+      <p>반려견의 건강은 보호자의 올바른 지식에서 시작됩니다. 유행이나 편의를 위한 미용보다는 아이의 신체적 특성을 존중하는 관리가 필요합니다. 오늘 알려드린 정보가 이중모 아이들과 함께하는 모든 가정에 도움이 되기를 바랍니다. 똑똑한 집사는 모든 강아지가 자신의 본연의 모습 그대로 건강하고 행복하게 지내는 세상을 응원합니다!</p>
+    </div>
+  ),
   '26': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지와 함께하는 드라이브, 즐거운 추억이 되기 위해서는 '안전'이 최우선입니다. 왜 강아지에게도 전용 카시트가 필요한지, 그리고 어떤 제품을 선택해야 하는지 상세히 알려드립니다."</p>
