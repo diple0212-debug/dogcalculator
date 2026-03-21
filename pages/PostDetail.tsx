@@ -5,6 +5,81 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '28': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 맑고 초롱초롱한 눈, 하지만 눈가에 뭉친 눈곱과 눈을 찌르는 털은 단순한 미관상의 문제를 넘어 안구 질환의 원인이 됩니다. 안전하고 효과적인 눈가 관리 비법을 공개합니다."</p>
+      
+      <p>강아지를 키우다 보면 매일 아침 마주하게 되는 것이 바로 '눈곱'입니다. 특히 말티즈, 푸들, 비숑 프리제와 같이 눈가 털이 계속 자라는 견종들은 관리가 조금만 소홀해도 눈물 자국이 생기거나 눈가 피부가 짓무르기 쉽습니다. 눈가 관리는 강아지의 인상을 결정짓는 중요한 요소일 뿐만 아니라, 결막염이나 각막염 같은 질병을 예방하는 필수적인 위생 관리입니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 눈곱을 안전하게 제거하는 법부터 초보자도 할 수 있는 눈가 털 정리 노하우</strong>를 2000자 이상의 상세 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 강아지 눈가 관리가 왜 중요한가요?</h2>
+      <p>강아지의 눈은 사람보다 외부 자극에 취약하며, 털이 눈을 찌르는 구조적 문제를 가진 경우가 많습니다.</p>
+      <div className="bg-teal-50 p-6 rounded-3xl border border-teal-100 space-y-4 my-6">
+        <p><strong>● 안구 손상 방지:</strong> 길게 자란 털이 눈을 찌르면 각막에 상처를 입히거나 지속적인 자극으로 인해 눈물이 과도하게 분비됩니다.</p>
+        <p><strong>● 세균 번식 억제:</strong> 젖은 눈가 털은 세균과 곰팡이가 번식하기 가장 좋은 환경입니다. 이는 지독한 냄새와 함께 피부염을 유발합니다.</p>
+        <p><strong>● 눈물 자국 예방:</strong> 눈물 속의 포르피린 성분은 공기와 만나면 붉게 변색됩니다. 방치하면 털이 착색되어 되돌리기 어렵습니다.</p>
+        <p><strong>● 시야 확보:</strong> 눈 앞을 가리는 털을 정리해 주면 강아지의 시야가 넓어져 심리적 불안감을 줄여줄 수 있습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 눈곱, 억지로 떼지 마세요! 안전한 제거법</h2>
+      <p>딱딱하게 굳은 눈곱을 손으로 억지로 떼어내면 피부에 상처가 나고 강아지가 통증을 느껴 관리를 거부하게 됩니다.</p>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-teal-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 미온수로 불리기</h4>
+          <p className="text-gray-700 leading-relaxed">깨끗한 거즈나 화장솜에 미온수를 충분히 적셔 눈곱 위에 1~2분 정도 살포시 올려둡니다. 눈곱이 충분히 불어 말랑해질 때까지 기다리는 것이 핵심입니다. 전용 눈 세정제를 사용하면 더욱 효과적입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-teal-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 눈곱 빗 활용하기</h4>
+          <p className="text-gray-700 leading-relaxed">불린 눈곱은 촘촘한 '눈곱 빗'을 사용하여 결 방향대로 부드럽게 빗어내세요. 이때 빗이 안구를 찌르지 않도록 손가락으로 눈 주변 피부를 살짝 당겨 고정하는 것이 좋습니다.</p>
+        </div>
+
+        <div className="border-l-4 border-teal-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 물기 제거하기</h4>
+          <p className="text-gray-700 leading-relaxed">눈곱을 제거한 후에는 반드시 마른 거즈로 주변의 물기를 닦아주세요. 습한 상태로 방치하면 다시 세균이 번식하여 냄새가 날 수 있습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 초보 보호자를 위한 눈가 털 정리 가이드</h2>
+      <p>가위를 눈 근처에 가져가는 것은 매우 위험할 수 있으므로 철저한 준비가 필요합니다.</p>
+      <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-200 my-10">
+        <h3 className="text-xl font-black text-gray-800 mb-4">✂️ 안전한 털 정리 단계</h3>
+        <ul className="space-y-4 text-gray-700 font-medium">
+          <li><strong>1. 도구 선택:</strong> 끝이 뭉툭한 '안전 가위'나 소형 '부분 미용기'를 사용하세요. 날카로운 가위는 강아지가 갑자기 움직일 때 큰 사고로 이어질 수 있습니다.</li>
+          <li><strong>2. 보상과 안정:</strong> 미용 전 간식을 주어 긍정적인 인식을 심어주고, 강아지가 흥분하지 않은 상태에서 시작하세요.</li>
+          <li><strong>3. 고정법:</strong> 강아지의 턱 아래를 가볍게 잡아 머리가 움직이지 않도록 고정합니다. 다른 한 손은 가위를 쥔 채 새끼손가락을 강아지 얼굴에 살짝 대어 지지대 역할을 하게 합니다.</li>
+          <li><strong>4. 절단 방향:</strong> 가위 날은 항상 눈 바깥쪽을 향하게 하세요. 눈 앞머리에서 코 방향으로, 위에서 아래로 조금씩 다듬어 나갑니다.</li>
+          <li><strong>5. 욕심 버리기:</strong> 한 번에 완벽하게 하려 하지 마세요. 강아지가 싫어하면 즉시 중단하고 나중에 다시 시도하는 것이 트라우마를 방지하는 길입니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 눈곱으로 보는 건강 신호: 언제 병원에 가야 할까?</h2>
+      <p>평소와 다른 눈곱은 질병의 신호일 수 있습니다. 매일 체크해 보세요.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>투명하거나 옅은 갈색 눈곱:</strong> 정상적인 신진대사 과정에서 생기는 눈곱입니다. 걱정하지 않으셔도 됩니다.</li>
+        <li><strong>노란색 또는 초록색 눈곱:</strong> 세균 감염이나 염증(결막염 등)이 의심됩니다. 즉시 수의사의 진료가 필요합니다.</li>
+        <li><strong>과도한 눈물과 붉은 눈:</strong> 알레르기, 각막 상처, 혹은 속눈썹이 눈을 찌르는 '안검내반증'일 가능성이 높습니다.</li>
+        <li><strong>눈을 제대로 못 뜨거나 비비는 행동:</strong> 통증이 심하다는 증거입니다. 각막 궤양으로 진행될 수 있으니 빠른 조치가 필요합니다.</li>
+      </ul>
+
+      <div className="bg-rose-50 p-8 rounded-[2.5rem] border border-rose-100 my-10">
+        <h3 className="text-xl font-black text-rose-800 mb-4">💡 눈 건강을 위한 생활 습관</h3>
+        <p className="text-rose-900 mb-4">청결한 환경과 영양 공급이 병행되어야 합니다.</p>
+        <ul className="space-y-2 text-rose-900 font-medium">
+          <li>- 실내 습도를 40~60%로 유지하여 안구 건조를 예방하세요.</li>
+          <li>- 산책 후에는 인공눈물이나 세정제로 눈에 들어간 먼지를 씻어내 주세요.</li>
+          <li>- 루테인이나 안토시아닌이 풍부한 눈 영양제 섭취를 고려해 보세요.</li>
+          <li>- 눈물 자국이 심하다면 사료 알레르기 테스트를 진행해 보는 것이 좋습니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 매일 1분의 투자가 만드는 건강한 눈</h2>
+      <p>강아지 눈가 관리는 거창한 미용 기술이 아닙니다. 매일 아침 눈곱을 닦아주고, 일주일에 한 번 삐져나온 털을 살짝 다듬어주는 '관심'입니다. 보호자의 세심한 손길이 우리 아이의 맑은 눈을 평생 지켜줄 수 있습니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 눈을 맞추며 나누는 교감</h3>
+      <p>눈가 관리를 하는 시간은 강아지와 눈을 맞추며 깊은 교감을 나누는 시간이기도 합니다. 처음에는 서툴고 강아지도 낯설어하겠지만, 인내심을 갖고 부드럽게 다가가 보세요. 똑똑한 집사는 세상의 모든 반려견이 아프지 않고 맑은 눈으로 세상을 바라보기를 응원합니다!</p>
+    </div>
+  ),
   '27': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"여름철 무더위, 털이 복슬복슬한 우리 아이가 너무 더워 보여 털을 싹 밀어주고 싶으신가요? 하지만 이중모 견종에게 삭발은 오히려 독이 될 수 있습니다."</p>
