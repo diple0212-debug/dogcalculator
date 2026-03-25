@@ -5,6 +5,233 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '30': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 피부는 사람보다 3배나 얇고 예민합니다. 우리가 무심코 사용하는 샴푸 속 성분이 아이들에게는 치명적인 독이 될 수 있다는 사실, 알고 계셨나요?"</p>
+      
+      <p>반려견을 키우는 보호자라면 누구나 아이의 털을 부드럽게 하고 좋은 향기가 나게 하고 싶어 합니다. 하지만 향기롭고 거품이 잘 나는 샴푸가 반드시 좋은 것은 아닙니다. 오히려 그런 제품일수록 화학 성분이 가득 들어있어 강아지의 연약한 피부 장벽을 무너뜨릴 위험이 큽니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 샴푸를 고를 때 반드시 피해야 할 유해 성분 5가지와 우리 아이의 피부 건강을 지키는 올바른 선택 기준</strong>을 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 강아지 피부, 왜 사람 샴푸를 쓰면 안 될까요?</h2>
+      <p>가장 큰 이유는 'pH 지수'의 차이와 '피부 두께' 때문입니다.</p>
+      <div className="bg-indigo-50 p-6 rounded-3xl border border-indigo-100 space-y-4 my-6">
+        <p><strong>● pH 지수의 차이:</strong> 사람의 피부는 pH 5.2~5.5 정도의 약산성인 반면, 강아지의 피부는 pH 7.0~7.5 정도의 중성 또는 약알칼리성입니다. 사람용 샴푸를 강아지에게 사용하면 피부의 산성도가 파괴되어 세균 번식이 쉬워지고 극심한 건조함을 유발합니다.</p>
+        <p><strong>● 얇은 피부층:</strong> 강아지의 피부 표피층은 사람보다 3~5배 정도 더 얇습니다. 이는 외부 자극이나 화학 성분이 피부 속으로 훨씬 더 쉽게 침투한다는 것을 의미합니다.</p>
+        <p><strong>● 땀샘의 부재:</strong> 강아지는 발바닥을 제외하고는 땀샘이 거의 없습니다. 피부를 통해 노폐물을 배출하는 능력이 떨어지기 때문에 화학 성분이 피부에 남았을 때의 부작용이 훨씬 큽니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 반드시 피해야 할 '유해 성분' TOP 5</h2>
+      <p>전 성분 표를 확인하실 때 다음 성분들이 포함되어 있다면 구매를 재고해 보시는 것이 좋습니다.</p>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 설페이트계 계면활성제 (SLS, SLES)</h4>
+          <p className="text-gray-700 leading-relaxed">풍성한 거품을 내고 세정력을 높이기 위해 사용되는 성분입니다. 하지만 세정력이 너무 강력해 피부의 필수 유분까지 앗아가며, 피부 장벽을 손상시켜 가려움증과 염증을 유발합니다. 또한 제조 과정에서 발암 물질인 '1,4-다이옥산'에 오염될 가능성이 있어 주의가 필요합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 파라벤 (Parabens)</h4>
+          <p className="text-gray-700 leading-relaxed">제품의 보존 기간을 늘리기 위해 사용되는 방부제입니다. 호르몬 체계를 교란하는 '내분비계 장애 물질'로 알려져 있으며, 피부를 통해 흡수되어 체내에 축적될 수 있습니다. 메틸파라벤, 프로필파라벤 등 '파라벤'이라는 이름이 들어간 성분은 피하는 것이 상책입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 인공 향료 및 인공 색소</h4>
+          <p className="text-gray-700 leading-relaxed">강아지의 후각은 사람보다 수만 배 예민합니다. 사람이 맡기에 좋은 진한 향기는 강아지에게는 엄청난 스트레스와 두통을 유발할 수 있습니다. 또한 인공 향료는 알레르기 반응의 주범이며, 인공 색소는 피부 자극과 발암 위험성이 제기되고 있습니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">④ 페녹시에탄올 (Phenoxyethanol)</h4>
+          <p className="text-gray-700 leading-relaxed">파라벤 대신 사용되는 방부제이지만, 이 역시 피부 자극과 알레르기를 유발할 수 있습니다. 특히 강아지가 목욕 중 샴푸 물을 핥게 될 경우 중추신경계에 영향을 줄 수 있다는 연구 결과가 있어 각별한 주의가 필요합니다.</p>
+        </div>
+
+        <div className="border-l-4 border-indigo-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑤ 미네랄 오일 (Mineral Oil)</h4>
+          <p className="text-gray-700 leading-relaxed">석유에서 추출한 오일로, 털을 부드럽게 보이게 하는 효과가 있지만 피부의 모공을 막아 노폐물 배출을 방해합니다. 이는 피부의 자연스러운 재생 능력을 떨어뜨리고 만성적인 피부 질환의 원인이 됩니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 좋은 샴푸를 고르는 3가지 핵심 기준</h2>
+      <p>단순히 '천연'이라는 단어에 속지 마세요. 진짜 안전한 제품은 다음과 같은 특징을 가집니다.</p>
+      <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-200 my-10">
+        <ul className="space-y-6 text-gray-700 font-medium">
+          <li className="flex items-start gap-4">
+            <span className="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">1</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">전 성분 공개 여부 확인</p>
+              <p className="text-sm mt-1">현행법상 강아지 샴푸는 전 성분을 공개할 의무가 없습니다. 그럼에도 불구하고 모든 성분을 투명하게 공개하는 브랜드는 그만큼 성분에 자신이 있다는 증거입니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">2</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">EWG 그린 등급 성분 위주</p>
+              <p className="text-sm mt-1">미국 환경 연구 단체(EWG)에서 분류한 성분 안전 등급 중 1~2등급(그린 등급) 성분을 주로 사용했는지 확인하세요. 이는 성분의 유해성을 판단하는 객관적인 지표가 됩니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">3</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">천연 유래 계면활성제 사용</p>
+              <p className="text-sm mt-1">코코넛, 사탕수수 등에서 추출한 천연 유래 계면활성제(예: 코코-글루코사이드, 라우릴글루코사이드)는 세정력은 유지하면서도 피부 자극을 최소화합니다.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 피부 타입별 추천 성분</h2>
+      <p>우리 아이의 피부 상태에 따라 필요한 성분이 다를 수 있습니다.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-indigo-700 mb-2">🌵 건조하고 가려운 피부</h4>
+          <p className="text-sm text-gray-600">오트밀, 알로에 베라, 세라마이드 성분이 함유된 제품을 고르세요. 수분을 공급하고 가려움증을 완화하는 데 효과적입니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-indigo-700 mb-2">🦠 염증이 잦은 예민한 피부</h4>
+          <p className="text-sm text-gray-600">병풀 추출물(시카), 마데카소사이드, 카모마일 성분이 좋습니다. 피부 재생을 돕고 염증을 진정시키는 효과가 있습니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-indigo-700 mb-2">🌬️ 각질이 많은 피부</h4>
+          <p className="text-sm text-gray-600">살리실산(낮은 농도)이나 티트리 오일(희석된 것)이 각질 제거와 항균 작용에 도움을 줄 수 있습니다. 단, 티트리는 고농도일 경우 독성이 있으므로 주의해야 합니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-indigo-700 mb-2">✨ 윤기 없는 털</h4>
+          <p className="text-sm text-gray-600">실크 아미노산, 비오틴, 아르간 오일 성분이 털에 영양을 공급하여 윤기 있고 부드러운 모질을 만들어줍니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 올바른 목욕 방법: 성분만큼 중요합니다</h2>
+      <p>아무리 좋은 샴푸를 써도 방법이 틀리면 소용없습니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>희석해서 사용하기:</strong> 샴푸 원액을 직접 피부에 닿게 하기보다는 물에 희석하여 거품을 낸 뒤 사용하는 것이 자극을 줄이는 가장 좋은 방법입니다.</li>
+        <li><strong>충분히 헹구기:</strong> 샴푸 성분이 피부에 남으면 아무리 좋은 성분이라도 자극이 됩니다. 헹구는 시간은 샴푸 하는 시간의 2~3배 정도로 넉넉히 잡으세요.</li>
+        <li><strong>완벽한 건조:</strong> 샴푸 후 털 사이사이를 완벽하게 말려주지 않으면 습진이나 곰팡이성 피부염이 생길 수 있습니다. 특히 발가락 사이와 귀 주변을 신경 써주세요.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 결론: 샴푸 선택은 건강의 시작입니다</h2>
+      <p>강아지에게 목욕은 단순히 몸을 씻는 행위를 넘어, 피부 건강을 체크하고 관리하는 소중한 시간입니다. 화려한 패키지나 강한 향기에 현혹되지 말고, 뒷면의 성분표를 꼼꼼히 읽는 습관을 들여보세요. 보호자의 작은 노력이 우리 아이의 평생 피부 건강을 결정합니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 사랑한다면 성분을 보세요</h3>
+      <p>말 못 하는 우리 아이들은 샴푸가 따갑거나 가려워도 표현할 방법이 없습니다. 그저 긁거나 핥을 뿐이죠. 아이들의 침묵 섞인 고통을 예방하는 것은 오직 보호자의 몫입니다. 오늘 알려드린 정보를 통해 우리 아이에게 꼭 맞는 '인생 샴푸'를 찾으시길 바랍니다. 똑똑한 집사는 모든 반려견이 건강한 피부로 행복하게 뛰어노는 세상을 응원합니다!</p>
+    </div>
+  ),
+  '29': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"보호자가 외출할 때마다 들리는 처절한 하울링, 퇴근 후 마주하는 엉망이 된 집안... 이것은 단순한 말썽이 아닌 우리 아이의 간절한 구조 신호일 수 있습니다."</p>
+      
+      <p>강아지에게 보호자는 세상의 전부입니다. 하지만 그 애착이 지나쳐 보호자와 떨어져 있을 때 극심한 공포와 불안을 느끼는 상태를 '분리불안'이라고 합니다. 많은 보호자분들이 "우리 아이는 그냥 외로움을 많이 타요"라고 가볍게 넘기시곤 하지만, 방치된 분리불안은 강아지의 정신적, 육체적 건강을 심각하게 해칠 뿐만 아니라 보호자의 삶의 질도 떨어뜨립니다. 오늘 '똑똑한 집사'에서는 <strong>우리 아이의 현재 상태를 정확히 파악할 수 있는 20가지 자가진단 테스트와 분리불안을 극복하기 위한 실질적인 해결책</strong>을 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 분리불안(Separation Anxiety)이란 무엇인가요?</h2>
+      <p>분리불안은 단순히 혼자 있는 것을 싫어하는 수준을 넘어, 보호자와의 분리가 예상되거나 실제로 일어났을 때 나타나는 병적인 불안 반응입니다.</p>
+      <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100 space-y-4 my-6">
+        <p><strong>● 공포 반응:</strong> 보호자가 나갈 준비를 하는 소리(열쇠 소리, 옷 입는 소리 등)만 들어도 심박수가 급격히 상승하고 안절부절못합니다.</p>
+        <p><strong>● 패닉 상태:</strong> 보호자가 문을 닫고 나가는 순간부터 패닉에 빠져 탈출을 시도하거나 자해를 하기도 합니다.</p>
+        <p><strong>● 자율신경계 이상:</strong> 침 흘림, 구토, 설사, 부적절한 배변 실수 등 신체적인 이상 증상이 동반됩니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. [자가진단] 우리 강아지 분리불안 테스트 (20문항)</h2>
+      <p>지난 한 달간 우리 아이의 행동을 떠올리며 해당되는 항목의 개수를 세어보세요.</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+        {[
+          "보호자가 외출 준비를 하면 낑낑거리거나 안절부절못한다.",
+          "외출 시 문앞을 가로막거나 옷을 물고 늘어진다.",
+          "보호자가 나간 직후부터 하울링이나 짖음이 시작된다.",
+          "혼자 있을 때 문이나 창문 주변을 긁어 파손시킨다.",
+          "평소에는 잘 가리던 배변을 혼자 있을 때만 실수한다.",
+          "외출 후 돌아오면 집안 물건(리모컨, 신발 등)이 씹혀 있다.",
+          "혼자 있을 때 침을 과도하게 흘려 바닥이 젖어 있다.",
+          "보호자가 집에 돌아왔을 때 지나치게 흥분하며 진정되지 않는다.",
+          "집안에서도 보호자의 뒤를 졸졸 따라다니는 '껌딱지'다.",
+          "보호자가 화장실만 가도 문앞에서 기다리며 운다.",
+          "혼자 있을 때 사료나 간식을 전혀 먹지 않는다.",
+          "외출 준비 소리(차 키, 가방)에 숨거나 벌벌 떤다.",
+          "혼자 있을 때 자신의 발이나 꼬리를 과도하게 핥거나 깨문다.",
+          "보호자가 외출하면 밥을 먹지 않다가 돌아오면 폭식한다.",
+          "혼자 있는 동안 좁은 구석에 숨어서 나오지 않는다.",
+          "보호자의 외출 시간이 길어질수록 파괴 행동이 심해진다.",
+          "낯선 장소에 혼자 남겨지면 극도의 공포를 보인다.",
+          "보호자가 외출복으로 갈아입으면 표정이 급격히 어두워진다.",
+          "혼자 있을 때 헥헥거림(팬팅)이 멈추지 않는다.",
+          "보호자와 눈이 마주치지 않으면 불안해하며 계속 시선을 쫓는다."
+        ].map((item, index) => (
+          <div key={index} className="flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-2xl shadow-sm">
+            <span className="flex-shrink-0 w-6 h-6 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-xs font-bold">{index + 1}</span>
+            <p className="text-sm text-gray-700">{item}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-gray-900 text-white p-8 rounded-[2.5rem] my-10">
+        <h3 className="text-xl font-black mb-4 text-amber-400">📊 테스트 결과 해석</h3>
+        <ul className="space-y-4">
+          <li><span className="font-bold text-amber-200">0~4개 (정상):</span> 일반적인 애착 관계입니다. 가끔 심심해할 수 있으나 큰 문제는 없습니다.</li>
+          <li><span className="font-bold text-amber-200">5~10개 (주의):</span> 가벼운 분리불안 증세가 보입니다. 예방 교육이 필요한 시점입니다.</li>
+          <li><span className="font-bold text-amber-200">11~15개 (위험):</span> 명확한 분리불안 상태입니다. 적극적인 행동 교정이 시급합니다.</li>
+          <li><span className="font-bold text-amber-200">16개 이상 (심각):</span> 중증 분리불안입니다. 전문가의 도움과 약물 치료 병행이 필요할 수 있습니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 분리불안의 주요 증상 심층 분석</h2>
+      <p>단순한 말썽과 분리불안에 의한 행동은 동기부터 다릅니다.</p>
+      
+      <div className="space-y-8">
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">① 파괴적인 행동 (Destruction)</h4>
+          <p className="text-gray-600 leading-relaxed">주로 현관문, 창문, 문틀 등 '탈출 경로'를 공격합니다. 이는 보호자를 찾으러 나가고 싶은 간절함의 표현입니다. 또한 보호자의 냄새가 짙게 밴 물건(신발, 양말, 리모컨)을 씹는 것은 보호자의 냄새를 통해 안정을 찾으려는 시도입니다.</p>
+        </div>
+
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">② 끊임없는 소음 (Vocalization)</h4>
+          <p className="text-gray-600 leading-relaxed">하울링이나 짖음은 멀리 있는 무리를 부르는 본능적인 행동입니다. "나 여기 있어요! 빨리 돌아오세요!"라는 외침입니다. 아파트와 같은 공동주택에서는 이웃 간의 갈등으로 번지기 쉬워 보호자를 더욱 힘들게 만드는 요인입니다.</p>
+        </div>
+
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">③ 생리적 이상 징후 (Physiological Signs)</h4>
+          <p className="text-gray-600 leading-relaxed">극도의 스트레스는 소화 기관에 영향을 줍니다. 혼자 있을 때만 설사를 하거나 토를 하는 경우, 혹은 평소 완벽하던 배변 습관이 무너지는 것은 근육 조절 능력을 상실할 정도의 패닉 상태임을 의미합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 왜 우리 강아지는 분리불안이 생겼을까?</h2>
+      <p>원인을 알아야 정확한 해결이 가능합니다.</p>
+      <ul className="list-disc pl-5 space-y-4 text-gray-700">
+        <li><strong>과도한 의존성 형성:</strong> 어릴 때부터 24시간 내내 보호자와 붙어 지내며 '혼자 있는 법'을 배우지 못한 경우입니다.</li>
+        <li><strong>환경의 급격한 변화:</strong> 이사, 새로운 가족 구성원의 등장, 혹은 반대로 가족의 부재 등이 트리거가 될 수 있습니다.</li>
+        <li><strong>트라우마:</strong> 혼자 있을 때 큰 천둥소리가 났거나, 무서운 경험을 했던 기억이 불안을 고착화시킵니다.</li>
+        <li><strong>유전적 요인:</strong> 선천적으로 불안도가 높은 기질을 타고난 아이들도 있습니다.</li>
+      </ul>
+
+      <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 my-10">
+        <h3 className="text-xl font-black text-blue-800 mb-4">🚀 분리불안 극복을 위한 5단계 솔루션</h3>
+        <div className="space-y-6">
+          <div>
+            <h5 className="font-bold text-blue-900 mb-1">1단계: 외출 신호 둔감화 교육</h5>
+            <p className="text-blue-800 text-sm">옷을 입거나 열쇠를 집어 들고 나가지 않는 연습을 반복하세요. "열쇠 소리 = 보호자가 떠남"이라는 공식을 깨야 합니다.</p>
+          </div>
+          <div>
+            <h5 className="font-bold text-blue-900 mb-1">2단계: 짧은 이별 연습 (5초부터 시작)</h5>
+            <p className="text-blue-800 text-sm">문을 닫고 나갔다가 불안해하기 전(단 5초라도)에 돌아와 보상하세요. "보호자는 반드시 돌아온다"는 신뢰를 쌓는 과정입니다.</p>
+          </div>
+          <div>
+            <h5 className="font-bold text-blue-900 mb-1">3단계: 독립적인 공간 마련</h5>
+            <p className="text-blue-800 text-sm">집안에서도 계속 따라다니지 못하게 '기다려' 교육을 하고, 자신만의 안전한 하우스(크레이트)에서 쉬는 연습을 시키세요.</p>
+          </div>
+          <div>
+            <h5 className="font-bold text-blue-900 mb-1">4단계: 노즈워크와 풍부한 자극</h5>
+            <p className="text-blue-800 text-sm">외출 직전 아주 맛있는 간식이 든 노즈워크 장난감을 주어, 보호자의 외출을 '맛있는 것이 생기는 즐거운 시간'으로 치환하세요.</p>
+          </div>
+          <div>
+            <h5 className="font-bold text-blue-900 mb-1">5단계: 충분한 산책과 에너지 발산</h5>
+            <p className="text-blue-800 text-sm">"피곤한 강아지가 행복한 강아지다"라는 말처럼, 외출 전 충분한 산책으로 에너지를 소진시켜 잠을 자게 유도하는 것이 효과적입니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 인내심이 만드는 기적</h2>
+      <p>분리불안 교정은 하루아침에 이루어지지 않습니다. 때로는 나아지는 듯하다가 다시 나빠지는 '퇴보'의 과정을 겪기도 합니다. 하지만 보호자가 포기하지 않고 일관된 태도로 교육한다면, 우리 아이는 반드시 혼자서도 편안하게 쉴 수 있는 용기를 얻게 될 것입니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 당신의 사랑이 정답입니다</h3>
+      <p>강아지의 분리불안은 당신을 너무나 사랑하기 때문에 생기는 아픈 사랑의 병입니다. 아이를 혼내기보다는 그 불안한 마음을 먼저 안아주세요. 똑똑한 집사는 모든 반려견과 보호자가 떨어져 있는 시간에도 서로를 믿으며 행복할 수 있기를 진심으로 응원합니다!</p>
+    </div>
+  ),
   '28': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 맑고 초롱초롱한 눈, 하지만 눈가에 뭉친 눈곱과 눈을 찌르는 털은 단순한 미관상의 문제를 넘어 안구 질환의 원인이 됩니다. 안전하고 효과적인 눈가 관리 비법을 공개합니다."</p>
