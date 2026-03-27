@@ -5,6 +5,192 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '32': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"즐거운 산책 후 현관문 앞에서 마주하는 고민, '오늘 발은 어떻게 닦아주지?' 물로 씻기자니 번거롭고, 물티슈로 닦자니 찝찝한 보호자님들을 위한 완벽 가이드를 공개합니다."</p>
+      
+      <p>반려견에게 산책은 하루 중 가장 행복한 시간입니다. 하지만 산책 후 발을 닦는 과정은 보호자에게도, 강아지에게도 때로는 스트레스가 되기도 합니다. 특히 미세먼지가 심한 날이나 비 온 뒤 진흙탕을 걸었을 때, 혹은 단순히 매일 하는 일상적인 산책 후에도 '어떤 방법이 가장 위생적이고 피부에 무리가 없을지' 고민하게 됩니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 산책 후 발 세정법 3가지(물 세척, 물티슈, 샴푸/폼)의 장단점을 철저히 비교하고, 우리 아이의 피부 건강을 지키는 올바른 관리 노하우</strong>를 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 왜 산책 후 발 관리가 중요한가요?</h2>
+      <p>강아지의 발바닥은 단순히 걷는 도구가 아니라, 외부 환경과 직접 소통하는 민감한 기관입니다.</p>
+      <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100 space-y-4 my-6">
+        <p><strong>● 오염물질 제거:</strong> 아스팔트의 먼지, 중금속, 잔디밭의 진드기나 기생충 알, 겨울철 염화칼슘 등은 강아지 발바닥 사이사이에 끼어 염증을 유발합니다.</p>
+        <p><strong>● 지간염 예방:</strong> 발가락 사이가 습하거나 오염된 상태로 방치되면 세균이 번식하여 지간염(발가락 사이 염증)이 생기기 쉽습니다. 이는 강아지가 발을 계속 핥게 만드는 주범입니다.</p>
+        <p><strong>● 실내 위생 유지:</strong> 외부의 오염물질이 침대나 소파 등 실내 공간으로 유입되는 것을 막아 가족의 위생도 지킬 수 있습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 방법 1: 물 세척 (물로만 씻기기)</h2>
+      <p>가장 전통적이고 확실한 세정 방법입니다.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">✅ 장점</h4>
+          <p className="text-gray-700 leading-relaxed">화학 성분 걱정 없이 물리적으로 오염물질을 가장 깨끗하게 씻어낼 수 있습니다. 특히 발가락 사이 깊숙이 박힌 모래나 흙을 제거하는 데 탁월합니다.</p>
+        </div>
+        <div className="border-l-4 border-red-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">❌ 단점</h4>
+          <p className="text-gray-700 leading-relaxed">매번 화장실로 데려가야 하는 번거로움이 있으며, 털이 젖기 때문에 완벽하게 말려주지 않으면 오히려 습진의 원인이 됩니다. 또한 잦은 물 세척은 발바닥 패드를 건조하게 만들 수 있습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 방법 2: 물티슈 (간편하게 닦기)</h2>
+      <p>바쁜 현대인들이 가장 선호하는 간편한 방법입니다.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">✅ 장점</h4>
+          <p className="text-gray-700 leading-relaxed">장소에 구애받지 않고 현관에서 바로 해결할 수 있어 매우 편리합니다. 강아지도 물에 젖는 거부감 없이 빠르게 끝낼 수 있습니다.</p>
+        </div>
+        <div className="border-l-4 border-red-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">❌ 단점</h4>
+          <p className="text-gray-700 leading-relaxed">표면의 먼지만 닦아낼 뿐, 발가락 사이의 미세한 오염물질까지 제거하기는 어렵습니다. 또한 일반 물티슈의 방부제나 향료 성분이 강아지 피부에 자극을 줄 수 있으므로 반드시 '반려견 전용'을 사용해야 합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 방법 3: 워터리스 샴푸/버블 폼 (거품 세정)</h2>
+      <p>최근 인기를 끌고 있는 하이브리드 방식입니다.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">✅ 장점</h4>
+          <p className="text-gray-700 leading-relaxed">물 없이 거품만으로 세정하고 수건으로 닦아내면 끝입니다. 물티슈보다 세정력이 좋고, 물 세척보다 간편합니다. 보습 성분이 포함된 경우가 많아 패드 관리에도 도움이 됩니다.</p>
+        </div>
+        <div className="border-l-4 border-red-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">❌ 단점</h4>
+          <p className="text-gray-700 leading-relaxed">잔여 성분이 남을 수 있어 예민한 피부를 가진 아이들은 알레르기 반응을 보일 수 있습니다. 또한 심한 오염(진흙 등)에는 세정력의 한계가 있습니다.</p>
+        </div>
+      </div>
+
+      <div className="bg-gray-900 text-white p-8 rounded-[2.5rem] my-10">
+        <h3 className="text-xl font-black mb-4 text-blue-400">📊 상황별 추천 세정법 요약</h3>
+        <ul className="space-y-4">
+          <li><span className="font-bold text-blue-200">맑은 날, 가벼운 동네 산책:</span> 반려견 전용 물티슈 또는 워터리스 샴푸</li>
+          <li><span className="font-bold text-blue-200">비 온 뒤, 흙먼지가 많은 날:</span> 미온수를 이용한 물 세척 (필요시 약산성 샴푸 병행)</li>
+          <li><span className="font-bold text-blue-200">겨울철 눈 온 뒤 (염화칼슘):</span> 반드시 물로 충분히 헹궈내는 물 세척 필수</li>
+          <li><span className="font-bold text-blue-200">피부가 예민하거나 지간염이 있는 경우:</span> 자극이 적은 물 세척 후 완벽 건조</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 세정보다 중요한 '건조'와 '보습'</h2>
+      <p>많은 보호자님들이 놓치는 가장 중요한 포인트입니다.</p>
+      <div className="bg-white p-8 rounded-[2.5rem] border border-gray-200 shadow-sm space-y-6">
+        <div>
+          <h4 className="font-bold text-lg text-blue-600 mb-2">① 틈새까지 완벽 건조</h4>
+          <p className="text-gray-600">발가락 사이의 습기는 곰팡이균의 온상입니다. 드라이기 바람(찬바람 권장)이나 마른 수건으로 뽀송뽀송하게 말려주세요. '축축한 발'은 지간염으로 가는 지름길입니다.</p>
+        </div>
+        <div>
+          <h4 className="font-bold text-lg text-blue-600 mb-2">② 발바닥 밤(Balm) 활용</h4>
+          <p className="text-gray-600">잦은 세정은 발바닥 패드를 갈라지게 만듭니다. 세정 후 전용 보습 밤을 발라주면 패드가 말랑말랑하게 유지되어 미끄럼 방지 효과도 높아집니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 결론: 정답은 '상황에 맞는 유연함'입니다</h2>
+      <p>무조건 물로 씻겨야 한다거나, 물티슈는 안 된다는 고정관념보다는 그날의 산책 환경과 우리 아이의 피부 상태에 맞춰 가장 스트레스 없는 방법을 선택하는 것이 정답입니다. 보호자의 편의와 강아지의 건강 사이에서 적절한 균형을 찾는 것이 중요합니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 건강한 발이 행복한 산책을 만듭니다</h3>
+      <p>강아지에게 발은 세상을 탐험하는 가장 소중한 도구입니다. 산책 후 5분만 더 투자해서 아이의 발을 꼼꼼히 살피고 닦아주세요. 그 작은 습관이 우리 아이가 평생 아프지 않고 신나게 뛰어놀 수 있는 튼튼한 발을 만들어줍니다. 똑똑한 집사는 모든 반려견의 건강한 발걸음을 응원합니다!</p>
+    </div>
+  ),
+  '31': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지가 갑자기 하품을 하거나, 눈을 피하며 고개를 돌리는 행동... 단순히 졸리거나 무관심해서일까요? 그것은 당신에게 보내는 강아지의 간절한 '평화의 메시지'입니다."</p>
+      
+      <p>강아지는 말을 할 수 없지만, 온몸으로 자신의 감정을 표현합니다. 이를 '카밍 시그널(Calming Signals)'이라고 부릅니다. 노르웨이의 반려견 전문가 투리드 루가스(Turid Rugaas)가 정립한 이 개념은 강아지가 스스로를 진정시키거나 상대방에게 적의가 없음을 알리고 평화를 유지하기 위해 보내는 미세한 신호들을 의미합니다. 보호자가 이 신호를 이해하지 못하면 강아지는 소통의 단절을 느끼고 스트레스를 받게 됩니다. 오늘 '똑똑한 집사'에서는 <strong>강아지가 보내는 주요 카밍 시그널 10가지와 그 속에 담긴 진짜 의미</strong>를 3000자 이상의 상세 가이드로 완벽하게 해석해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 카밍 시그널, 왜 알아야 할까요?</h2>
+      <p>카밍 시그널은 강아지 세계의 '공용어'이자 '예절'입니다.</p>
+      <div className="bg-green-50 p-6 rounded-3xl border border-green-100 space-y-4 my-6">
+        <p><strong>● 갈등 회피:</strong> 강아지는 본능적으로 싸움을 싫어합니다. 시그널을 통해 상대에게 "나는 싸울 의사가 없으니 진정해"라고 말합니다.</p>
+        <p><strong>● 스트레스 완화:</strong> 낯선 환경이나 긴장되는 상황에서 스스로를 달래기 위해 이러한 행동을 합니다.</p>
+        <p><strong>● 신뢰 관계 형성:</strong> 보호자가 시그널에 적절히 반응해주면 강아지는 "내 말을 이해해주는구나!"라고 느끼며 깊은 유대감을 형성합니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 놓치기 쉬운 주요 카밍 시그널 10가지</h2>
+      
+      <div className="space-y-10">
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 고개 돌리기 (Turning Away)</h4>
+          <p className="text-gray-700 leading-relaxed">정면으로 마주 보는 것은 강아지 세계에서 도전이나 위협으로 느껴질 수 있습니다. 강아지가 고개를 돌리는 것은 "부담스러우니 좀 떨어져 줘" 또는 "나는 너를 공격할 생각이 없어"라는 뜻입니다. 사진을 찍으려 할 때 고개를 돌리는 것도 카메라 렌즈를 위협으로 느끼기 때문입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 하품하기 (Yawning)</h4>
+          <p className="text-gray-700 leading-relaxed">졸리지 않은 상황에서 하는 하품은 전형적인 긴장 신호입니다. 동물병원에 갔을 때나 보호자에게 혼날 때 하품을 한다면, 그것은 "지금 너무 긴장돼요. 제발 그만해 주세요"라는 의미입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 코 핥기 (Licking Nose)</h4>
+          <p className="text-gray-700 leading-relaxed">순식간에 혀로 코를 낼름 핥는 행동입니다. 아주 빠르게 일어나서 놓치기 쉽지만, 이는 매우 흔한 불안의 표현입니다. 낯선 사람이 다가오거나 불편한 신체 접촉이 있을 때 자주 나타납니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">④ 눈 깜빡이기 (Blinking)</h4>
+          <p className="text-gray-700 leading-relaxed">상대방을 빤히 쳐다보는 대신 눈을 부드럽게 깜빡이는 것은 "나는 너에게 우호적이야"라는 신호입니다. 보호자도 강아지와 눈이 마주쳤을 때 천천히 깜빡여주면 강아지에게 안정감을 줄 수 있습니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑤ 몸 털기 (Shaking Off)</h4>
+          <p className="text-gray-700 leading-relaxed">몸이 젖지 않았는데도 몸을 세게 터는 행동은 '스트레스 털어내기'입니다. 긴장되는 상황이 끝난 직후(예: 목욕 후, 낯선 개와의 만남 후)에 자주 나타나며, "휴, 이제 좀 살겠다"라는 안도의 표현입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑥ 기지개 켜기 (Stretching)</h4>
+          <p className="text-gray-700 leading-relaxed">잠에서 깬 직후가 아닌데 앞다리를 쭉 뻗으며 기지개를 켠다면, 이는 놀이를 제안하거나 상대방을 진정시키려는 의도입니다. "우리 싸우지 말고 같이 놀자!"라는 긍정적인 신호일 때가 많습니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑦ 냄새 맡기 (Sniffing)</h4>
+          <p className="text-gray-700 leading-relaxed">갑자기 바닥의 냄새를 맡는 척하는 것은 상황을 회피하려는 행동입니다. 낯선 개가 다가올 때 뜬금없이 땅을 킁킁거린다면 "나는 너에게 관심 없으니 그냥 지나가 줘"라는 정중한 거절의 의사표시입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑧ 느리게 걷기 (Slow Motion)</h4>
+          <p className="text-gray-700 leading-relaxed">보호자가 화난 목소리로 부를 때 강아지가 아주 천천히 다가오는 것을 보신 적 있나요? 이는 반항하는 것이 아니라, 화난 보호자를 진정시키기 위해 "제발 화내지 마세요. 천천히 갈게요"라고 말하는 것입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑨ 끼어들기 (Splitting)</h4>
+          <p className="text-gray-700 leading-relaxed">사람들이 포옹하거나 싸우는 듯한 분위기가 조성될 때 강아지가 그 사이를 파고드는 행동입니다. 이는 "둘이 너무 가깝거나 험악해 보여요. 내가 중간에서 중재할게요"라는 평화 중재자의 역할입니다.</p>
+        </div>
+
+        <div className="border-l-4 border-green-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">⑩ 앉거나 엎드리기 (Sitting/Lying Down)</h4>
+          <p className="text-gray-700 leading-relaxed">상대방이 너무 흥분해 있을 때 강아지가 갑자기 그 자리에 앉거나 엎드리는 것은 "나는 움직이지 않을 테니 너도 진정해"라는 강력한 진정 신호입니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 보호자가 카밍 시그널을 활용하는 법</h2>
+      <p>우리도 강아지의 언어로 대답해줄 수 있습니다.</p>
+      <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-200 my-10">
+        <ul className="space-y-6 text-gray-700 font-medium">
+          <li className="flex items-start gap-4">
+            <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">1</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">정면 대신 곡선으로 접근하기</p>
+              <p className="text-sm mt-1">처음 만나는 강아지에게는 일직선으로 다가가지 말고 완만한 곡선을 그리며 다가가세요. 훨씬 덜 위협적으로 느껴집니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">2</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">시선 피해주기</p>
+              <p className="text-sm mt-1">강아지가 겁을 먹었다면 눈을 똑바로 쳐다보지 말고 고개를 살짝 돌려주세요. 강아지는 즉시 안도감을 느낍니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">3</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">하품 따라 하기</p>
+              <p className="text-sm mt-1">강아지가 불안해할 때 보호자가 크게 하품을 해주면 "괜찮아, 여기는 안전해"라는 메시지를 전달할 수 있습니다.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 결론: 마음으로 듣는 대화</h2>
+      <p>카밍 시그널을 아는 것은 강아지의 마음을 여는 열쇠를 갖는 것과 같습니다. 이제 우리 아이의 사소한 몸짓 하나도 그냥 지나치지 마세요. 그 속에 담긴 간절한 이야기를 들어줄 때, 진정한 교감이 시작됩니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 강아지의 언어에 귀 기울여주세요</h3>
+      <p>강아지는 평생 우리에게 말을 걸고 있습니다. 다만 우리가 그 언어를 배우지 않았을 뿐입니다. 오늘 배운 시그널들을 실생활에서 관찰해보세요. 아이들의 소리 없는 외침에 응답해주는 최고의 보호자가 되시길 바랍니다. 똑똑한 집사는 반려견과 보호자의 행복한 소통을 응원합니다!</p>
+    </div>
+  ),
   '30': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 피부는 사람보다 3배나 얇고 예민합니다. 우리가 무심코 사용하는 샴푸 속 성분이 아이들에게는 치명적인 독이 될 수 있다는 사실, 알고 계셨나요?"</p>
