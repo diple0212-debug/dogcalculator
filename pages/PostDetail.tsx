@@ -5,6 +5,117 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '33': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"보호자가 눈앞에서 사라지기만 해도 불안해하는 우리 아이, 어떻게 도와줄 수 있을까요? '기다려' 훈련은 단순히 복종을 위한 것이 아니라, 강아지에게 독립심과 신뢰를 가르치는 가장 강력한 도구입니다."</p>
+      
+      <p>강아지에게 보호자는 세상의 전부입니다. 하지만 그 애착이 지나쳐 보호자가 잠시만 자리를 비워도 극심한 공포를 느끼는 '분리불안'은 강아지와 보호자 모두의 삶을 힘들게 만듭니다. 많은 분들이 분리불안 해결을 위해 노즈워크나 음악 감상 등을 시도하시지만, 가장 근본적인 해결책은 강아지 스스로 '보호자는 반드시 돌아온다'는 확신과 '혼자서도 안전하다'는 독립심을 갖게 하는 것입니다. 오늘 '똑똑한 집사'에서는 <strong>분리불안 완화를 위한 '기다려' 훈련의 단계별 실전 가이드</strong>를 3000자 이상의 방대한 분량으로 상세히 전해드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 분리불안과 '기다려' 훈련의 상관관계</h2>
+      <p>'기다려' 훈련이 왜 분리불안에 효과적일까요? 단순히 앉아서 기다리는 동작 그 이상의 의미가 있기 때문입니다.</p>
+      <div className="bg-orange-50 p-6 rounded-3xl border border-orange-100 space-y-4 my-6">
+        <p><strong>● 충동 조절 능력 향상:</strong> 강아지가 즉각적인 욕구(보호자를 따라가는 것)를 억제하고 차분히 기다리는 법을 배우면서 감정 조절 능력이 길러집니다.</p>
+        <p><strong>● 독립심 배양:</strong> 보호자와 물리적으로 떨어져 있는 시간을 아주 짧은 단위부터 성공적으로 경험하며, 혼자 있는 것이 무서운 일이 아님을 깨닫게 됩니다.</p>
+        <p><strong>● 신뢰 관계의 재정립:</strong> "기다리면 보호자가 반드시 돌아와서 보상해준다"는 경험이 반복되면서, 보호자의 부재에 대한 막연한 공포가 신뢰로 바뀝니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 훈련 전 필수 준비사항</h2>
+      <p>성공적인 훈련을 위해 다음 세 가지를 먼저 체크하세요.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">① 아주 맛있는 보상 (High-Value Treats)</h4>
+          <p className="text-gray-700 leading-relaxed">평소에 먹는 사료보다는 강아지가 가장 좋아하는 특별한 간식을 준비하세요. '기다려'라는 어려운 과제를 수행했을 때의 보상이 확실해야 훈련 의욕이 높아집니다.</p>
+        </div>
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">② 조용한 환경</h4>
+          <p className="text-gray-700 leading-relaxed">처음에는 TV 소리나 다른 가족의 방해가 없는 조용한 실내에서 시작하세요. 집중력이 흐트러지면 훈련 성과가 떨어집니다.</p>
+        </div>
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">③ 보호자의 차분한 태도</h4>
+          <p className="text-gray-700 leading-relaxed">보호자가 긴장하거나 서두르면 강아지도 그 감정을 느낍니다. 훈련은 놀이처럼 즐겁고 차분한 분위기에서 진행되어야 합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. [1단계] 눈앞에서 기다리기 (기초 다지기)</h2>
+      <p>가장 먼저 보호자가 바로 앞에 있는 상태에서 기다리는 연습을 합니다.</p>
+      <div className="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-200 my-10">
+        <ol className="space-y-6 text-gray-700 font-medium">
+          <li className="flex items-start gap-4">
+            <span className="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">1</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">앉거나 엎드린 자세 유도</p>
+              <p className="text-sm mt-1">강아지가 가장 편안하게 머무를 수 있는 자세를 취하게 합니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">2</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">손바닥 신호와 함께 '기다려'</p>
+              <p className="text-sm mt-1">손바닥을 강아지 코앞에 가볍게 보여주며 낮은 목소리로 '기다려'라고 말합니다.</p>
+            </div>
+          </li>
+          <li className="flex items-start gap-4">
+            <span className="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">3</span>
+            <div>
+              <p className="text-lg font-bold text-gray-900">1초부터 시작하는 보상</p>
+              <p className="text-sm mt-1">단 1초라도 움직이지 않았다면 즉시 '옳지!'라는 칭찬과 함께 간식을 줍니다. 처음에는 시간을 아주 짧게 잡는 것이 핵심입니다.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. [2단계] 시야에서 사라지기 (불안 극복의 핵심)</h2>
+      <p>보호자가 보이지 않아도 안전하다는 것을 가르치는 단계입니다.</p>
+      <div className="space-y-8">
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">① 한 걸음 뒤로 물러나기</h4>
+          <p className="text-gray-600 leading-relaxed">'기다려' 신호를 준 뒤 한 걸음 뒤로 갔다가 바로 돌아와 보상하세요. 거리를 조금씩 늘려가는 것이 중요합니다.</p>
+        </div>
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">② 문 뒤로 숨기 (Peek-a-boo)</h4>
+          <p className="text-gray-600 leading-relaxed">방문을 살짝 닫고 1초만 숨었다가 다시 나타나세요. 강아지가 불안해하며 문을 긁기 전에 돌아오는 것이 포인트입니다.</p>
+        </div>
+        <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-black text-lg text-gray-800 mb-3">③ 시간 늘리기</h4>
+          <p className="text-gray-600 leading-relaxed">숨어 있는 시간을 2초, 5초, 10초로 천천히 늘려갑니다. 만약 강아지가 움직이거나 짖는다면 이전 단계로 돌아가 난이도를 낮추세요.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. [3단계] 현관문 밖으로 나가기 (실전 응용)</h2>
+      <p>실제 외출 상황과 유사한 환경에서 훈련합니다.</p>
+      <div className="bg-orange-50 p-8 rounded-[2.5rem] border border-orange-100 my-10">
+        <h3 className="text-xl font-black text-orange-800 mb-4">🚪 현관문 훈련 프로토콜</h3>
+        <ul className="space-y-4 text-orange-900 font-medium">
+          <li><strong>● 외출 신호 둔감화:</strong> 외출하지 않더라도 옷을 입거나 가방을 메고 집안을 돌아다니세요. 외출 준비 소리가 불안의 신호가 되지 않게 해야 합니다.</li>
+          <li><strong>● 도어락 소리 들려주기:</strong> 현관문을 열고 닫는 소리만 들려주고 다시 들어와 간식을 줍니다.</li>
+          <li><strong>● 짧은 외출 반복:</strong> 문 밖으로 나갔다가 10초 후에 들어오기, 30초 후에 들어오기 등을 반복합니다. 이때 돌아와서 너무 과하게 반겨주지 않는 것이 중요합니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 훈련 시 반드시 지켜야 할 3가지 원칙</h2>
+      <p>이 원칙을 어기면 훈련 효과가 반감되거나 오히려 불안이 심해질 수 있습니다.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-orange-700 mb-2">🚫 절대 혼내지 마세요</h4>
+          <p className="text-sm text-gray-600">기다리지 못하고 움직였다고 해서 혼을 내면, 강아지는 훈련 자체를 무서운 경험으로 인식하게 됩니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-orange-700 mb-2">🔄 일관성 유지</h4>
+          <p className="text-sm text-gray-600">어제는 되고 오늘은 안 되는 훈련은 강아지를 혼란스럽게 합니다. 매일 5~10분씩 꾸준히 진행하세요.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-orange-700 mb-2">📉 난이도 조절</h4>
+          <p className="text-sm text-gray-600">강아지가 실패한다면 그것은 보호자가 난이도를 너무 빨리 높였기 때문입니다. 언제든 쉬운 단계로 돌아갈 용기가 필요합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">7. 결론: 기다림은 사랑의 또 다른 이름입니다</h2>
+      <p>분리불안은 하루아침에 고쳐지는 병이 아닙니다. 하지만 '기다려' 훈련을 통해 강아지에게 혼자 있는 시간의 평온함을 선물할 수 있습니다. 보호자가 인내심을 가지고 한 걸음씩 나아간다면, 우리 아이는 어느덧 현관문 밖의 소리에도 동요하지 않고 편안하게 잠을 청하는 늠름한 강아지가 되어 있을 것입니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 당신의 노력을 응원합니다</h3>
+      <p>분리불안으로 힘든 시간을 보내고 계신 모든 보호자님, 포기하지 마세요. 당신의 정성과 인내심은 강아지에게 가장 큰 위로이자 치료제입니다. 오늘부터 시작하는 5분의 '기다려' 훈련이 우리 아이의 평생 행복을 결정합니다. 똑똑한 집사는 모든 반려견과 보호자의 평화로운 일상을 진심으로 응원합니다!</p>
+    </div>
+  ),
   '32': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"즐거운 산책 후 현관문 앞에서 마주하는 고민, '오늘 발은 어떻게 닦아주지?' 물로 씻기자니 번거롭고, 물티슈로 닦자니 찝찝한 보호자님들을 위한 완벽 가이드를 공개합니다."</p>
