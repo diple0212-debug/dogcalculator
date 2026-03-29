@@ -5,6 +5,89 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '34': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지가 짖는 것은 소음이 아니라, 무언가 말하고 싶어 하는 '언어'입니다. 하지만 그 언어가 이웃에게 피해를 주고 보호자를 힘들게 한다면, 정확한 원인을 파악하고 올바른 방법으로 대화하는 법을 배워야 합니다."</p>
+      
+      <p>아파트나 빌라 같은 공동주택에서 강아지를 키우는 보호자들에게 가장 큰 고민 중 하나는 바로 '짖음'입니다. 강아지가 짖을 때마다 가슴이 철렁 내려앉고, 이웃집의 눈치를 보느라 산책조차 조심스러워지는 마음은 겪어보지 않은 사람은 모를 고통입니다. 하지만 무작정 "안 돼!", "조용히 해!"라고 소리치는 것은 오히려 강아지를 더 흥분시키거나 불안하게 만들 뿐입니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 짖음의 4가지 주요 원인과 그에 따른 맞춤형 해결 방법</strong>을 3000자 이상의 방대한 분량으로 심도 있게 다뤄보겠습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 짖음은 강아지의 본능이자 소통 수단입니다</h2>
+      <p>훈련에 들어가기에 앞서 우리가 꼭 이해해야 할 사실이 있습니다. 강아지에게 짖는 행위는 사람의 말과 같습니다. 배가 고프거나, 무섭거나, 낯선 사람이 나타났을 때 자신의 감정과 상태를 알리는 유일한 방법이죠. 따라서 우리의 목표는 '절대 짖지 않는 강아지'를 만드는 것이 아니라, <strong>'상황에 맞지 않는 과도한 짖음을 조절할 수 있는 강아지'</strong>로 교육하는 것입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 원인별 분석과 실전 해결 가이드</h2>
+      
+      <h3 className="text-xl font-bold text-gray-800">① 요구성 짖음: "나랑 놀아줘! 간식 줘!"</h3>
+      <p>보호자가 밥을 먹을 때, 혹은 TV를 보고 있을 때 강아지가 빤히 쳐다보며 '멍멍!' 하고 짖는 경우입니다. 이는 자신이 원하는 것을 얻기 위해 보호자의 관심을 끄는 행동입니다.</p>
+      <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100 space-y-4 my-6">
+        <p><strong>● 해결 방법: '철저한 무시'가 답입니다.</strong></p>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>강아지가 짖을 때 눈을 맞추거나 말을 걸거나, 심지어 혼내는 것도 강아지 입장에서는 '관심'으로 느껴질 수 있습니다.</li>
+          <li>짖는 동안에는 고개를 돌리거나 아예 다른 방으로 이동하세요.</li>
+          <li>짖음을 멈추고 3~5초 정도 차분해졌을 때 비로소 다가가서 칭찬하고 원하는 것을 들어주세요. "짖으면 아무것도 얻을 수 없지만, 조용히 있으면 보상이 따른다"는 것을 가르치는 것이 핵심입니다.</li>
+        </ul>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">② 경계성 짖음: "누구냐! 가까이 오지 마!"</h3>
+      <p>현관문 밖의 발소리, 택배 기사님의 방문, 창밖의 고양이 등을 보고 짖는 경우입니다. 자신의 영역을 지키려는 본능과 낯선 것에 대한 두려움이 섞여 있습니다.</p>
+      <div className="bg-red-50 p-6 rounded-3xl border border-red-100 space-y-4 my-6">
+        <p><strong>● 해결 방법: '안심시키기'와 '주의 돌리기'</strong></p>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>소리가 들릴 때 강아지보다 먼저 현관 쪽으로 가서 상황을 확인하는 시늉을 하세요. "내가 확인했어, 괜찮아"라는 신호를 주는 것입니다.</li>
+          <li>짖기 직전 혹은 짖기 시작했을 때 강아지가 좋아하는 장난감이나 노즈워크를 던져주어 관심을 외부 소리에서 보호자에게로 돌리세요.</li>
+          <li>백색소음(TV, 라디오, 전용 음악)을 틀어주어 외부 소음을 중화시키는 것도 큰 도움이 됩니다.</li>
+        </ul>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">③ 분리불안 및 공포에 의한 짖음: "가지 마, 무서워!"</h3>
+      <p>보호자가 외출했을 때 하울링을 하거나 계속해서 짖는 경우입니다. 이는 단순한 버릇이 아니라 심리적인 질병에 가깝습니다.</p>
+      <div className="bg-orange-50 p-6 rounded-3xl border border-orange-100 space-y-4 my-6">
+        <p><strong>● 해결 방법: 단계별 둔감화 교육</strong></p>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>외출 준비 동작(차 키 챙기기, 옷 입기)을 하고 다시 소파에 앉는 등 외출 신호에 대한 긴장감을 낮춰주세요.</li>
+          <li>1초, 5초, 10초 등 아주 짧은 시간 동안 문밖으로 나갔다 돌아오는 연습을 반복하여 "보호자는 반드시 돌아온다"는 신뢰를 쌓아야 합니다.</li>
+          <li>외출 직전 간식이 나오는 장난감을 주어 '보호자의 외출 = 맛있는 것이 생기는 시간'이라는 긍정적인 인식을 심어주세요.</li>
+        </ul>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">④ 지루함과 에너지 과잉: "심심해 죽겠어!"</h3>
+      <p>활동량이 부족한 강아지가 에너지를 발산하기 위해 짖는 경우입니다. 특별한 자극이 없는데도 허공을 향해 짖거나 집안을 뛰어다니며 짖기도 합니다.</p>
+      <div className="bg-green-50 p-6 rounded-3xl border border-green-100 space-y-4 my-6">
+        <p><strong>● 해결 방법: 충분한 산책과 두뇌 활동</strong></p>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>"피곤한 강아지가 행복한 강아지다"라는 말이 있습니다. 매일 정기적인 산책을 통해 신체적 에너지를 소모시켜주세요.</li>
+          <li>집안에서도 노즈워크, 퍼즐 장난감 등을 통해 두뇌를 쓰게 하면 강아지는 금방 차분해집니다.</li>
+        </ul>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 실전! '조용히' 명령 가르치기</h2>
+      <p>짖음을 멈추게 하는 구체적인 명령어를 가르쳐두면 위급한 상황에서 큰 도움이 됩니다.</p>
+      <ol className="list-decimal list-inside space-y-4 text-gray-700">
+        <li>강아지가 짖을 때, 코앞에 아주 맛있는 간식을 가져다 대세요. (냄새를 맡느라 짖음을 멈추게 됩니다.)</li>
+        <li>짖음을 멈춘 순간 "조용히" 또는 "쉿"이라고 말합니다.</li>
+        <li>조용히 있는 상태가 2~3초 유지되면 간식을 주고 폭풍 칭찬을 해줍니다.</li>
+        <li>이 과정을 반복하면 강아지는 "조용히"라는 말이 짖음을 멈추라는 신호임을 이해하게 됩니다.</li>
+      </ol>
+
+      <AdPlaceholder placement="중단" />
+
+      <h2 className="text-2xl font-black text-gray-800">4. 보호자가 절대 하지 말아야 할 행동</h2>
+      <div className="bg-gray-100 p-6 rounded-3xl space-y-4">
+        <p className="text-red-600 font-bold">X 같이 소리 지르기</p>
+        <p>보호자가 "조용히 해!"라고 소리 지르면, 강아지는 보호자가 같이 짖으며 응원해준다고 착각하여 더 신나게 짖을 수 있습니다.</p>
+        
+        <p className="text-red-600 font-bold">X 체벌하기</p>
+        <p>공포심을 이용한 훈련은 일시적으로 효과가 있을지 모르나, 강아지와의 신뢰 관계를 무너뜨리고 공격성을 유발하는 부작용을 낳습니다.</p>
+        
+        <p className="text-red-600 font-bold">X 짖을 때 간식 주며 달래기</p>
+        <p>"이거 먹고 제발 조용히 해"라며 간식을 주는 것은, 강아지에게 "짖으니까 간식을 주네?"라는 잘못된 학습을 시키는 지름길입니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 인내심이 가장 큰 선물입니다</h2>
+      <p>강아지의 짖음 문제는 하루아침에 해결되지 않습니다. 수개월, 혹은 그 이상의 시간이 걸릴 수도 있습니다. 하지만 원인을 정확히 파악하고 일관된 태도로 훈련한다면 반드시 변화는 찾아옵니다. 강아지가 짖을 때 화를 내기보다, 우리 아이가 지금 무엇을 말하고 싶어 하는지 한 번 더 귀 기울여주는 여유를 가져보세요. 여러분의 인내심과 사랑이 이웃과의 평화, 그리고 강아지와의 행복한 동행을 만들어낼 것입니다.</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지짖음 #강아지훈련 #강아지행동교정 #분리불안 #경계성짖음 #요구성짖음 #반려견교육 #강아지소음문제 #똑똑한집사 #강아지키우기</p>
+    </div>
+  ),
   '33': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"보호자가 눈앞에서 사라지기만 해도 불안해하는 우리 아이, 어떻게 도와줄 수 있을까요? '기다려' 훈련은 단순히 복종을 위한 것이 아니라, 강아지에게 독립심과 신뢰를 가르치는 가장 강력한 도구입니다."</p>
