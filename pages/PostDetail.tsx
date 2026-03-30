@@ -5,6 +5,85 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '35': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리 강아지가 예전처럼 활발하게 뛰놀지 못하거나, 걷는 모습이 조금이라도 이상해 보인다면? 관절 건강의 적신호일 수 있습니다. 약물 치료 이전에 매일 먹는 음식을 통해 관절을 튼튼하게 지켜주는 지혜가 필요합니다."</p>
+      
+      <p>반려견을 키우는 보호자들에게 '슬개골 탈구'나 '관절염'은 듣기만 해도 가슴이 철렁 내려앉는 단어입니다. 특히 소형견이 많은 우리나라의 주거 환경 특상상, 미끄러운 바닥과 높은 침대 등은 강아지의 관절에 지속적인 무리를 줍니다. 관절 건강은 한 번 무너지면 회복하기 매우 어렵기 때문에, 평소 적절한 운동과 함께 <strong>관절에 좋은 영양소를 풍부하게 함유한 천연 식품</strong>을 급여하는 것이 무엇보다 중요합니다. 오늘 '똑똑한 집사'에서는 강아지 관절 건강을 획기적으로 개선해 줄 7가지 천연 식품과 올바른 관리법을 3000자 이상의 방대한 분량으로 상세히 전해드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 강아지 관절 건강, 왜 음식으로 관리해야 할까요?</h2>
+      <p>시중에는 수많은 관절 영양제가 판매되고 있습니다. 하지만 인공적으로 합성된 영양제보다 자연에서 온 천연 식품은 체내 흡수율이 높고 부작용이 적다는 큰 장점이 있습니다. 식품 속에 들어있는 다양한 항산화 성분과 비타민, 미네랄은 관절의 염증을 줄여줄 뿐만 아니라 연골의 재생을 돕고 주변 근육을 강화하는 데 도움을 줍니다. 특히 노령견이나 슬개골 탈구 1~2기 진단을 받은 강아지라면 식단 관리가 필수적입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 강아지 관절에 좋은 최고의 천연 식품 7가지</h2>
+      
+      <h3 className="text-xl font-bold text-gray-800">① 초록입홍합 (Green-Lipped Mussel)</h3>
+      <p>뉴질랜드의 보물이라 불리는 초록입홍합은 관절 건강에 있어 가장 유명한 천연 식품입니다. 강력한 항염 작용을 하는 오메가-3 지방산(ETA)이 풍부하여 관절의 통증과 부종을 줄이는 데 탁월한 효과가 있습니다.</p>
+      <div className="bg-blue-50 p-6 rounded-3xl border border-blue-100 space-y-4 my-6">
+        <p><strong>● 급여 팁:</strong> 생물로 구하기 어렵다면 동결 건조된 가루 형태나 간식 형태를 선택하세요. 열을 가하면 영양소가 파괴될 수 있으므로 저온 가공된 제품이 좋습니다.</p>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">② 연어 및 등푸른 생선</h3>
+      <p>연어, 고등어, 정어리 등에는 풍부한 EPA와 DHA가 함유되어 있습니다. 이 성분들은 관절 연골을 파괴하는 효소의 활동을 억제하고 염증 반응을 완화합니다.</p>
+      <div className="bg-red-50 p-6 rounded-3xl border border-red-100 space-y-4 my-6">
+        <p><strong>● 주의사항:</strong> 가시를 완벽하게 제거하고 반드시 익혀서 급여하세요. 기름기가 많으므로 췌장염이 있는 강아지는 주의가 필요합니다.</p>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">③ 고구마와 호박</h3>
+      <p>베타카로틴과 비타민 C, E가 풍부한 고구마와 호박은 강력한 항산화 작용을 합니다. 관절 조직의 손상을 막고 면역력을 높여주는 데 도움을 줍니다.</p>
+      <div className="bg-orange-50 p-6 rounded-3xl border border-orange-100 space-y-4 my-6">
+        <p><strong>● 장점:</strong> 기호성이 매우 뛰어나 입맛이 까다로운 강아지도 잘 먹습니다. 섬유질이 풍부해 체중 관리에도 도움을 줍니다.</p>
+      </div>
+
+      <AdPlaceholder placement="중단" />
+
+      <h3 className="text-xl font-bold text-gray-800">④ 브로콜리와 케일</h3>
+      <p>십자화과 채소에 들어있는 '설포라판' 성분은 관절염을 유발하는 연골 파괴를 늦추는 효과가 있다는 연구 결과가 있습니다. 또한 칼슘이 풍부하여 뼈 건강에도 좋습니다.</p>
+      <div className="bg-green-50 p-6 rounded-3xl border border-green-100 space-y-4 my-6">
+        <p><strong>● 급여 방법:</strong> 살짝 데쳐서 잘게 다져 사료에 섞어주세요. 생으로 주면 소화가 어려울 수 있고 가스를 유발할 수 있습니다.</p>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">⑤ 강황 (커큐민)</h3>
+      <p>강황의 핵심 성분인 커큐민은 천연 소염제로 불릴 만큼 강력한 항염 효과를 자랑합니다. 관절염으로 인한 통증을 완화하는 데 매우 효과적입니다.</p>
+      <div className="bg-yellow-50 p-6 rounded-3xl border border-yellow-100 space-y-4 my-6">
+        <p><strong>● 중요:</strong> 커큐민은 흡수율이 낮으므로 약간의 지방(코코넛 오일 등)과 함께 급여하는 것이 좋습니다. 소량부터 시작하여 적응기를 가지세요.</p>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">⑥ 블루베리</h3>
+      <p>안토시아닌이 풍부한 블루베리는 노화 방지와 염증 완화에 탁월합니다. 관절 주변의 결합 조직을 강화하고 혈액 순환을 돕습니다.</p>
+      <div className="bg-purple-50 p-6 rounded-3xl border border-purple-100 space-y-4 my-6">
+        <p><strong>● 급여량:</strong> 소형견 기준 하루 2~3알이면 충분합니다. 과도한 급여는 설사를 유발할 수 있습니다.</p>
+      </div>
+
+      <h3 className="text-xl font-bold text-gray-800">⑦ 사골국 (Bone Broth)</h3>
+      <p>뼈를 오랫동안 고아 만든 사골국은 천연 글루코사민과 콘드로이틴의 보고입니다. 연골을 보호하고 관절액을 보충하는 데 큰 도움을 줍니다.</p>
+      <div className="bg-gray-50 p-6 rounded-3xl border border-gray-200 space-y-4 my-6">
+        <p><strong>● 직접 만들기:</strong> 소금이나 조미료를 전혀 넣지 않고 뼈만 푹 고아주세요. 기름기는 완벽하게 걷어내고 차갑게 식혀 젤리 형태로 급여하면 좋습니다.</p>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 관절 건강을 위한 생활 수칙 3가지</h2>
+      <p>좋은 음식을 먹는 것만큼이나 나쁜 습관을 버리는 것이 중요합니다.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-blue-700 mb-2">⚖️ 적정 체중 유지</h4>
+          <p className="text-sm text-gray-600">비만은 관절 건강의 최대 적입니다. 체중이 1kg만 늘어도 관절에 가해지는 하중은 몇 배로 증가합니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-blue-700 mb-2">🏠 미끄럼 방지</h4>
+          <p className="text-sm text-gray-600">집안 바닥에 매트를 깔아주세요. 미끄러운 바닥에서 중심을 잡으려다 관절에 큰 무리가 갑니다.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-blue-700 mb-2">✂️ 발바닥 털 관리</h4>
+          <p className="text-sm text-gray-600">발바닥 털이 길면 더 쉽게 미끄러집니다. 주기적으로 털을 깎아 접지력을 높여주세요.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 결론: 꾸준한 관리가 튼튼한 다리를 만듭니다</h2>
+      <p>강아지의 관절 건강은 하루아침에 좋아지지 않습니다. 하지만 오늘 소개한 천연 식품들을 식단에 조금씩 포함시키고, 생활 환경을 개선해 나간다면 우리 강아지는 노년기에도 건강하고 씩씩하게 산책을 즐길 수 있을 것입니다. 무엇보다 중요한 것은 보호자의 세심한 관찰과 꾸준함입니다. 우리 아이의 걸음걸이가 가벼워지는 그날까지, 똑똑한 집사가 함께하겠습니다!</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지관절건강 #강아지슬개골탈구 #강아지관절에좋은음식 #강아지천연식품 #초록입홍합 #강아지오메가3 #강아지뼈건강 #강아지건강관리 #똑똑한집사 #반려견영양식</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '34': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지가 짖는 것은 소음이 아니라, 무언가 말하고 싶어 하는 '언어'입니다. 하지만 그 언어가 이웃에게 피해를 주고 보호자를 힘들게 한다면, 정확한 원인을 파악하고 올바른 방법으로 대화하는 법을 배워야 합니다."</p>
