@@ -5,6 +5,79 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '36': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"황금빛 털과 인자한 미소, '천사견'이라는 별명이 가장 잘 어울리는 견종은 단연 골든 리트리버일 것입니다. 하지만 그 아름다운 모습 뒤에는 보호자의 엄청난 책임감과 노력이 숨어 있다는 사실, 알고 계셨나요?"</p>
+      
+      <p>골든 리트리버는 전 세계적으로 가장 사랑받는 견종 중 하나입니다. 지능이 높고 성격이 온순하여 안내견, 구조견, 치료견 등 다양한 분야에서 활약하고 있으며, 가정견으로서도 최고의 파트너로 손꼽힙니다. 하지만 단순히 '착하다'는 소문만 듣고 섣불리 입양했다가 예상치 못한 활동량과 털 빠짐에 당황하는 경우도 많습니다. 오늘 '똑똑한 집사'에서는 <strong>골든 리트리버의 실제 성격과 입양 전 반드시 고려해야 할 현실적인 문제들</strong>을 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 왜 골든 리트리버는 '천사'라 불릴까요?</h2>
+      <p>골든 리트리버의 가장 큰 특징은 타인과 다른 동물에 대한 높은 사회성과 친화력입니다. 공격성이 매우 낮고 인내심이 강해 어린아이가 있는 가정에서도 안심하고 키울 수 있는 견종으로 알려져 있습니다. 또한 주인의 기분을 살피는 능력이 탁월하여 정서적 교감이 매우 깊은 견종이기도 합니다. 하지만 이러한 '천사 같은 성격'은 타고난 기질뿐만 아니라, 적절한 사회화 교육과 충분한 에너지 발산이 뒷받침되었을 때 완성된다는 점을 기억해야 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 골든 리트리버의 성격적 특징</h2>
+      
+      <h3 className="text-xl font-bold text-gray-800">① 무한한 친화력과 사회성</h3>
+      <p>골든 리트리버는 낯선 사람을 봐도 꼬리를 흔들며 반길 정도로 경계심이 적습니다. 도둑이 들어와도 반갑다고 꼬리를 흔들 것이라는 농담이 있을 정도죠. 이러한 성격 덕분에 다른 강아지들과도 원만하게 잘 지내며, 다견 가정에서도 큰 갈등 없이 적응하는 편입니다.</p>
+
+      <h3 className="text-xl font-bold text-gray-800">② 높은 지능과 학습 의욕</h3>
+      <p>견종 지능 순위에서 항상 상위권에 랭크되는 골든 리트리버는 새로운 명령어를 배우는 속도가 매우 빠릅니다. 단순히 똑똑할 뿐만 아니라 주인을 기쁘게 하려는 욕구(Eager to please)가 강해 훈련 성과가 매우 높습니다. 이는 초보 보호자들에게 큰 장점이 됩니다.</p>
+
+      <h3 className="text-xl font-bold text-gray-800">③ '마의 2년', 반전의 활동량</h3>
+      <p>성견이 되면 점잖고 차분해지지만, 생후 2년까지는 '인절미 악마'라고 불릴 만큼 엄청난 에너지를 자랑합니다. 리트리버는 원래 사냥감을 물어오는 '리트리버(Retriever)' 역할을 수행하던 견종이기 때문에, 입에 무언가를 물고 뜯는 것을 매우 좋아하며 활동량이 어마어마합니다.</p>
+
+      <AdPlaceholder placement="중단" />
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 키울 때 반드시 고려해야 할 현실적 문제</h2>
+      
+      <div className="bg-yellow-50 p-8 rounded-[2.5rem] border border-yellow-100 space-y-6 my-10">
+        <h3 className="text-xl font-black text-yellow-800">⚠️ 입양 전 체크리스트</h3>
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-bold text-lg text-yellow-900">● 상상을 초월하는 털 빠짐</h4>
+            <p className="text-gray-700">골든 리트리버는 이중모를 가지고 있어 1년 내내 털이 빠집니다. 특히 털갈이 시기에는 '털이 뿜어져 나온다'는 표현이 정확할 정도입니다. 집안 곳곳에 황금빛 털이 날리는 것을 감당할 수 있어야 합니다.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg text-yellow-900">● 하루 최소 1~2시간의 산책</h4>
+            <p className="text-gray-700">대형견인 만큼 활동량이 상당합니다. 단순히 동네 한 바퀴 도는 정도로는 부족하며, 에너지를 충분히 발산하지 못하면 집안 물건을 파괴하는 등 문제 행동으로 이어질 수 있습니다.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg text-yellow-900">● 주거 환경과 공간</h4>
+            <p className="text-gray-700">실내에서 키우는 것이 불가능한 것은 아니지만, 덩치가 크기 때문에 충분한 활동 공간이 필요합니다. 또한 관절 건강을 위해 미끄러운 바닥 관리가 필수적입니다.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg text-yellow-900">● 경제적 부담</h4>
+            <p className="text-gray-700">사료비, 병원비, 미용비 등 대형견을 키우는 데 드는 비용은 소형견의 몇 배에 달합니다. 특히 노령견이 되었을 때 발생할 수 있는 의료비에 대한 대비가 필요합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 주의해야 할 유전 질환과 건강 관리</h2>
+      <p>골든 리트리버는 유전적으로 몇 가지 취약한 질환이 있습니다.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-yellow-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">고관절 이형성증</h4>
+          <p className="text-gray-700 leading-relaxed">대형견에게 흔히 나타나는 질환으로, 고관절이 비정상적으로 형성되어 통증과 보행 장애를 유발합니다. 어릴 때부터 체중 관리와 적절한 운동이 필수입니다.</p>
+        </div>
+        <div className="border-l-4 border-yellow-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">암(종양) 발생률</h4>
+          <p className="text-gray-700 leading-relaxed">안타깝게도 골든 리트리버는 다른 견종에 비해 암 발생률이 높은 편입니다. 정기적인 건강검진을 통해 조기에 발견하는 것이 중요합니다.</p>
+        </div>
+        <div className="border-l-4 border-yellow-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">피부 질환</h4>
+          <p className="text-gray-700 leading-relaxed">털이 빽빽하고 피부가 예민하여 습진이나 알레르기성 피부염이 생기기 쉽습니다. 목욕 후에는 속털까지 완벽하게 말려주어야 합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 골든 리트리버와 행복하게 사는 법</h2>
+      <p>골든 리트리버는 보호자에게 무한한 사랑과 기쁨을 주는 견종입니다. 하지만 그 사랑을 받기 위해서는 보호자 역시 아이의 본능을 이해하고, 충분한 시간과 에너지를 쏟아야 합니다. 털 빠짐과 활동량을 기꺼이 감수하고, 아이의 눈높이에서 소통하려 노력한다면 골든 리트리버는 여러분의 인생에서 가장 소중한 '황금빛 선물'이 되어줄 것입니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 준비된 보호자가 행복한 강아지를 만듭니다</h3>
+      <p>천사견이라는 이름 뒤에 숨겨진 현실적인 면들을 충분히 고민해 보셨나요? 리트리버는 혼자 있는 것을 싫어하고 사람의 손길을 갈구하는 견종입니다. 아이와 함께 보낼 시간이 충분한지, 경제적/공간적 여건이 허락하는지 다시 한번 점검해 보세요. 준비된 보호자 곁에서 골든 리트리버는 비로소 진정한 '천사'가 될 수 있습니다. 똑똑한 집사는 여러분의 책임감 있는 반려 생활을 응원합니다!</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#골든리트리버 #리트리버성격 #대형견키우기 #천사견 #리트리버털빠짐 #강아지입양고려사항 #리트리버건강관리 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '35': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"우리 강아지가 예전처럼 활발하게 뛰놀지 못하거나, 걷는 모습이 조금이라도 이상해 보인다면? 관절 건강의 적신호일 수 있습니다. 약물 치료 이전에 매일 먹는 음식을 통해 관절을 튼튼하게 지켜주는 지혜가 필요합니다."</p>
