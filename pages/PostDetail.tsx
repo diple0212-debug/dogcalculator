@@ -5,6 +5,72 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '37': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"말티즈의 애교와 푸들의 지능을 모두 갖춘 '말티푸', 왜 전 세계적으로 가장 인기 있는 하이브리드 견종이 되었을까요? 사랑스러운 외모 뒤에 숨겨진 반전 매력과 건강 관리 비법을 공개합니다."</p>
+      
+      <p>최근 몇 년 사이 반려견 커뮤니티에서 가장 뜨거운 관심을 받는 견종을 꼽으라면 단연 '말티푸(Maltipoo)'일 것입니다. 말티즈와 토이(혹은 미니어처) 푸들 사이에서 태어난 이 하이브리드 견종은 두 품종의 장점만을 쏙 빼닮아 많은 이들의 마음을 사로잡고 있습니다. 하지만 하이브리드 견종이라고 해서 건강 관리가 쉬운 것만은 아닙니다. 오늘 '똑똑한 집사'에서는 <strong>말티푸의 성격적 특징부터 유전 질환 예방, 그리고 찰랑이는 털을 유지하기 위한 관리 노하우</strong>를 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 말티푸, 단순한 믹스견이 아닌 '디자이너 독'</h2>
+      <p>말티푸는 엄밀히 말하면 공인된 순종은 아니지만, 특정 목적(털 빠짐 최소화, 성격 보완 등)을 가지고 의도적으로 교배된 '디자이너 독(Designer Dog)'에 해당합니다. 털이 거의 빠지지 않는 푸들과 작고 귀여운 말티즈의 조합은 실내 생활이 많은 현대인들에게 최적의 선택지로 여겨집니다. 하지만 두 견종의 유전자가 섞여 있는 만큼, 각 부모 견종이 가진 특징을 잘 이해해야만 올바른 양육이 가능합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 말티푸의 3가지 핵심 매력</h2>
+      
+      <h3 className="text-xl font-bold text-gray-800">① 천재적인 지능과 뛰어난 공감 능력</h3>
+      <p>푸들은 견종 지능 순위에서 2위를 차지할 만큼 영리합니다. 말티푸 역시 이러한 푸들의 지능을 이어받아 훈련 습득 속도가 매우 빠릅니다. 또한 말티즈 특유의 다정함과 애교가 더해져 보호자의 감정을 귀신같이 알아차리고 위로해주는 탁월한 공감 능력을 보여줍니다.</p>
+
+      <h3 className="text-xl font-bold text-gray-800">② 알레르기 걱정 없는 털 빠짐</h3>
+      <p>반려견 입양을 망설이는 가장 큰 이유 중 하나인 '털 빠짐' 문제에서 말티푸는 매우 자유롭습니다. 푸들의 곱슬거리는 털 성질 덕분에 털 날림이 거의 없어 비염이나 알레르기가 있는 보호자들에게도 비교적 안전한 견종으로 손꼽힙니다.</p>
+
+      <h3 className="text-xl font-bold text-gray-800">③ 다양한 외모와 개성</h3>
+      <p>하이브리드 견종의 묘미는 바로 '예측 불가능한 다양성'입니다. 부모견 중 누구의 유전자가 더 강하게 발현되느냐에 따라 털의 색상(크림, 화이트, 실버, 파티 등)과 곱슬거림의 정도가 모두 다릅니다. 세상에 단 하나뿐인 나만의 강아지라는 특별함을 선사합니다.</p>
+
+      <AdPlaceholder placement="중단" />
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 말티푸 건강 관리, 이것만은 꼭!</h2>
+      <p>하이브리드 강아지는 유전병에 강하다는 인식이 있지만, 말티즈와 푸들이 공통으로 취약한 질환은 더욱 주의 깊게 살펴야 합니다.</p>
+      
+      <div className="bg-pink-50 p-8 rounded-[2.5rem] border border-pink-100 space-y-6 my-10">
+        <h3 className="text-xl font-black text-pink-800">🏥 주요 주의 질환 및 예방법</h3>
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-bold text-lg text-pink-900">● 슬개골 탈구 (Patellar Luxation)</h4>
+            <p className="text-gray-700">소형견인 말티즈와 푸들 모두에게 흔한 질환입니다. 미끄러운 바닥에 매트를 깔아주고, 높은 곳에서 뛰어내리지 않도록 계단을 설치해주는 환경 조성이 필수입니다.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg text-pink-900">● 눈물 자국 및 안구 질환</h4>
+            <p className="text-gray-700">말티즈의 유전적 영향으로 눈물이 많아 눈가 피부염이 생기기 쉽습니다. 매일 눈가를 청결히 닦아주고, 알레르기를 유발하지 않는 식단을 구성하는 것이 중요합니다.</p>
+          </div>
+          <div>
+            <h4 className="font-bold text-lg text-pink-900">● 치아 건강 (치주염)</h4>
+            <p className="text-gray-700">입이 작은 소형견은 치열이 고르지 못해 치석이 잘 생깁니다. 어릴 때부터 양치질 습관을 들이고 정기적인 스케일링을 통해 구강 건강을 지켜주세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 엉킴 방지를 위한 털 관리 노하우</h2>
+      <p>말티푸의 털은 빠지지는 않지만, 관리를 소홀히 하면 금방 엉켜버리는 특징이 있습니다.</p>
+      <div className="space-y-6">
+        <div className="border-l-4 border-pink-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">매일 1회 이상 빗질</h4>
+          <p className="text-gray-700 leading-relaxed">슬리커 브러시와 일자 빗을 사용하여 속털까지 꼼꼼히 빗어주어야 합니다. 특히 귀 뒤쪽과 겨드랑이 부분은 잘 엉키므로 주의가 필요합니다.</p>
+        </div>
+        <div className="border-l-4 border-pink-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">정기적인 미용 (6~8주 간격)</h4>
+          <p className="text-gray-700 leading-relaxed">털이 계속 자라기 때문에 주기적인 미용이 필요합니다. 위생 미용(발바닥, 항문 주변)은 2~3주에 한 번씩 직접 해주면 피부병 예방에 좋습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 말티푸와 함께하는 행복한 삶을 위하여</h2>
+      <p>말티푸는 보호자의 사랑을 먹고 자라는 견종입니다. 똑똑한 만큼 분리불안이 생기기 쉬우므로 어릴 때부터 독립심을 길러주는 교육이 병행되어야 합니다. 귀여운 외모에만 치중하기보다, 아이의 건강 상태와 심리를 세심하게 살피는 보호자의 노력이 더해질 때 말티푸는 여러분의 인생에서 가장 빛나는 동반자가 되어줄 것입니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 당신의 선택을 응원합니다</h3>
+      <p>말티푸 입양을 고민 중이시라면, 단순히 유행을 따르기보다 15년 이상을 함께할 가족으로서의 책임감을 먼저 생각해주세요. 아이의 평생을 책임질 준비가 되었다면, 말티푸는 그 이상의 행복과 웃음을 여러분에게 돌려줄 것입니다. 똑똑한 집사는 모든 말티푸와 보호자의 건강하고 행복한 일상을 진심으로 응원합니다!</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#말티푸 #Maltipoo #말티푸성격 #말티푸건강관리 #하이브리드견종 #디자이너독 #강아지털관리 #슬개골탈구예방 #강아지입양가이드 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '36': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"황금빛 털과 인자한 미소, '천사견'이라는 별명이 가장 잘 어울리는 견종은 단연 골든 리트리버일 것입니다. 하지만 그 아름다운 모습 뒤에는 보호자의 엄청난 책임감과 노력이 숨어 있다는 사실, 알고 계셨나요?"</p>
