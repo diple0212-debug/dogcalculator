@@ -5,6 +5,92 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '38': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"우리 강아지는 내 말을 다 알아듣는 것 같은데, 정말 똑똑한 걸까요? 강아지의 지능은 단순히 명령어를 잘 듣는 것 이상의 복합적인 능력을 의미합니다. 세계에서 가장 영리하다고 인정받는 견종들은 누구인지, 그리고 지능의 기준은 무엇인지 상세히 파헤쳐 봅니다."</p>
+      
+      <p>강아지를 키우는 보호자라면 누구나 한 번쯤 "우리 아이는 천재가 아닐까?"라는 생각을 해보셨을 겁니다. 이름을 부르면 달려오고, 간식을 꺼내기도 전에 미리 앉아 기다리는 모습을 보면 정말 사람처럼 느껴지기도 하죠. 하지만 과학적으로 강아지의 지능을 측정하는 기준은 따로 있습니다. 오늘 '똑똑한 집사'에서는 <strong>스탠리 코렌 교수의 연구를 바탕으로 한 세계 견종 지능 순위</strong>와 함께, 지능의 다양한 측면을 3000자 이상의 방대한 분량으로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 강아지 지능, 어떻게 측정하나요?</h2>
+      <p>강아지의 지능 순위를 이야기할 때 가장 많이 인용되는 자료는 브리티시 컬럼비아 대학의 스탠리 코렌(Stanley Coren) 교수가 발표한 연구 결과입니다. 코렌 교수는 견종별 지능을 크게 세 가지 측면에서 분석했습니다.</p>
+      <div className="bg-indigo-50 p-6 rounded-3xl border border-indigo-100 space-y-4 my-6">
+        <p><strong>● 본능적 지능 (Instinctive Intelligence):</strong> 해당 견종이 원래 수행하던 목적(사냥, 가축 몰이 등)을 얼마나 잘 수행하는가.</p>
+        <p><strong>● 적응적 지능 (Adaptive Intelligence):</strong> 스스로 문제를 해결하고 환경에 적응하며 과거의 경험으로부터 배우는 능력.</p>
+        <p><strong>● 작업 및 복종 지능 (Working and Obedience Intelligence):</strong> 사람의 명령을 이해하고 따르는 능력 (순위의 주요 기준).</p>
+      </div>
+      <p>일반적으로 알려진 '지능 순위'는 주로 <strong>작업 및 복종 지능</strong>을 기준으로 합니다. 즉, 새로운 명령을 얼마나 빨리 배우고(5회 미만 반복), 첫 번째 명령에 얼마나 높은 확률(95% 이상)로 복종하는지를 측정한 것입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 세계에서 가장 영리한 견종 TOP 10</h2>
+      
+      <div className="space-y-10">
+        <div className="bg-white p-8 rounded-[2.5rem] border border-gray-200 shadow-sm">
+          <h3 className="text-2xl font-black text-indigo-700 mb-4">🥇 1위: 보더 콜리 (Border Collie)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">명실상부한 '지능 끝판왕'입니다. 보더 콜리는 수백 마리의 양 떼를 눈빛과 몸동작만으로 통제할 정도로 뛰어난 상황 판단력을 가졌습니다. 새로운 명령어를 단 한두 번 만에 이해하기도 하며, 수천 개의 단어를 기억하는 개체도 보고된 바 있습니다. 하지만 지능이 높은 만큼 충분한 두뇌 활동이 없으면 심한 지루함을 느끼고 문제 행동을 보일 수 있습니다.</p>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] border border-gray-200 shadow-sm">
+          <h3 className="text-2xl font-black text-indigo-700 mb-4">🥈 2위: 푸들 (Poodle)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">귀여운 외모와 달리 푸들은 매우 영리한 사냥견 출신입니다. 사람과의 교감 능력이 탁월하며, 상황을 파악하는 눈치가 매우 빠릅니다. 훈련 효율이 굉장히 높아 초보 보호자들에게도 추천되는 견종이지만, 영악할 정도로 머리를 써서 보호자를 조종(?)하기도 합니다.</p>
+        </div>
+
+        <div className="bg-white p-8 rounded-[2.5rem] border border-gray-200 shadow-sm">
+          <h3 className="text-2xl font-black text-indigo-700 mb-4">🥉 3위: 저먼 셰퍼드 (German Shepherd)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4">경찰견, 군견, 구조견으로 가장 많이 활약하는 이유가 있습니다. 높은 지능은 물론이고 용맹함과 충성심까지 겸비했습니다. 복잡한 임무를 수행하는 능력이 뛰어나며, 보호자의 명령에 대한 집중도가 매우 높습니다.</p>
+        </div>
+
+        <AdPlaceholder placement="중단" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
+            <h4 className="font-bold text-lg text-gray-800 mb-2">4위: 골든 리트리버</h4>
+            <p className="text-sm text-gray-600">온순한 성격만큼이나 지능도 높습니다. 인내심이 강해 안내견으로 최고의 적임자입니다.</p>
+          </div>
+          <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
+            <h4 className="font-bold text-lg text-gray-800 mb-2">5위: 도베르만 핀셔</h4>
+            <p className="text-sm text-gray-600">기민하고 용감하며 학습 속도가 매우 빠릅니다. 경비견으로서 최고의 지능을 자랑합니다.</p>
+          </div>
+          <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
+            <h4 className="font-bold text-lg text-gray-800 mb-2">6위: 셔틀랜드 쉽독</h4>
+            <p className="text-sm text-gray-600">'셀티'라고도 불리며, 양 몰이견 출신답게 명령 이행 능력이 매우 정교합니다.</p>
+          </div>
+          <div className="p-6 bg-gray-50 rounded-3xl border border-gray-100">
+            <h4 className="font-bold text-lg text-gray-800 mb-2">7위: 래브라도 리트리버</h4>
+            <p className="text-sm text-gray-600">친화력과 지능의 완벽한 조화. 사람의 감정을 읽는 능력이 탁월합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 순위가 낮으면 머리가 나쁜 걸까요? (지능의 오해)</h2>
+      <p>순위가 낮다고 해서 결코 '멍청한' 강아지가 아닙니다. 지능 순위의 함정을 이해해야 합니다.</p>
+      <div className="space-y-6">
+        <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100">
+          <h4 className="font-bold text-amber-800 mb-2">● 독립성의 차이</h4>
+          <p className="text-gray-700">아프간 하운드나 비글처럼 순위가 낮은 견종들은 머리가 나쁜 것이 아니라 <strong>독립심이 강한 것</strong>입니다. 이들은 사람의 명령을 듣기보다 자신의 본능이나 판단을 우선시하도록 개량되었습니다. 즉, "못 알아듣는 것"이 아니라 "안 듣는 것"에 가깝습니다.</p>
+        </div>
+        <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100">
+          <h4 className="font-bold text-amber-800 mb-2">● 고집과 집중력</h4>
+          <p className="text-gray-700">테리어 종이나 불독 계열은 고집이 세서 훈련이 어려울 수 있지만, 특정 상황에서의 문제 해결 능력은 매우 뛰어날 수 있습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 똑똑한 강아지를 키울 때 주의할 점</h2>
+      <p>지능이 높은 강아지를 키우는 것은 축복이지만, 그만큼 보호자의 노력이 더 많이 필요합니다.</p>
+      <ul className="list-disc list-inside space-y-4 text-gray-700">
+        <li><strong>정신적 자극 (Mental Stimulation):</strong> 단순히 몸만 쓰는 산책으로는 부족합니다. 노즈워크, 퍼즐 장난감, 새로운 기술 배우기 등 뇌를 쓰는 활동이 필수입니다.</li>
+        <li><strong>일관성 있는 훈련:</strong> 똑똑한 강아지는 보호자의 허점을 금방 파악합니다. 한 번 허용된 규칙을 어기면 이를 교묘하게 이용하려 들 수 있습니다.</li>
+        <li><strong>파괴적인 행동 예방:</strong> 지루함을 느끼는 천재견은 집안의 모든 물건을 해체(?)하는 취미를 가질 수 있습니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 가장 똑똑한 강아지는 '나와 교감하는 강아지'입니다</h2>
+      <p>지능 순위는 참고 자료일 뿐, 우리 강아지의 가치를 결정하는 척도가 아닙니다. 명령어를 100번 가르쳐야 겨우 배우더라도, 내가 슬플 때 다가와 눈물을 닦아주는 강아지가 세상에서 가장 영리한 존재일 수 있습니다. 견종의 특성을 이해하고 그에 맞는 교육과 사랑을 준다면, 모든 강아지는 각자의 방식으로 천재성을 발휘할 것입니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 지능보다 중요한 것은 사랑입니다</h3>
+      <p>우리 아이가 순위에 없다고 실망하지 마세요. 강아지의 지능은 보호자와의 깊은 유대감 속에서 더욱 빛을 발합니다. 오늘 저녁에는 순위표 대신 우리 아이의 눈을 한 번 더 맞춰주며 칭찬 한마디를 건네보는 건 어떨까요? 똑똑한 집사는 모든 강아지와 보호자의 행복한 소통을 응원합니다!</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지지능순위 #똑똑한강아지 #보더콜리 #푸들 #저먼셰퍼드 #강아지훈련 #반려견지능 #강아지키우기 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '37': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"말티즈의 애교와 푸들의 지능을 모두 갖춘 '말티푸', 왜 전 세계적으로 가장 인기 있는 하이브리드 견종이 되었을까요? 사랑스러운 외모 뒤에 숨겨진 반전 매력과 건강 관리 비법을 공개합니다."</p>

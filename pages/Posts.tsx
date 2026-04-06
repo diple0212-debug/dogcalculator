@@ -5,6 +5,15 @@ import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
   {
+    id: '38',
+    title: '세계에서 가장 영리한 강아지 순위: 우리 아이 지능은 몇 등일까?',
+    excerpt: '강아지의 지능은 어떻게 측정될까요? 스탠리 코렌 교수의 연구를 바탕으로 한 세계에서 가장 똑똑한 견종 TOP 10과 지능 유형별 특징을 3000자 이상의 상세 가이드로 확인해보세요.',
+    date: '2026.04.06',
+    category: '반려견 백과',
+    icon: '🧠🐕',
+    color: 'bg-indigo-50'
+  },
+  {
     id: '37',
     title: '말티푸(Maltipoo)의 매력과 건강 관리법: 초보 집사를 위한 완벽 가이드',
     excerpt: '귀여운 외모와 똑똑한 지능을 겸비한 하이브리드 견종 말티푸! 말티푸의 성격적 매력부터 유전 질환 예방, 털 관리 노하우까지 3000자 이상의 상세 가이드로 만나보세요.',
