@@ -5,6 +5,63 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '40': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지에게 '놀이'는 단순히 시간을 때우는 활동이 아닙니다. 특히 지능 발달 장난감을 활용한 놀이는 반려견의 뇌를 자극하고 성취감을 선사하는 최고의 교육이자 힐링 타임입니다. 우리 아이를 위한 맞춤형 장난감, 어떻게 골라야 할까요?"</p>
+      
+      <p>많은 보호자가 강아지의 운동량 충족을 위해 '산책'에 집중하지만, 사실 강아지에게는 육체적 활동만큼이나 <strong>정신적 자극(Mental Stimulation)</strong>이 중요합니다. 뇌를 쓰지 않는 강아지는 지루함을 느끼고, 이는 곧 가구 파괴나 과도한 짖음 같은 문제 행동으로 이어지기 쉽습니다. 오늘 '똑똑한 집사'에서는 <strong>강아지의 인지 능력을 높이고 스트레스를 날려줄 지능 발달 장난감 추천 리스트</strong>를 3000자 이상의 방대한 가이드로 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 왜 지능 발달 장난감이 필요할까요?</h2>
+      <p>강아지의 조상은 야생에서 먹이를 찾기 위해 끊임없이 머리를 쓰고 코를 사용했습니다. 하지만 현대의 반려견들은 보호자가 주는 사료를 편하게 먹으며 이러한 본능을 분출할 기회를 잃어버렸죠. 지능 발달 장난감은 강아지에게 '먹이를 찾는 즐거움'을 되돌려줍니다. 이는 단순한 재미를 넘어 자존감을 높여주고, 노령견의 경우 인지 장애(치매)를 예방하는 데 결정적인 역할을 합니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 지능 발달 장난감의 3가지 핵심 효과</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        <div className="p-6 bg-yellow-50 rounded-3xl border border-yellow-100 shadow-sm">
+          <h3 className="font-bold text-yellow-800 mb-2">✨ 스트레스 해소</h3>
+          <p className="text-sm text-gray-700">코를 쓰고 머리를 쓰는 활동은 강아지에게 엄청난 에너지를 소모하게 합니다. 10분의 두뇌 놀이는 1시간의 산책과 맞먹는 피로 해소 효과가 있습니다.</p>
+        </div>
+        <div className="p-6 bg-yellow-50 rounded-3xl border border-yellow-100 shadow-sm">
+          <h3 className="font-bold text-yellow-800 mb-2">🧠 인지 능력 향상</h3>
+          <p className="text-sm text-gray-700">문제를 해결하는 과정을 통해 사고력이 발달하며, 보호자와의 유대감도 깊어집니다.</p>
+        </div>
+        <div className="p-6 bg-yellow-50 rounded-3xl border border-yellow-100 shadow-sm">
+          <h3 className="font-bold text-yellow-800 mb-2">🛡️ 문제 행동 교정</h3>
+          <p className="text-sm text-gray-700">지루함에서 오는 분리불안이나 파괴적인 본능을 긍정적인 방향으로 전환해줍니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 단계별 지능 발달 장난감 추천</h2>
+      
+      <h3 className="text-xl font-bold text-gray-800">① 초급 단계: 노즈워크 매트와 담요</h3>
+      <p>가장 대중적이고 접근하기 쉬운 장난감입니다. 다양한 천 조각 사이에 간식을 숨겨 코로 찾게 하는 방식입니다. 후각 활동을 극대화하여 강아지에게 정서적 안정감을 줍니다. 처음 시작하는 강아지나 겁이 많은 아이들에게 최적입니다.</p>
+
+      <h3 className="text-xl font-bold text-gray-800">② 중급 단계: 간식 볼과 오뚝이형 장난감</h3>
+      <p>강아지가 발이나 코로 장난감을 굴려야 구멍에서 간식이 나오는 형태입니다. 단순히 냄새를 맡는 것을 넘어 '움직임'과 '결과' 사이의 상관관계를 이해해야 합니다. 활동량이 많은 견종에게 추천합니다.</p>
+
+      <AdPlaceholder placement="중단" />
+
+      <h3 className="text-xl font-bold text-gray-800">③ 고급 단계: 슬라이드 및 버튼형 퍼즐</h3>
+      <p>니나 오토슨(Nina Ottosson) 퍼즐처럼 뚜껑을 밀거나, 버튼을 누르거나, 조각을 뽑아야 간식을 먹을 수 있는 복합적인 형태입니다. 순차적인 문제 해결 능력이 필요하며, 보더 콜리나 푸들처럼 지능이 높은 견종들이 매우 즐거워하는 단계입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 집에서 만드는 DIY 지능 장난감</h2>
+      <p>비싼 장난감을 사지 않아도 집 안의 물건으로 충분히 뇌 자극 놀이를 할 수 있습니다.</p>
+      <ul className="list-disc list-inside space-y-4 text-gray-700">
+        <li><strong>종이컵 노즈워크:</strong> 종이컵 안에 간식을 넣고 입구를 살짝 접어 던져주세요. 컵을 펴거나 찢어서 간식을 먹는 과정이 훌륭한 놀이가 됩니다.</li>
+        <li><strong>양말 공:</strong> 낡은 양말 속에 간식을 넣고 매듭을 지어주세요. 매듭을 풀거나 양말을 당기는 활동이 지능 발달에 도움을 줍니다.</li>
+        <li><strong>머핀 틀 놀이:</strong> 머핀 틀 칸칸이 간식을 넣고 그 위를 테니스공으로 덮어주세요. 공을 치워야 간식을 먹을 수 있다는 것을 금방 배우게 될 것입니다.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 장난감보다 중요한 것은 보호자의 '함께함'입니다</h2>
+      <p>지능 발달 장난감은 강아지 혼자 노는 도구가 아닙니다. 보호자가 옆에서 응원해주고, 너무 어려워하면 살짝 도와주며 성공의 기쁨을 함께 나누는 것이 중요합니다. 또한, 장난감에만 의존하기보다 매일 새로운 산책 경로를 가거나 새로운 명령어를 가르치는 등 일상 속에서의 자극을 병행해주세요. 똑똑한 강아지는 보호자의 관심과 사랑 속에서 만들어집니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 우리 아이의 잠재력을 믿어주세요</h3>
+      <p>처음에는 장난감을 어떻게 사용하는지 몰라 당황할 수도 있습니다. 하지만 인내심을 갖고 기다려주면, 어느덧 스스로 문제를 해결하고 꼬리를 흔들며 다가오는 아이의 모습을 보게 될 것입니다. 오늘부터 하루 15분, 지능 놀이를 통해 우리 아이의 뇌를 깨워주세요! 똑똑한 집사는 모든 반려견의 반짝이는 지능과 행복한 일상을 응원합니다.</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지지능장난감 #노즈워크 #강아지퍼즐 #반려견교육 #강아지스트레스해소 #강아지치매예방 #지능발달놀이 #강아지DIY장난감 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '39': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지에게 산책은 단순한 운동 그 이상의 의미입니다. 세상과 소통하고 스트레스를 해소하는 가장 소중한 시간이죠. 이 시간을 더욱 완벽하게 만들기 위해, 우리 보호자들이 가방에 꼭 챙겨야 할 필수 아이템들은 무엇일까요?"</p>
