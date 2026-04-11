@@ -5,6 +5,102 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '41': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"켄넬(크레이트)은 강아지를 가두는 감옥이 아닙니다. 올바른 훈련을 거친 켄넬은 강아지에게 세상에서 가장 안전하고 아늑한 '나만의 방'이 됩니다. 왜 켄넬 훈련이 필수인지, 그리고 어떻게 성공할 수 있는지 상세히 알아봅니다."</p>
+      
+      <p>많은 초보 보호자분들이 좁은 켄넬 안에 강아지를 넣는 것에 대해 거부감을 느끼곤 합니다. "불쌍해 보여요", "답답하지 않을까요?"라는 질문을 자주 하시죠. 하지만 강아지의 조상인 늑대는 원래 어둡고 좁은 동굴(Den)에서 안정감을 느끼던 동물입니다. 켄넬은 이러한 본능을 충족시켜주는 현대판 동굴인 셈입니다. 오늘 '똑똑한 집사'에서는 <strong>강아지 켄넬 훈련의 놀라운 장점부터 실패 없는 단계별 훈련법</strong>을 3000자 이상의 방대한 가이드로 완벽하게 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 켄넬 훈련, 왜 선택이 아닌 필수일까요?</h2>
+      <p>켄넬 훈련은 단순히 강아지를 잠시 가둬두기 위한 수단이 아닙니다. 이는 강아지의 심리적 안정, 안전사고 예방, 그리고 사회화 교육의 핵심적인 부분입니다. 특히 재난 상황이나 병원 입원, 장거리 이동 시 켄넬에 익숙하지 않은 강아지는 극심한 스트레스를 받게 됩니다. 어릴 때부터 켄넬을 긍정적인 공간으로 인식시키는 것은 반려견의 평생 삶의 질을 결정짓는 중요한 과정입니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 켄넬 훈련이 주는 5가지 놀라운 장점</h2>
+      
+      <div className="space-y-6">
+        <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 shadow-sm">
+          <h3 className="text-xl font-black text-blue-800 mb-3">① 심리적 안정감 제공 (안전 가옥)</h3>
+          <p className="text-gray-700 leading-relaxed">강아지가 천둥소리, 청소기 소음, 혹은 낯선 손님의 방문으로 불안해할 때 스스로 숨어들어 쉴 수 있는 공간이 됩니다. "여기 있으면 아무도 나를 건드리지 않아"라는 믿음을 주는 것이 핵심입니다.</p>
+        </div>
+
+        <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 shadow-sm">
+          <h3 className="text-xl font-black text-blue-800 mb-3">② 배변 훈련의 지름길</h3>
+          <p className="text-gray-700 leading-relaxed">강아지는 본능적으로 자신이 잠자고 쉬는 공간을 더럽히지 않으려는 습성이 있습니다. 이를 이용해 적절한 시간 동안 켄넬에 머물게 한 뒤 정해진 배변 장소로 유도하면 배변 훈련 속도가 획기적으로 빨라집니다.</p>
+        </div>
+
+        <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 shadow-sm">
+          <h3 className="text-xl font-black text-blue-800 mb-3">③ 안전한 이동과 여행</h3>
+          <p className="text-gray-700 leading-relaxed">자동차 이동 시 리드줄만으로는 사고 발생 시 강아지를 보호하기 어렵습니다. 켄넬은 차량 사고 시 2차 충격으로부터 강아지를 보호하며, 비행기 탑승 시에는 필수적인 장비입니다.</p>
+        </div>
+
+        <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 shadow-sm">
+          <h3 className="text-xl font-black text-blue-800 mb-3">④ 분리불안 예방 및 완화</h3>
+          <p className="text-gray-700 leading-relaxed">보호자가 외출했을 때 집안 전체를 지켜야 한다는 부담감을 줄여줍니다. 좁고 안전한 공간에서 쉬는 습관은 보호자의 부재를 더 차분하게 받아들이는 데 도움을 줍니다.</p>
+        </div>
+
+        <div className="bg-blue-50 p-8 rounded-[2.5rem] border border-blue-100 shadow-sm">
+          <h3 className="text-xl font-black text-blue-800 mb-3">⑤ 응급 상황 및 병원 입원 대비</h3>
+          <p className="text-gray-700 leading-relaxed">수술 후 절대 안정이 필요하거나 전염병으로 격리가 필요할 때, 켄넬에 익숙한 강아지는 좁은 입원실에서도 훨씬 빠르게 회복합니다.</p>
+        </div>
+      </div>
+
+      <AdPlaceholder placement="중단" />
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 우리 아이에게 맞는 켄넬 고르기</h2>
+      <p>훈련의 성공은 적절한 켄넬 선택에서 시작됩니다. 너무 크거나 너무 작으면 효과가 반감됩니다.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-gray-800 mb-2">📏 적정 사이즈 측정법</h4>
+          <p className="text-sm text-gray-600">강아지가 안에서 편하게 <strong>한 바퀴 돌 수 있고, 똑바로 서 있을 때 머리가 천장에 닿지 않으며, 다리를 뻗고 누울 수 있는 정도</strong>가 가장 좋습니다. 너무 크면 한쪽 구석을 화장실로 사용할 수 있으니 주의하세요.</p>
+        </div>
+        <div className="p-6 bg-white rounded-3xl border border-gray-200 shadow-sm">
+          <h4 className="font-bold text-gray-800 mb-2">🛠️ 소재별 특징</h4>
+          <p className="text-sm text-gray-600"><strong>플라스틱(항공 켄넬):</strong> 사방이 막혀 있어 안정감이 높고 이동 시 안전합니다. <strong>철제(와이어):</strong> 통기성이 좋고 시야가 확보되지만 안정감은 떨어질 수 있어 덮개를 씌워주는 것이 좋습니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 실패 없는 켄넬 훈련 5단계 가이드</h2>
+      <p>가장 중요한 원칙은 <strong>'절대로 강제로 밀어넣지 않는 것'</strong>입니다. 모든 과정은 즐거운 놀이처럼 진행되어야 합니다.</p>
+      
+      <div className="space-y-6">
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">1단계: 탐색과 친해지기</h4>
+          <p className="text-gray-700 leading-relaxed">켄넬 문을 열어두고 근처에 맛있는 간식을 뿌려줍니다. 강아지가 스스로 켄넬 근처로 다가오면 칭찬해주세요. 켄넬 안에 좋아하는 장난감이나 보호자의 냄새가 밴 옷을 넣어두는 것도 좋습니다.</p>
+        </div>
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">2단계: 켄넬 안에서 식사하기</h4>
+          <p className="text-gray-700 leading-relaxed">식사 시간을 활용하세요. 밥그릇을 켄넬 입구에 두었다가, 점차 안쪽으로 옮깁니다. "켄넬 안에 들어가면 맛있는 것이 생긴다"는 강력한 긍정 신호를 심어주는 과정입니다.</p>
+        </div>
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">3단계: 문 닫기 연습 (짧게)</h4>
+          <p className="text-gray-700 leading-relaxed">강아지가 안에서 간식을 먹거나 쉴 때 아주 잠시 문을 닫았다가 바로 열어줍니다. 이때 강아지가 짖거나 긁으면 열어주지 마세요. 조용히 기다릴 때 열어주어야 "조용히 있으면 나갈 수 있다"는 것을 배웁니다.</p>
+        </div>
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">4단계: 시간 늘리기와 시야 차단</h4>
+          <p className="text-gray-700 leading-relaxed">보호자가 옆에 있는 상태에서 문을 닫는 시간을 5분, 10분 점차 늘립니다. 익숙해지면 보호자가 잠시 방을 나갔다 들어오는 연습을 반복하세요.</p>
+        </div>
+        <div className="border-l-4 border-blue-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">5단계: 밤잠과 외출 시 활용</h4>
+          <p className="text-gray-700 leading-relaxed">충분히 적응했다면 밤에 잠을 잘 때나 짧은 외출 시 켄넬을 사용합니다. 이때 켄넬 안에 오래 씹을 수 있는 간식(불리스틱 등)을 넣어주면 지루함을 달래는 데 큰 도움이 됩니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 본론: 보호자가 저지르기 쉬운 치명적 실수</h2>
+      <ul className="list-disc list-inside space-y-4 text-gray-700">
+        <li><strong>벌을 주는 장소로 사용하기:</strong> 사고를 쳤다고 켄넬에 가두면 켄넬은 공포의 장소가 됩니다.</li>
+        <li><strong>너무 오랜 시간 가두기:</strong> 성견 기준 6~8시간 이상 가두는 것은 학대와 다름없습니다. 켄넬은 휴식처이지 감금 장소가 아닙니다.</li>
+        <li><strong>짖을 때 열어주기:</strong> 짖으면 나갈 수 있다는 학습은 훈련을 망치는 지름길입니다. 반드시 조용해진 순간에 문을 열어주세요.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">6. 결론: 인내심이 만드는 기적</h2>
+      <p>켄넬 훈련은 하루아침에 완성되지 않습니다. 어떤 강아지는 며칠 만에 적응하지만, 어떤 강아지는 몇 달이 걸리기도 합니다. 중요한 것은 보호자의 조급함을 버리고 강아지의 속도에 맞춰주는 것입니다. 켄넬이 세상에서 가장 편안한 안식처가 되는 순간, 여러분과 반려견의 삶은 이전보다 훨씬 더 평화롭고 안전해질 것입니다. 똑똑한 집사는 모든 반려견이 자신만의 아늑한 방을 갖게 되는 그날까지 여러분을 응원합니다!</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 당신의 노력이 아이의 평생을 바꿉니다</h3>
+      <p>처음에는 켄넬 앞에서 망설이는 아이의 모습에 마음이 약해질 수도 있습니다. 하지만 지금의 훈련이 미래의 위급 상황에서 아이의 생명을 구하고 스트레스를 줄여준다는 사실을 기억하세요. 오늘부터 아주 작은 간식 하나로 켄넬과 친해지는 연습을 시작해보는 건 어떨까요? 궁금한 점이 있다면 언제든 댓글로 남겨주세요. 함께 고민하는 똑똑한 집사가 되겠습니다.</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지켄넬훈련 #크레이트훈련 #강아지교육 #분리불안예방 #강아지배변훈련 #반려견안전 #강아지이동장 #강아지집훈련 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '40': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"강아지에게 '놀이'는 단순히 시간을 때우는 활동이 아닙니다. 특히 지능 발달 장난감을 활용한 놀이는 반려견의 뇌를 자극하고 성취감을 선사하는 최고의 교육이자 힐링 타임입니다. 우리 아이를 위한 맞춤형 장난감, 어떻게 골라야 할까요?"</p>
