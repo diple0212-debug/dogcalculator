@@ -5,6 +5,88 @@ import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
 const POST_CONTENTS: Record<string, React.ReactNode> = {
+  '42': (
+    <div className="space-y-8">
+      <p className="text-xl font-bold text-gray-800 leading-snug">"강아지의 털은 단순히 외모를 결정짓는 요소가 아닙니다. 외부 자극으로부터 피부를 보호하고 체온을 조절하는 중요한 역할을 하죠. 우리 아이의 털 타입에 맞는 올바른 빗질, 어떻게 해야 할까요?"</p>
+      
+      <p>반려견을 키우면서 가장 많은 시간을 할애하게 되는 관리 중 하나가 바로 '빗질'입니다. 하지만 많은 보호자가 견종의 모질 특성을 고려하지 않고 잘못된 도구를 사용하여 강아지에게 통증을 주거나 피부병을 유발하곤 합니다. 오늘 '똑똑한 집사'에서는 <strong>단모, 장모, 이중모, 곱슬모 등 견종별 모질 특징에 따른 맞춤형 털 관리법과 필수 브러시 선택 가이드</strong>를 3000자 이상의 방대한 분량으로 상세히 정리해 드립니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">1. 서론: 빗질, 왜 매일 해야 할까요?</h2>
+      <p>빗질은 단순히 엉킨 털을 푸는 작업이 아닙니다. 매일 하는 빗질은 죽은 털을 제거하여 피부의 통기성을 높여주고, 혈액순환을 촉진하며, 피부병이나 기생충 감염 여부를 조기에 발견할 수 있게 해줍니다. 무엇보다 보호자와 강아지 사이의 깊은 유대감을 형성하는 소중한 스킨십 시간이기도 합니다. 올바른 도구와 방법만 안다면 빗질은 강아지에게 최고의 마사지 시간이 될 수 있습니다.</p>
+
+      <h2 className="text-2xl font-black text-gray-800">2. 본론: 모질 타입별 특징과 관리 노하우</h2>
+      
+      <div className="space-y-10">
+        <div className="bg-orange-50 p-8 rounded-[2.5rem] border border-orange-100 shadow-sm">
+          <h3 className="text-xl font-black text-orange-800 mb-3">① 단모종 (Short Coat)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4"><strong>해당 견종:</strong> 퍼그, 비글, 치와와, 닥스훈트 등<br />
+          단모종은 털이 짧아 관리가 쉬워 보이지만, 실제로는 '박히는 털' 때문에 고생하는 경우가 많습니다. 털이 빠지면 옷이나 소파에 콕콕 박히기 때문이죠. 피부가 얇아 자극에 민감하므로 부드러운 도구를 사용해야 합니다.</p>
+          <p className="font-bold text-orange-900">추천 도구: 고무 브러시(러버 브러시), 돈모 브러시</p>
+        </div>
+
+        <div className="bg-orange-50 p-8 rounded-[2.5rem] border border-orange-100 shadow-sm">
+          <h3 className="text-xl font-black text-orange-800 mb-3">② 장모종 (Long Coat)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4"><strong>해당 견종:</strong> 말티즈, 요크셔 테리어, 시츄 등<br />
+          사람의 머리카락처럼 계속 자라는 털을 가졌습니다. 털이 가늘고 부드러워 매우 잘 엉키기 때문에 매일 빗질이 필수입니다. 특히 귀 뒤, 겨드랑이, 다리 안쪽이 취약합니다.</p>
+          <p className="font-bold text-orange-900">추천 도구: 핀 브러시, 일자 빗(콤), 슬리커 브러시(엉킨 곳용)</p>
+        </div>
+
+        <div className="bg-orange-50 p-8 rounded-[2.5rem] border border-orange-100 shadow-sm">
+          <h3 className="text-xl font-black text-orange-800 mb-3">③ 이중모종 (Double Coat)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4"><strong>해당 견종:</strong> 포메라니안, 스피츠, 웰시코기, 진돗개 등<br />
+          겉털과 빽빽한 속털을 모두 가진 견종입니다. 털 빠짐이 가장 심한 그룹으로, 속털(죽은 털)을 제대로 제거해주지 않으면 피부병의 원인이 됩니다. 털갈이 시기에는 엄청난 양의 털이 뿜어져 나옵니다.</p>
+          <p className="font-bold text-orange-900">추천 도구: 슬리커 브러시, 디쉐딩 툴(퍼미네이터 등), 일자 빗</p>
+        </div>
+
+        <div className="bg-orange-50 p-8 rounded-[2.5rem] border border-orange-100 shadow-sm">
+          <h3 className="text-xl font-black text-orange-800 mb-3">④ 곱슬모종 (Curly Coat)</h3>
+          <p className="text-gray-700 leading-relaxed mb-4"><strong>해당 견종:</strong> 푸들, 비숑 프리제 등<br />
+          털이 거의 빠지지 않지만, 빠진 털이 곱슬거리는 털 사이에 갇혀 덩어리째 엉키기 쉽습니다. 겉만 빗으면 속에서 털이 떡처럼 뭉칠 수 있으므로 뿌리부터 빗어주는 '라인 브러싱'이 중요합니다.</p>
+          <p className="font-bold text-orange-900">추천 도구: 슬리커 브러시, 일자 빗(콤)</p>
+        </div>
+      </div>
+
+      <AdPlaceholder placement="중단" />
+
+      <h2 className="text-2xl font-black text-gray-800">3. 본론: 빗질 도구 완벽 분석 (브러시 종류별 용도)</h2>
+      <div className="space-y-6">
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">슬리커 브러시 (Slicker Brush)</h4>
+          <p className="text-gray-700 leading-relaxed">가장 범용적인 도구로, 촘촘한 철사 핀이 엉킨 털을 풀고 죽은 털을 제거합니다. 핀 끝이 날카로울 수 있으므로 피부에 직접 닿지 않게 주의해야 합니다.</p>
+        </div>
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">핀 브러시 (Pin Brush)</h4>
+          <p className="text-gray-700 leading-relaxed">끝이 둥근 긴 핀이 박혀 있어 장모종의 털을 정리하고 볼륨을 줄 때 사용합니다. 피부 자극이 적어 강아지들이 좋아합니다.</p>
+        </div>
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">일자 빗 (Comb)</h4>
+          <p className="text-gray-700 leading-relaxed">빗질의 마무리 단계에서 털이 엉킨 곳이 없는지 확인하는 용도입니다. 눈가나 입 주변 등 세밀한 부위를 정리할 때도 필수입니다.</p>
+        </div>
+        <div className="border-l-4 border-orange-500 pl-6 py-2">
+          <h4 className="font-black text-xl text-gray-800 mb-2">디쉐딩 툴 (Deshedding Tool)</h4>
+          <p className="text-gray-700 leading-relaxed">이중모의 속털을 솎아내는 특수 도구입니다. 털 빠짐을 획기적으로 줄여주지만, 너무 자주 사용하면 겉털이 상할 수 있으므로 주의가 필요합니다.</p>
+        </div>
+      </div>
+
+      <h2 className="text-2xl font-black text-gray-800">4. 본론: 올바른 빗질 순서와 주의사항</h2>
+      <p>무작정 빗기기보다 순서를 지키면 강아지의 거부감을 줄일 수 있습니다.</p>
+      <ul className="list-disc list-inside space-y-4 text-gray-700">
+        <li><strong>미스트 사용:</strong> 건조한 상태에서 빗질하면 정전기가 발생하고 털이 끊어집니다. 반드시 그루밍 미스트를 뿌려 수분을 공급하세요.</li>
+        <li><strong>끝부분부터 시작:</strong> 엉킨 곳이 있다면 끝부분부터 조금씩 풀어 올라가야 통증이 적습니다.</li>
+        <li><strong>심장에서 먼 곳부터:</strong> 다리 끝이나 꼬리부터 시작해 몸통 쪽으로 진행하는 것이 강아지가 덜 당황합니다.</li>
+        <li><strong>보상 칭찬:</strong> 빗질 중간중간 간식을 주어 "빗질은 기분 좋은 일"이라는 인식을 심어주세요.</li>
+      </ul>
+
+      <h2 className="text-2xl font-black text-gray-800">5. 결론: 아름다운 털은 보호자의 정성에서 나옵니다</h2>
+      <p>강아지의 모질은 건강의 거울이기도 합니다. 영양 상태가 좋지 않거나 스트레스를 받으면 털이 푸석해지고 잘 빠지게 되죠. 매일 5분의 빗질은 단순히 외모를 가꾸는 것을 넘어, 우리 아이의 건강 상태를 체크하고 사랑을 전달하는 가장 쉬운 방법입니다. 오늘 알려드린 견종별 맞춤 도구를 활용해 우리 아이의 숨겨진 미모를 찾아주세요! 똑똑한 집사는 모든 반려견의 찰랑이는 일상을 응원합니다.</p>
+
+      <h3 className="text-2xl font-black text-gray-800 mt-10">마치며: 빗질이 즐거운 놀이가 될 때까지</h3>
+      <p>처음에는 빗만 봐도 도망가는 아이들이 있을 수 있습니다. 하지만 인내심을 갖고 아주 짧은 시간부터 시작해보세요. 부드러운 빗질과 따뜻한 칭찬이 반복된다면, 어느덧 빗을 들고 오면 먼저 다가와 배를 보여주는 사랑스러운 모습을 보게 될 것입니다. 궁금한 점이나 추천하고 싶은 꿀템이 있다면 언제든 공유해 주세요!</p>
+      
+      <p className="text-sm text-gray-500 mt-12">#강아지털관리 #강아지빗질 #슬리커브러시 #핀브러시 #이중모관리 #푸들털관리 #포메라니안털관리 #강아지그루밍 #반려견미용 #똑똑한집사 #반려견백과</p>
+      <AdPlaceholder placement="하단" />
+    </div>
+  ),
   '41': (
     <div className="space-y-8">
       <p className="text-xl font-bold text-gray-800 leading-snug">"켄넬(크레이트)은 강아지를 가두는 감옥이 아닙니다. 올바른 훈련을 거친 켄넬은 강아지에게 세상에서 가장 안전하고 아늑한 '나만의 방'이 됩니다. 왜 켄넬 훈련이 필수인지, 그리고 어떻게 성공할 수 있는지 상세히 알아봅니다."</p>
