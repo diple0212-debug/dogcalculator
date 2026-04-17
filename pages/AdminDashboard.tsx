@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth, db, handleFirestoreError, OperationType } from '../firebase';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { auth, db, storage, handleFirestoreError, OperationType } from '../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { 
   collection, 
@@ -15,6 +15,7 @@ import {
   deleteDoc,
   updateDoc
 } from 'firebase/firestore';
+import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import ReactQuill from 'react-quill-new';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -29,7 +30,8 @@ import {
   Eye,
   X,
   Save,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Upload
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -61,9 +63,12 @@ const AdminDashboard: React.FC = () => {
   const [category, setCategory] = useState(CATEGORIES[0]);
   const [icon, setIcon] = useState('🐕');
   const [color, setColor] = useState(COLORS[0]);
+  const [thumbnailUrl, setThumbnailUrl] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [uploadingThumbnail, setUploadingThumbnail] = useState(false);
 
   const navigate = useNavigate();
+  const quillRef = useRef<any>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -74,18 +79,22 @@ const AdminDashboard: React.FC = () => {
       
       const adminEmail = "diple0212@gmail.com";
       const userRef = doc(db, 'users', user.uid);
-      const userSnap = await getDoc(userRef);
-      
-      const role = user.email === adminEmail ? 'admin' : (userSnap.exists() ? userSnap.data().role : 'user');
-      
-      if (role !== 'admin') {
-        navigate('/admin/login');
-        return;
-      }
+      try {
+        const userSnap = await getDoc(userRef);
+        const role = user.email === adminEmail ? 'admin' : (userSnap.exists() ? userSnap.data().role : 'user');
+        
+        if (role !== 'admin') {
+          navigate('/admin/login');
+          return;
+        }
 
-      setUser(user);
-      fetchPosts();
-      setLoading(false);
+        setUser(user);
+        fetchPosts();
+        setLoading(false);
+      } catch (error) {
+        console.error("Auth check error:", error);
+        navigate('/admin/login');
+      }
     });
 
     return () => unsubscribe();
@@ -118,9 +127,73 @@ const AdminDashboard: React.FC = () => {
     setCategory(CATEGORIES[0]);
     setIcon('🐕');
     setColor(COLORS[0]);
+    setThumbnailUrl('');
     setEditingPost(null);
     setIsFormOpen(false);
   };
+
+  const handleThumbnailUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingThumbnail(true);
+    try {
+      const filename = `thumbnails/${Date.now()}_${file.name}`;
+      const imageRef = storageRef(storage, filename);
+      const snapshot = await uploadBytes(imageRef, file);
+      const url = await getDownloadURL(snapshot.ref);
+      setThumbnailUrl(url);
+    } catch (error) {
+      console.error("Thumbnail upload error:", error);
+      alert("이미지 업로드 중 오류가 발생했습니다.");
+    } finally {
+      setUploadingThumbnail(false);
+    }
+  };
+
+  const imageHandler = useCallback(() => {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*');
+    input.click();
+
+    input.onchange = async () => {
+      const file = input.files?.[0];
+      if (!file) return;
+
+      const editor = quillRef.current.getEditor();
+      const range = editor.getSelection();
+      
+      try {
+        const filename = `blog_images/${Date.now()}_${file.name}`;
+        const imageRef = storageRef(storage, filename);
+        const snapshot = await uploadBytes(imageRef, file);
+        const url = await getDownloadURL(snapshot.ref);
+        
+        // Insert image into editor
+        editor.insertEmbed(range.index, 'image', url);
+        editor.setSelection(range.index + 1);
+      } catch (error) {
+        console.error("Quill image upload error:", error);
+        alert("이미지 업로드 중 오류가 발생했습니다.");
+      }
+    };
+  }, []);
+
+  const quillModules = useMemo(() => ({
+    toolbar: {
+      container: [
+        [{ 'header': [1, 2, 3, false] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        ['link', 'image'],
+        ['clean']
+      ],
+      handlers: {
+        image: imageHandler
+      }
+    }
+  }), [imageHandler]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -141,6 +214,7 @@ const AdminDashboard: React.FC = () => {
       category,
       icon,
       color,
+      thumbnailUrl,
       date, // YYYY.MM.DD
       authorId: user.uid,
       updatedAt: serverTimestamp(),
@@ -172,6 +246,7 @@ const AdminDashboard: React.FC = () => {
     setCategory(post.category);
     setIcon(post.icon || '🐕');
     setColor(post.color || COLORS[0]);
+    setThumbnailUrl(post.thumbnailUrl || '');
     setIsFormOpen(true);
   };
 
@@ -266,8 +341,12 @@ const AdminDashboard: React.FC = () => {
                 <tr key={post.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 ${post.color || 'bg-gray-100'} rounded-lg flex items-center justify-center text-xl`}>
-                        {post.icon || '🐕'}
+                      <div className={`w-10 h-10 ${post.color || 'bg-gray-100'} rounded-lg flex items-center justify-center text-xl overflow-hidden`}>
+                        {post.thumbnailUrl ? (
+                          <img src={post.thumbnailUrl} alt="" className="w-full h-full object-cover" />
+                        ) : (
+                          post.icon || '🐕'
+                        )}
                       </div>
                       <span className="font-bold text-gray-800 line-clamp-1">{post.title}</span>
                     </div>
@@ -282,6 +361,13 @@ const AdminDashboard: React.FC = () => {
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex justify-end gap-2">
+                       <Link 
+                        to={`/posts/${post.id}`}
+                        target="_blank"
+                        className="p-2 text-gray-400 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-all"
+                      >
+                        <Eye className="w-5 h-5" />
+                      </Link>
                       <button 
                         onClick={() => handleEdit(post)}
                         className="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-all"
@@ -338,36 +424,68 @@ const AdminDashboard: React.FC = () => {
               </div>
 
               <div className="flex-grow overflow-y-auto p-8 space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">제목</label>
-                    <input 
-                      type="text" 
-                      value={title}
-                      onChange={(e) => setTitle(e.target.value)}
-                      placeholder="포스트 제목을 입력하세요"
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800"
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">카테고리</label>
-                      <select 
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800 appearance-none"
-                      >
-                        {CATEGORIES.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-                      </select>
+                {/* Image Upload / Thumbnail Section */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="md:col-span-1 space-y-2">
+                    <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">대표 이미지 (Thumbnail)</label>
+                    <div className="relative aspect-video bg-gray-50 border-2 border-dashed border-gray-100 rounded-2xl overflow-hidden group">
+                      {thumbnailUrl ? (
+                        <>
+                          <img src={thumbnailUrl} alt="Thumbnail" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+                          <button 
+                            onClick={() => setThumbnailUrl('')}
+                            className="absolute top-2 right-2 p-1.5 bg-black/50 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </>
+                      ) : (
+                        <label className="w-full h-full flex flex-col items-center justify-center cursor-pointer hover:bg-gray-100 transition-all gap-2">
+                          <div className={`p-3 rounded-xl bg-white shadow-sm text-gray-400 group-hover:text-orange-500 transition-colors`}>
+                            {uploadingThumbnail ? (
+                              <div className="w-6 h-6 border-2 border-orange-200 border-t-orange-500 rounded-full animate-spin" />
+                            ) : (
+                              <Upload className="w-6 h-6" />
+                            )}
+                          </div>
+                          <span className="text-xs font-bold text-gray-400">이미지 업로드</span>
+                          <input type="file" className="hidden" accept="image/*" onChange={handleThumbnailUpload} disabled={uploadingThumbnail} />
+                        </label>
+                      )}
                     </div>
+                  </div>
+
+                  <div className="md:col-span-2 space-y-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">아이콘(Emoji)</label>
+                      <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">제목</label>
                       <input 
                         type="text" 
-                        value={icon}
-                        onChange={(e) => setIcon(e.target.value)}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800 text-center"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="포스트 제목을 입력하세요"
+                        className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800"
                       />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">카테고리</label>
+                        <select 
+                          value={category}
+                          onChange={(e) => setCategory(e.target.value)}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800 appearance-none"
+                        >
+                          {CATEGORIES.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">아이콘(Emoji)</label>
+                        <input 
+                          type="text" 
+                          value={icon}
+                          onChange={(e) => setIcon(e.target.value)}
+                          className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-orange-500 focus:bg-white transition-all font-bold text-gray-800 text-center"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -398,22 +516,15 @@ const AdminDashboard: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">본문 내용(HTML)</label>
-                  <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden min-h-[400px]">
+                  <label className="text-sm font-bold text-gray-400 uppercase tracking-wider px-1">본문 내용(Rich Text)</label>
+                  <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden">
                     <ReactQuill 
+                      ref={quillRef}
                       theme="snow" 
                       value={content} 
                       onChange={setContent}
-                      className="h-[350px]"
-                      modules={{
-                        toolbar: [
-                          [{ 'header': [1, 2, 3, false] }],
-                          ['bold', 'italic', 'underline', 'strike'],
-                          [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                          ['link', 'image'],
-                          ['clean']
-                        ],
-                      }}
+                      className="h-[400px] mb-12"
+                      modules={quillModules}
                     />
                   </div>
                 </div>

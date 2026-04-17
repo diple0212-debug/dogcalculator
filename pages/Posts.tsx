@@ -471,6 +471,11 @@ const Posts: React.FC = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full pl-12 pr-4 py-4 bg-white border-2 border-orange-100 rounded-2xl shadow-sm focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 outline-none transition-all font-medium text-gray-700"
         />
+        {loading && (
+          <div className="absolute right-4 top-1/2 -translate-y-1/2">
+            <div className="w-5 h-5 border-2 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+          </div>
+        )}
       </div>
 
       {filteredPosts.length > 0 ? (
@@ -482,15 +487,19 @@ const Posts: React.FC = () => {
                 to={`/posts/${post.id}`}
                 className="group bg-white rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-1 flex flex-col"
               >
-                <div className={`h-48 ${post.color} flex items-center justify-center text-7xl group-hover:scale-110 transition-transform`}>
-                  {post.icon}
+                <div className={`h-48 ${post.color || 'bg-orange-50'} flex items-center justify-center text-7xl group-hover:scale-110 transition-transform overflow-hidden`}>
+                  {post.thumbnailUrl ? (
+                    <img src={post.thumbnailUrl} alt={post.title} className="w-full h-full object-cover" />
+                  ) : (
+                    post.icon
+                  )}
                 </div>
                 <div className="p-6 space-y-3 flex-grow">
                   <div className="flex justify-between items-center">
                     <span className="text-xs font-bold text-orange-500 px-2 py-1 bg-orange-50 rounded-full">{post.category}</span>
-                    <span className="text-xs text-gray-400">{post.date}</span>
+                    <span className="text-xs text-gray-400">{post.date || new Date(post.createdAt).toLocaleDateString()}</span>
                   </div>
-                  <h2 className="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors leading-tight">
+                  <h2 className="text-xl font-black text-gray-800 group-hover:text-orange-500 transition-colors leading-tight line-clamp-2">
                     {post.title}
                   </h2>
                   <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">

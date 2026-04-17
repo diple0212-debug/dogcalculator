@@ -2398,7 +2398,7 @@ const PostDetail: React.FC = () => {
           "name": "똑똑한 집사"
         },
         "datePublished": (post.date || post.createdAt)?.toString().replace(/\./g, '-'),
-        "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000",
+        "image": post.thumbnailUrl || "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000",
         "publisher": {
           "@type": "Organization",
           "name": "똑똑한 집사",
@@ -2459,8 +2459,12 @@ const PostDetail: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto space-y-10 px-4">
       <article className="bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
-        <div className={`h-64 ${post.color || 'bg-orange-50'} flex items-center justify-center text-8xl`}>
-          {post.icon || '📝'}
+        <div className={`h-64 ${post.color || 'bg-orange-50'} flex items-center justify-center text-8xl overflow-hidden`}>
+          {post.thumbnailUrl ? (
+            <img src={post.thumbnailUrl} alt={post.title} className="w-full h-full object-cover" />
+          ) : (
+            post.icon || '📝'
+          )}
         </div>
         
         <div className="p-8 md:p-12 space-y-10">
