@@ -1,6 +1,8 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { db, handleFirestoreError, OperationType } from '../firebase';
 import AdPlaceholder from '../components/AdPlaceholder';
 
 export const POSTS_DATA = [
@@ -232,7 +234,7 @@ export const POSTS_DATA = [
   {
     id: '17',
     title: '강아지 치석 제거와 양치질 교육: 완벽한 구강 관리 가이드',
-    excerpt: '강아지 수명을 결정하는 구강 건강! 치석이 쌓이면 단순한 입 냄새를 넘어 전신 질환으로 이어질 수 있습니다. 단계별 양치 교육법과 치석 관리 비법을 공개합니다.',
+    excerpt: '강아지 수명을 결정하는 구강 건강! 치석이 쌓이면 단순한 입 냄애를 넘어 전신 질환으로 이어질 수 있습니다. 단계별 양치 교육법과 치석 관리 비법을 공개합니다.',
     date: '2026.02.20',
     category: '건강관리/위생',
     icon: '🦷🐕',
@@ -389,17 +391,49 @@ const ITEMS_PER_PAGE = 6;
 const Posts: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [firebasePosts, setFirebasePosts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchFirebasePosts = async () => {
+      const path = 'posts';
+      try {
+        const q = query(collection(db, path), orderBy('createdAt', 'desc'));
+        const querySnapshot = await getDocs(q);
+        const fetched = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+          isFirebase: true // Flag to identify Firestore posts
+        }));
+        setFirebasePosts(fetched);
+      } catch (error) {
+        // We handle but don't block, so static posts still show
+        console.error('Firebase posts fetch error:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFirebasePosts();
+  }, []);
+
+  const allPosts = useMemo(() => {
+    // Merge Firestore posts with static posts, avoiding duplicates if any
+    const firebaseIds = new Set(firebasePosts.map(p => p.id));
+    const filteredStatic = POSTS_DATA.filter(post => !firebaseIds.has(post.id));
+    return [...firebasePosts, ...filteredStatic];
+  }, [firebasePosts]);
 
   const filteredPosts = useMemo(() => {
     const term = searchTerm.toLowerCase().trim();
-    if (!term) return POSTS_DATA;
+    if (!term) return allPosts;
     
-    return POSTS_DATA.filter(post => 
+    return allPosts.filter(post => 
       post.title.toLowerCase().includes(term) ||
       post.excerpt.toLowerCase().includes(term) ||
       post.category.toLowerCase().includes(term)
     );
-  }, [searchTerm]);
+  }, [searchTerm, allPosts]);
 
   const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
   const currentPosts = useMemo(() => {

@@ -1,6 +1,8 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 import { POSTS_DATA } from './Posts.tsx';
 import AdPlaceholder from '../components/AdPlaceholder.tsx';
 
@@ -2333,7 +2335,36 @@ const POST_CONTENTS: Record<string, React.ReactNode> = {
 
 const PostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const post = POSTS_DATA.find(p => p.id === id);
+  const [post, setPost] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      // 1. Try static data first
+      const staticPost = POSTS_DATA.find(p => p.id === id);
+      if (staticPost) {
+        setPost(staticPost);
+        setLoading(false);
+        return;
+      }
+
+      // 2. Try Firestore
+      if (id) {
+        try {
+          const docRef = doc(db, 'posts', id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            setPost({ id: docSnap.id, ...docSnap.data() });
+          }
+        } catch (error) {
+          console.error('Error fetching post from Firestore:', error);
+        }
+      }
+      setLoading(false);
+    };
+
+    fetchPost();
+  }, [id]);
 
   useEffect(() => {
     if (post) {
@@ -2366,7 +2397,7 @@ const PostDetail: React.FC = () => {
           "@type": "Organization",
           "name": "똑똑한 집사"
         },
-        "datePublished": post.date.replace(/\./g, '-'),
+        "datePublished": (post.date || post.createdAt)?.toString().replace(/\./g, '-'),
         "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000",
         "publisher": {
           "@type": "Organization",
@@ -2388,6 +2419,14 @@ const PostDetail: React.FC = () => {
       canonical.setAttribute('href', window.location.href);
     }
   }, [post]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-40">
+        <div className="w-12 h-12 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
@@ -2420,15 +2459,15 @@ const PostDetail: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto space-y-10 px-4">
       <article className="bg-white rounded-[2.5rem] shadow-sm border border-gray-100 overflow-hidden">
-        <div className={`h-64 ${post.color} flex items-center justify-center text-8xl`}>
-          {post.icon}
+        <div className={`h-64 ${post.color || 'bg-orange-50'} flex items-center justify-center text-8xl`}>
+          {post.icon || '📝'}
         </div>
         
         <div className="p-8 md:p-12 space-y-10">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <span className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">{post.category}</span>
-              <span className="text-gray-400 text-sm font-medium">{post.date}</span>
+              <span className="text-gray-400 text-sm font-medium">{post.date || new Date(post.createdAt).toLocaleDateString()}</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-black text-gray-800 leading-[1.2] tracking-tight">
               {post.title}
@@ -2436,10 +2475,11 @@ const PostDetail: React.FC = () => {
           </div>
 
           <div className="prose prose-orange max-w-none text-gray-600 leading-relaxed text-lg">
-            {POST_CONTENTS[post.id] || (
-               <div className="py-20 text-center text-gray-400 italic">
-                 전문가들이 정성을 다해 콘텐츠를 작성 중입니다. 잠시만 기다려 주세요!
-               </div>
+            {POST_CONTENTS[post.id] ? POST_CONTENTS[post.id] : (
+               <div 
+                 className="ql-editor !p-0"
+                 dangerouslySetInnerHTML={{ __html: post.content }} 
+               />
             )}
           </div>
 

@@ -15,6 +15,8 @@ import Privacy from './pages/Privacy.tsx';
 import HealthAdvisor from './pages/HealthAdvisor.tsx';
 import Posts from './pages/Posts.tsx';
 import PostDetail from './pages/PostDetail.tsx';
+import AdminLogin from './pages/AdminLogin.tsx';
+import AdminDashboard from './pages/AdminDashboard.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
           <Route path="/health-advisor" element={<HealthAdvisor />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<PostDetail />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<About />} />
           <Route path="/terms" element={<Terms />} />

@@ -1,16 +1,73 @@
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    
+    <!-- 파비콘 설정: 구글 검색 결과 아이콘 최적화 -->
+    <!-- 헤더의 발바닥 아이콘과 동일한 디자인의 SVG 데이터 URI -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f97316'%3E%3Cpath fill-rule='evenodd' d='M10 3a1 1 0 00-1 1v1.586l-2.293-2.293a1 1 0 00-1.414 1.414L7.586 7H6a1 1 0 00-1 1 1.5 1.5 0 001.5 1.5h.063a4.5 4.5 0 015.874 0H13.5A1.5 1.5 0 0015 8a1 1 0 00-1-1h-1.586l2.293-2.293a1 1 0 00-1.414-1.414L11 5.586V4a1 1 0 00-1-1zM6.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM13.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5z' clip-rule='evenodd' /%3E%3Cpath d='M10 12a4.5 4.5 0 00-4.472 4.004A2.002 2.002 0 007.5 18h5a2.002 2.002 0 001.972-1.996A4.5 4.5 0 0010 12z' /%3E%3C/svg%3E" />
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f97316'%3E%3Cpath fill-rule='evenodd' d='M10 3a1 1 0 00-1 1v1.586l-2.293-2.293a1 1 0 00-1.414 1.414L7.586 7H6a1 1 0 00-1 1 1.5 1.5 0 001.5 1.5h.063a4.5 4.5 0 015.874 0H13.5A1.5 1.5 0 0015 8a1 1 0 00-1-1h-1.586l2.293-2.293a1 1 0 00-1.414-1.414L11 5.586V4a1 1 0 00-1-1zM6.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM13.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5z' clip-rule='evenodd' /%3E%3Cpath d='M10 12a4.5 4.5 0 00-4.472 4.004A2.002 2.002 0 007.5 18h5a2.002 2.002 0 001.972-1.996A4.5 4.5 0 0010 12z' /%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23f97316'%3E%3Cpath fill-rule='evenodd' d='M10 3a1 1 0 00-1 1v1.586l-2.293-2.293a1 1 0 00-1.414 1.414L7.586 7H6a1 1 0 00-1 1 1.5 1.5 0 001.5 1.5h.063a4.5 4.5 0 015.874 0H13.5A1.5 1.5 0 0015 8a1 1 0 00-1-1h-1.586l2.293-2.293a1 1 0 00-1.414-1.414L11 5.586V4a1 1 0 00-1-1zM6.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM13.5 11a2.5 2.5 0 100-5 2.5 2.5 0 000 5z' clip-rule='evenodd' /%3E%3Cpath d='M10 12a4.5 4.5 0 00-4.472 4.004A2.002 2.002 0 007.5 18h5a2.002 2.002 0 001.972-1.996A4.5 4.5 0 0010 12z' /%3E%3C/svg%3E" />
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>똑똑한 집사 - AI 강아지 건강 관리 & 계산기</title>
 
-const root = createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <meta name="google-site-verification" content="UtmUtlu5einA6oSJ3u277Ar7r2C_QeCkydkU4nkqyPs" />
+    
+    <!-- 구글 애드센스 코드 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7103577915860825"
+     crossorigin="anonymous"></script>
+    
+    <meta name="description" content="강아지 나이 계산기, 비만도(BCS) 체크, 사료량 계산기 및 AI 건강 상담 서비스로 반려견의 건강을 스마트하게 관리하세요." />
+    <meta name="keywords" content="강아지 나이 계산기, 강아지 비만도 계산기, 강아지 사료량 계산기, 강아지 건강 상담, AI 수의사, 반려견 건강관리" />
+    <link rel="canonical" href="https://dogcalculator.co.kr" />
+    
+    <!-- React Quill Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/react-quill-new@3.8.3/dist/quill.snow.css">
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="똑똑한 집사 - AI 강아지 건강 관리" />
+    <meta property="og:description" content="우리 강아지 나이부터 사료량까지, AI가 알려주는 스마트한 반려생활" />
+    <meta property="og:url" content="https://dogcalculator.co.kr" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=1000" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "똑똑한 집사",
+      "url": "https://dogcalculator.co.kr",
+      "description": "반려견 건강을 위한 AI 상담 및 필수 계산기 도구 모음",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "featureList": [
+        "강아지 나이 계산기",
+        "강아지 비만도(BCS) 체크",
+        "강아지 사료 급여량 계산기",
+        "AI 기반 건강 상담"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+        "vite": "https://esm.sh/vite@^7.3.1",
+        "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-orange-50 font-sans antialiased text-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

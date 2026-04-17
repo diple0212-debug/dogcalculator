@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "A blog post document",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "The title of the post" },
+        "excerpt": { "type": "string", "description": "A short summary of the post" },
+        "content": { "type": "string", "description": "The full HTML content of the post" },
+        "date": { "type": "string", "description": "Formatted date string (e.g. 2026.04.12)" },
+        "category": { "type": "string", "description": "The category of the post" },
+        "icon": { "type": "string", "description": "Emoji icon for the post" },
+        "color": { "type": "string", "description": "Tailwind color class for the post background" },
+        "authorId": { "type": "string", "description": "The UID of the user who created the post" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Last update timestamp" }
+      },
+      "required": ["title", "content", "date", "category", "authorId"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email", "description": "User email address" },
+        "role": { "type": "string", "enum": ["admin", "user"], "description": "User's role in the application" },
+        "displayName": { "type": "string", "description": "The user's display name" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Collection of blog posts"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of user profiles"
+    }
+  }
+}
